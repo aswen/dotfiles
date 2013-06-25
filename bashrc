@@ -97,7 +97,7 @@ alias tl='tmux ls'
 
 # Backup
 rsyncopts='-avz --exclude=lost+found --no-perms --no-owner --no-group --append-verify'
-alias bck_foto='rsync ${rsyncopts} --exclude-from=/data/foto/excludefile  /data/foto/ /netwerk/foto/'
+alias bck_foto='rsync ${rsyncopts} --exclude-from=/data/foto/.excludefile  /data/foto/ /netwerk/foto/'
 alias bck_home='rsync ${rsyncopts} --exclude-from=/home/alex/excludelist --delete /home/alex/ /netwerk/home-alex/'
 alias bck_vis='cd /data/vmware;tar cvf - vis|pigz -c >vis.tar.gz'
 alias restore_vis='cd /data/vmware;pigz -cd vis.tar.gz|tar xvf -'

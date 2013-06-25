@@ -213,6 +213,30 @@ mnt_cryptdisk () {
   l /mnt/$1
 }
 
+# this might install or update java...
+fix_java () {
+  # I need to know where to download from
+  if [ $# -lt 2 ];then
+    echo "usage: fix_java <url> <version>"
+    echo "example: fix_java http://javadl.sun.com/webapps/download/AutoDL?BundleId=78697 jre1.7.0_25"
+    return
+  fi
+
+  # check dir
+  [ -d /usr/$2 ] || curl $1 | sudo tar zxvf - -C /usr
+  ln -sf /usr/$2 /usr/java
+
+  # fix google chrome plugin
+  gcpplugins=/opt/google/chrome/plugins
+  [ -d ${gcplugins} ]|| sudo install -dm 755 ${gcplugins}
+  [ -L ${gcplugins}/libnpjp2.so ]|| sudo ln -s /usr/java/lib/amd64/libnpjp2.so ${gcplugins}/libnpjp2.so
+
+  # fix ff plugin
+  ffplugins=$(awk -v homedir=~ '/Path/ {sub (/Path=/, ""); print homedir"/.mozilla/firefox/"$1"/plugins" }' ~/.mozilla/firefox/profiles.ini)
+  [ -L ${ffplugins}/libnpjp2.so ]|| sudo ln -s /usr/java/lib/amd64/libnpjp2.so ${ffplugins}/libnpjp2.so
+}
+
+
 # This function should make extracting archives easy. I copied it from Hunner but it doesn't work for me and i never tried to find out why...
 ex () {
   if whence gtar > /dev/null ; then
@@ -261,7 +285,7 @@ export PATH=/data/git/nedap/puppet/modules/hiera/bin:$PATH
 export EDITOR=`which vim`
 
 # source specific stuff for my work
-. ~/.nedaprc
+[ -x ~/.nedaprc ] && . ~/.nedaprc
 
 # source specific stuff for my other work
-. ~/.melkwegrc
+[ -x ~/.nedaprc ] && . ~/.melkwegrc

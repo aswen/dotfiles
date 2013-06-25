@@ -169,7 +169,7 @@ mnt_cryptdisk () {
   # this function needs a file that holds a table of uuid => name matches
   listfile=~/.cryptvolumes
   # without that file this excercise doesn't make sense
-  if [ ! -e "${listfile}" ];then
+  if [ ! -s "${listfile}" ];then
     die 1 "Listfile ${listfile} not found"
     return
   fi

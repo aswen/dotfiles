@@ -1,0 +1,218 @@
+no-blackfilter = 1
+frontend = scanadf
+mode = True Gray
+<Paper>
+    <foto>
+        l = 0
+        y = 130
+        x = 88
+        t = 0
+    </foto>
+    <a6>
+        l = 0
+        y = 105
+        x = 148
+        t = 0
+    </a6>
+    <a5>
+        l = 0
+        y = 210
+        x = 148
+        t = 0
+    </a5>
+    <A4>
+        l = 0
+        y = 297
+        x = 210
+        t = 0
+    </A4>
+    <A4+acceptgiro>
+        l = 0
+        y = 400
+        x = 210
+        t = 0
+    </A4+acceptgiro>
+    <a3>
+        l = 0
+        y = 420
+        x = 297
+        t = 0
+    </a3>
+</Paper>
+output-pages = 1
+ocr engine = ocropus
+no-blurfilter = 1
+y = 297
+keywords = 
+layout = single
+cwd = /data/home/alex/Documenten/archief/Facturen en garantiebewijzen
+image type = pdf
+Paper size = A4
+subject = 
+user_defined_tools = gimp %i
+default filename = %y-%m-%d %t
+startup warning = 1
+no-grayfilter = 1
+title = Conrad - ontkalkingsspul
+source = Automatic Document Feeder(centrally aligned)
+rotate facing = 0
+cache options = 1
+author = Alexander Swen
+view files toggle = 
+window_x = 1920
+window_y = 16
+quality = 75
+date offset = -31
+version = 1.0.4
+device = brother3:net1;dev0
+scan prefix = 
+no-noisefilter = 1
+black-threshold = 0.33
+<cache>
+    <v4l:/dev/video0>
+    </v4l:/dev/video0>
+    <brother3:net1;dev0>
+        True Gray = <<EOF
+        Usage: scanadf [OPTION]...
+        
+        Start image acquisition on a scanner device and write image data to
+        output files.
+        
+           [ -d | --device-name <device> ]   use a given scanner device.
+           [ -h | --help ]                   display this help message and exit.
+           [ -L | --list-devices ]           show available scanner devices.
+           [ -v | --verbose ]                give even more status messages.
+           [ -V | --version ]                print version information.
+           [ -N | --no-overwrite ]           don't overwrite existing files.
+        
+           [ -o | --output-file <name> ]     name of file to write image data
+                                             (%d replacement in output file name).
+           [ -S | --scan-script <name> ]     name of script to run after every scan.
+           [ --script-wait ]                 wait for scripts to finish before exit
+           [ -s | --start-count <num> ]      page count of first scanned image.
+           [ -e | --end-count <num> ]        last page number to scan.
+           [ -r | --raw ]                    write raw image data to file.
+        
+        Options specific to device `brother3:net1;dev0':
+          Mode:
+            --mode Black & White|Gray[Error Diffusion]|True Gray|24bit Color [True Gray]
+                Select the scan mode
+            --resolution 100|150|200|300|400|600|1200|2400|4800|9600dpi [200]
+                Sets the resolution of the scanned image.
+            --source FlatBed|Automatic Document Feeder(left aligned)|Automatic Document Feeder(centrally aligned) [Automatic Document Feeder(left aligned)]
+                Selects the scan source (such as a document-feeder).
+            --brightness -50..50% (in steps of 1) [0]
+                Controls the brightness of the acquired image.
+            --contrast -50..50% (in steps of 1) [0]
+                Controls the contrast of the acquired image.
+          Geometry:
+            -l 0..297mm (in steps of 0.0999908) [0]
+                Top-left x position of scan area.
+            -t 0..420mm (in steps of 0.0999908) [0]
+                Top-left y position of scan area.
+            -x 0..297mm (in steps of 0.0999908) [296.973]
+                Width of scan-area.
+            -y 0..420mm (in steps of 0.0999908) [419.962]
+                Height of scan-area.
+        
+        Type ``scanadf --help -d DEVICE'' to get list of all options for DEVICE.
+        
+        List of available devices:
+            brother3:net1;dev0
+        EOF
+        default = <<EOF
+        Usage: scanadf [OPTION]...
+        
+        Start image acquisition on a scanner device and write image data to
+        output files.
+        
+           [ -d | --device-name <device> ]   use a given scanner device.
+           [ -h | --help ]                   display this help message and exit.
+           [ -L | --list-devices ]           show available scanner devices.
+           [ -v | --verbose ]                give even more status messages.
+           [ -V | --version ]                print version information.
+           [ -N | --no-overwrite ]           don't overwrite existing files.
+        
+           [ -o | --output-file <name> ]     name of file to write image data
+                                             (%d replacement in output file name).
+           [ -S | --scan-script <name> ]     name of script to run after every scan.
+           [ --script-wait ]                 wait for scripts to finish before exit
+           [ -s | --start-count <num> ]      page count of first scanned image.
+           [ -e | --end-count <num> ]        last page number to scan.
+           [ -r | --raw ]                    write raw image data to file.
+        EOF
+    </brother3:net1;dev0>
+</cache>
+<profile>
+    <foto>
+        source = Automatic Document Feeder(centrally aligned)
+        Paper size = Bewerk
+        mode = 24bit Color
+        x = 130
+        y = 88
+        l = 0
+        resolution = 400
+        t = 0
+    </foto>
+    <"brief meerdere pagina's">
+        source = Automatic Document Feeder(centrally aligned)
+        Paper size = A4
+        mode = True Gray
+        contrast = 0
+        x = 210
+        l = 0
+        y = 297
+        brightness = 0
+        resolution = 200
+        t = 0
+    </"brief meerdere pagina's">
+</profile>
+unsharp radius = 0
+window_maximize = 
+white-threshold = 0.9
+pid = 3133
+unsharp amount = 1
+OCR output = replace
+OCR on scan = 
+t = 0
+Page range = selected
+window_height = 1045
+<default>
+    <brother3:net1;dev0>
+        br-x = 210
+    </brother3:net1;dev0>
+    <brother3:net1;dev0>
+        br-y = 297
+    </brother3:net1;dev0>
+    <brother3:net1;dev0>
+        mode = True Gray
+    </brother3:net1;dev0>
+    <brother3:net1;dev0>
+        source = Automatic Document Feeder(centrally aligned)
+    </brother3:net1;dev0>
+</default>
+pdf font = /home/alex/.fonts/Aller_Bd.ttf
+rotate reverse = 0
+cycle sane handle = 
+brightness = 0
+Dark threshold = 0.12
+pages to scan = all
+Blank threshold = 0
+resolution = 200
+unpaper on scan = 
+libsane-perl version = 0.05
+x = 210
+downsample dpi = 150
+window_width = 956
+threshold tool = 80
+deskew-scan-direction = left,right,top,bottom
+unsharp sigma = 1
+thumb panel = 163
+contrast = 0
+unsharp threshold = 0.05
+SANE version = 1.0.22
+l = 0
+no-mask-scan = 1
+downsample = 
+restore window = 1
+pdf compression = auto

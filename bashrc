@@ -213,6 +213,22 @@ mnt_cryptdisk () {
   l /mnt/$1
 }
 
+# remove a mounted disk properly
+umnt_cryptdisk () {
+
+  # I need to know what to do
+  if [ -z "$1" ];then
+    die 1 "you have to tell which volume"
+    return
+  fi
+
+  # if mounted umount
+  [ "$(grep /mnt/$1 /proc/mounts)" ] && sudo umount /mnt/$1
+
+  # if luksopened close
+  [ -b /dev/mapper/$1 ] && sudo cryptsetup luksClose $1
+}
+
 # this might install or update java...
 fix_java () {
   # I need to know where to download from

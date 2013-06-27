@@ -28,3 +28,4 @@
 ##exec /usr/bin/gnome-keyring-daemon --start --components=secrets
 ##exec /usr/bin/gnome-keyring-daemon --start --components=ssh
 ##exec /usr/bin/gnome-keyring-daemon --start --components=pkcs11
+/usr/bin/xrdb -load $HOME/.Xdefaults

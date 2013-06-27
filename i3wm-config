@@ -90,7 +90,7 @@ bindsym $win+z exec gscan2pdf
 
 bindsym $win+b exec vmware -x /data/vmware/vis/vis.vmx
 
-bindsym $win+y exec spotify
+#bindsym $win+y exec spotify
 for_window [class="(?i)spotify"] border none
 for_window [class="(?i)spotify"] floating enable
 assign [class="(?i)spotify"] → meuk

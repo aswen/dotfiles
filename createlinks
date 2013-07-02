@@ -37,4 +37,6 @@ done
 [ -d ~/.i3 ]||install -dm 775 ~/.i3
 ln -s ~/dotfiles/i3wm-config ~/.i3/config
 
+ln -sf ~/dotfiles/dircolors-dark ~/.dircolors
+
 # END

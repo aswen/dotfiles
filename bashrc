@@ -304,4 +304,4 @@ export EDITOR=`which vim`
 [ -x ~/.nedaprc ] && . ~/.nedaprc
 
 # source specific stuff for my other work
-[ -x ~/.nedaprc ] && . ~/.melkwegrc
+[ -x ~/.melkwegrc ] && . ~/.melkwegrc

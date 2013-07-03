@@ -305,3 +305,6 @@ export EDITOR=`which vim`
 
 # source specific stuff for my other work
 [ -x ~/.melkwegrc ] && . ~/.melkwegrc
+
+# source specific stuff for my network
+[ -x ~/.swenrc ] && . ~/.swenrc

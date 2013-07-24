@@ -181,7 +181,7 @@ mnt_cryptdisk () {
   fi
 
   # $1 has to be declared in $listfile
-  uuid=$(awk -v vol="$1" '$0 ~ vol {print $1}' ${listfile})
+  uuid=$(awk -v vol="$1" '$0 ~ " "vol {print $1}' ${listfile})
   # if uuid is empty exit
   if [ -z "${uuid}" ];then
     die 1 "no uuid found in ${listfile} for $1"

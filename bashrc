@@ -4,6 +4,8 @@
 
 # let's work in vi mode (http://www.catonmat.net/download/bash-vi-editing-mode-cheat-sheet.txt)
 set -o vi
+# set some bindings
+[ -f ~/.bash_bindings ] && . ~/.bash_bindings
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return

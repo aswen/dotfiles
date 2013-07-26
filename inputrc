@@ -1,0 +1,4 @@
+# This is for vi mode (http://www.jukie.net/bart/blog/20040326082602)
+set editing-mode vi
+set keymap vi
+set convert-meta on

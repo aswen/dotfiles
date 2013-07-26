@@ -62,3 +62,5 @@ xterm*color13:                 S_violet
 xterm*color14:                 S_base1
 xterm*color15:                 S_base3
 
+# this is here for vi mode (http://www.jukie.net/bart/blog/20040326082602)
+xterm*eightBitInput: false

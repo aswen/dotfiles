@@ -75,7 +75,8 @@ assign [class="(?i)bluetooth-"] → meuk
 for_window [class="(?i)gnome-volume-control.gstreamer"] floating enable
 assign [class="(?i)gnome-volume-control.gstreamer"] → meuk
 
-bindsym $win+t exec remmina
+bindsym $win+t exec /data/git/alex/scripts/touchpadtoggle
+
 for_window [class="(?i)tsclient"] floating enable
 for_window [class="(?i)remmina"] floating enable
 for_window [class="(?i)rdesktop"] floating enable

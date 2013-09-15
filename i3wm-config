@@ -75,7 +75,7 @@ assign [class="(?i)bluetooth-"] → meuk
 for_window [class="(?i)gnome-volume-control.gstreamer"] floating enable
 assign [class="(?i)gnome-volume-control.gstreamer"] → meuk
 
-bindsym $win+t exec /data/git/alex/scripts/touchpadtoggle
+bindsym $win+z exec /data/git/alex/scripts/touchpadtoggle
 
 for_window [class="(?i)tsclient"] floating enable
 for_window [class="(?i)remmina"] floating enable
@@ -87,7 +87,7 @@ for_window [class="(?i)gkrellm"] border none
 for_window [class="(?i)gkrellm"] floating enable
 assign [class="(?i)gkrellm"] → meuk
 
-bindsym $win+z exec gscan2pdf
+bindsym $win+t exec gscan2pdf
 
 bindsym $win+b exec vmware -x /data/vmware/vis/vis.vmx
 

@@ -5,13 +5,11 @@
 /usr/bin/nm-applet&
 /usr/bin/gkrellm&
 /usr/bin/glipper&
-/usr/bin/setxkbmap -option compose:menu
-/usr/bin/setxkbmap en
-/usr/bin/setxkbmap -option lv3:ralt_switch,eurosign:5
-/usr/bin/setxkbmap -option ctrl:nocaps
+/usr/bin/setxkbmap -variant euro -option -option compose:menu,lv3:ralt_switch,eurosign:5,ctrl:nocaps
 /usr/bin/xmodmap .xmodmap
 /usr/bin/update-notifier&
 /usr/bin/libreoffice --quickstart --nologo&
+[ -x /usr/bin/numlockx ]&&/usr/bin/numlockx on
 ## tapping aan en geen palm op touchpad
 /usr/bin/synclient TapButton1=1 PalmDetect=1 VertEdgeScroll=1 HorizEdgeScroll=1 HorizTwoFingerScroll=1 AccelFactor=0.05
 #

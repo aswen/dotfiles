@@ -9,6 +9,7 @@
 /usr/bin/setxkbmap -option compose:menu
 /usr/bin/setxkbmap en
 /usr/bin/setxkbmap -option lv3:ralt_switch,eurosign:5
+/usr/bin/setxkbmap -option ctrl:nocaps
 /usr/bin/update-notifier&
 /usr/bin/libreoffice --quickstart --nologo&
 ## tapping aan en geen palm op touchpad

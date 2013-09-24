@@ -127,6 +127,7 @@ alias say='echo "$1" | espeak -s 120 2>/dev/null'
 alias xra_home='xrandr --output LVDS --off --output DisplayPort-2 --auto --output VGA-0 --auto --left-of DisplayPort-2 --verbose'
 alias xra_laptop='xrandr -s 1600x900 --output LVDS --auto --output DisplayPort-1 --off --output DisplayPort-2 --off --output VGA-0 --off'
 alias xra_tweedescherm='xrandr --output LVDS --auto --output DisplayPort-1 --off --output DisplayPort-2 --auto --right-of LVDS  --output VGA-0 --off'
+alias xra_dp_laptop='xrandr --output LVDS --auto --output DisplayPort-0 --auto --right-of LVDS'
 alias xra_beamer_1024='xrandr --output LVDS --auto --output VGA-0 --auto --right-of LVDS'
 
 # some standard settings and functions

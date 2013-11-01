@@ -297,7 +297,7 @@ ref=$(git symbolic-ref HEAD 2> /dev/null) && echo "$(date +%H:%M:%S) $(pwd) ("${
 PS1="\$(parse_git_branch)\$ "
 
 # this is here for the sake of ruby puppet
-export RUBYLIB=/data/git/nedap/puppet/modules/hiera/lib:/data/git/nedap/puppet/modules/hiera-puppet/lib
+# export RUBYLIB=/data/git/nedap/puppet/modules/hiera/lib:/data/git/nedap/puppet/modules/hiera-puppet/lib
 export PATH=/data/git/nedap/puppet/modules/hiera/bin:$PATH
 
 # have some colour support in tmux
@@ -320,3 +320,5 @@ alias note_connect='mtpfs -o allow_other /mnt/note'
 alias note_disconnect='fusermount -u /mnt/note'
 
 alias ':qa'='exit'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

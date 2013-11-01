@@ -1,3 +1,9 @@
+#!/bin/bash
+
+log=/home/alex/xprofile.log
+exec > $log 2>&1
+set -x
+
 /usr/bin/xset b off
 /usr/bin/xset b 0 0 0
 /usr/bin/gnome-sound-applet&
@@ -30,3 +36,4 @@
 
 # this might not be necesary any more
 #/usr/bin/xrdb -load $HOME/.Xresources
+set +x

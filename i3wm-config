@@ -6,7 +6,7 @@ set $mod Mod1
 set $win Mod4
 
 # is used in the bar {} block below. ISO 10646 = Unicode
-font xft:Inconsolata 8
+font xft:Dina 7
 
 # since I use older driver I need xinerama
 #force_xinerama yes

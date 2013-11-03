@@ -19,7 +19,8 @@ bindcode 122 exec amixer -qc 0 set Master 2dB- unmute
 bindcode 123 exec amixer -qc 0 set Master 2dB+ unmute
 
 # start a terminal
-bindsym $mod+Return exec uxterm -T HIER +bc -sl 100000 -si -sk -vb
+bindsym $win+Return exec uxterm -T HIER +bc -sl 100000 -si -sk -vb
+bindsym $mod+Return exec urxvt
 
 # start filemanager
 bindsym $win+e exec nautilus --no-desktop ~

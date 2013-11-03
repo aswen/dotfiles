@@ -6,6 +6,9 @@ set -x
 
 /usr/bin/xset b off
 /usr/bin/xset b 0 0 0
+/usr/bin/xset fp defaults
+/usr/bin/xset +fp ~/.fonts
+/usr/bin/xset +fp ~/.fonts/dina
 /usr/bin/gnome-sound-applet&
 /usr/bin/bluetooth-applet&
 /usr/bin/nm-applet&

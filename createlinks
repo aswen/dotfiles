@@ -12,7 +12,7 @@
 date=$(date +%Y%m%d)
 me=$(basename $0)
 mydir=$(dirname $0)
-dotfiles="bash_logout bashrc cryptvolumes gitconfig gitignore gscan2pdf gtk-bookmarks profile tmux.conf xmodmap xprofile Xresources bash_bindings"
+dotfiles="bash_logout bashrc cryptvolumes gitconfig gitignore gscan2pdf gtk-bookmarks profile tmux.conf xmodmap xprofile Xresources bash_bindings fonts"
 
 # FUNCTIONS
 die () {

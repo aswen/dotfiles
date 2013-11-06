@@ -106,6 +106,7 @@ URxvt*font          : -windows-dina-medium-r-normal-*-13-*-*-*-c-*-iso8859-1,-mi
 URxvt*boldFont      : -windows-dina-bold-r-normal-*-13-*-*-*-c-*-iso8859-1,-misc-fixed-bold-r-normal-*-15-*-*-*-*-*-iso10646-1,xft:AR PL UKai CN:bold:pixelsize=16
 
 URxvt*title                  : HIER
+URxvt*letterspace            : -1
 URxvt*scrollBar              : false
 URxvt*reverseVideo           : false
 URxvt*saveLines              : 100000

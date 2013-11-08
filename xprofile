@@ -26,17 +26,5 @@ set -x
 ##http://www.webupd8.org/2009/11/ubuntu-automatically-disable-touchpad.html
 /usr/bin/syndaemon -dKti2 -v
 #
-#
-### some gnome helpers
-##exec /usr/lib/gnome-settings-daemon/gnome-settings-daemon
-##exec /usr/lib/gnome-settings-daemon/gnome-fallback-mount-helper
-##exec /usr/lib/fingerprint-gui/fingerprint-polkit-agent -d
-### keyring daemon
-##exec /usr/bin/gnome-keyring-daemon --start --components=gpg
-##exec /usr/bin/gnome-keyring-daemon --start --components=secrets
-##exec /usr/bin/gnome-keyring-daemon --start --components=ssh
-##exec /usr/bin/gnome-keyring-daemon --start --components=pkcs11
-
-# this might not be necesary any more
-#/usr/bin/xrdb -load $HOME/.Xresources
+/usr/bin/vidalia &
 set +x

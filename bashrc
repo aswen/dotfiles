@@ -322,6 +322,3 @@ alias note_connect='mtpfs -o allow_other /mnt/note'
 alias note_disconnect='fusermount -u /mnt/note'
 
 alias ':qa'='exit'
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

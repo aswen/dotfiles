@@ -15,7 +15,7 @@ set -x
 /usr/bin/gkrellm&
 /usr/bin/glipper&
 /usr/bin/setxkbmap -variant euro -option -option compose:menu,lv3:ralt_switch,eurosign:5,ctrl:nocaps
-/usr/bin/xmodmap .xmodmap
+/usr/bin/xmodmap ~/.xmodmap
 /usr/bin/update-notifier&
 /usr/bin/libreoffice --quickstart --nologo&
 [ -x /usr/bin/numlockx ]&&/usr/bin/numlockx on

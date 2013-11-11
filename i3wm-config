@@ -47,8 +47,8 @@ bindcode 148 exec gnome-calculator
 for_window [class="(?i)gnome-calculator"] floating enable
 
 #start Zimbra in browser
-bindcode 163 exec google-chrome --allow-outdated-plugins --app=https://webmail.melkweg-online.nl --proxy-server="socks5://localhost:9050"
-bindsym $win+m exec google-chrome --allow-outdated-plugins --app=https://webmail.melkweg-online.nl --proxy-server="socks5://localhost:9050"
+bindcode 163 exec google-chrome --allow-outdated-plugins --app=https://webmail.melkweg-online.nl --proxy-pac-url=file:///home/alex/.proxy.pac
+bindsym $win+m exec google-chrome --allow-outdated-plugins --app=https://webmail.melkweg-online.nl --proxy-pac-url=file:///home/alex/.proxy.pac
 #for_window [class="(?i)webmail.melkwegit.nl"] floating enable
 for_window [title="(?i)Zimbra:"] border normal
 for_window [title="(?i)Zimbra: Compose"] floating enable
@@ -59,11 +59,11 @@ for_window [title="(?i)Zimbra: Forward"] floating enable
 for_window [title="(?i)Call with "] floating enable
 
 # start a browser
-bindsym $mod+p exec google-chrome --allow-outdated-plugins --proxy-server="socks5://localhost:9050"
-bindsym $mod+g exec google-chrome --allow-outdated-plugins --proxy-server="socks5://localhost:9050"
+bindsym $mod+p exec google-chrome --allow-outdated-plugins --proxy-pac-url=file:///home/alex/.proxy.pac
+bindsym $mod+g exec google-chrome --allow-outdated-plugins --proxy-pac-url=file:///home/alex/.proxy.pac
 #bindsym $mod+q workspace chat;exec google-chrome --app=https://webmail.melkweg-online.nl;split horizontal;exec pidgin;split vertical;exec skype
 bindsym $win+g exec gvim
-bindcode 180 exec google-chrome --allow-outdated-plugins --proxy-server="socks5://localhost:9050"
+bindcode 180 exec google-chrome --allow-outdated-plugins --proxy-pac-url=file:///home/alex/.proxy.pac
 for_window [class="(?i)google-chrome"] border none
 
 # NVidia settings

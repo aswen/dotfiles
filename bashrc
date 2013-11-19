@@ -263,29 +263,20 @@ fix_java () {
 
 # This function should make extracting archives easy. I copied it from Hunner but it doesn't work for me and i never tried to find out why...
 ex () {
-  if whence gtar > /dev/null ; then
-    TAR=gtar
-  else
-    TAR=tar
-  fi
-  if [ -f $1 ] ; then
+  if [ -s $1 ] ; then
     case $1 in
-      *.tar.bz2) $TAR xvjf $1  ;;
-      *.tar.gz)  $TAR xvzf $1  ;;
-      *.tar.xz)  $TAR xvJf $1  ;;
-      *.bz2)     bunzip2 $1    ;;
-      *.rar)     unrar x $1    ;;
-      *.gz)      gunzip $1     ;;
-      *.xz)      unxz $1       ;;
-      *.tar)     $TAR xvf $1   ;;
-      *.tbz2)    $TAR xvjf $1  ;;
-      *.tbz)     $TAR xvjf $1  ;;
-      *.tgz)     $TAR xvzf $1  ;;
-      *.txz)     $TAR xvJf $1  ;;
-      *.zip)     unzip $1      ;;
-      *.Z)       uncompress $1 ;;
-      *.7z)      7z x $1       ;;
-      *)         echo "don't know how to extract '$1'..." ;;
+      *.tar.bz2|*.tbz2|*.tbz) $TAR xvjf $1  ;;
+      *.tar.gz|*.tgz)         $TAR xvzf $1  ;;
+      *.tar.xz|*.txz)         $TAR xvJf $1  ;;
+      *.tar)                  $TAR xvf $1   ;;
+      *.bz2)                  bunzip2 $1    ;;
+      *.rar)                  unrar x $1    ;;
+      *.gz)                   gunzip $1     ;;
+      *.xz)                   unxz $1       ;;
+      *.zip)                  unzip $1      ;;
+      *.Z)                    uncompress $1 ;;
+      *.7z)                   7z x $1       ;;
+      *) echo "don't know how to extract '$1'..." ;;
     esac
   else
     echo "'$1' is not a valid file!"
@@ -297,10 +288,6 @@ parse_git_branch () {
 ref=$(git symbolic-ref HEAD 2> /dev/null) && echo "$(date +%H:%M:%S) $(pwd) ("${ref#refs/heads/}")" || echo "$(date +%H:%M:%S) ${USERNAME}@${HOSTNAME} $(pwd)"
 }
 PS1="\$(parse_git_branch)\$ "
-
-# this is here for the sake of ruby puppet
-# export RUBYLIB=/data/git/nedap/puppet/modules/hiera/lib:/data/git/nedap/puppet/modules/hiera-puppet/lib
-export PATH=/data/git/nedap/puppet/modules/hiera/bin:$PATH
 
 # have some colour support in tmux
 [ -z "$TMUX" ] && export TERM=xterm-256color
@@ -322,3 +309,18 @@ alias note_connect='mtpfs -o allow_other /mnt/note'
 alias note_disconnect='fusermount -u /mnt/note'
 
 alias ':qa'='exit'
+
+if [ -d "$HOME/bin" ];then
+  PATH="$HOME/bin:$PATH"
+fi
+
+if [ -d "$HOME/.rvm/bin" ];then
+  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+fi
+
+# this is here for the sake of ruby puppet
+# export RUBYLIB=/data/git/nedap/puppet/modules/hiera/lib:/data/git/nedap/puppet/modules/hiera-puppet/lib
+if [ -d /data/git/nedap/puppet/modules/hiera/bin ];then
+  export PATH=$PATH:/data/git/nedap/puppet/modules/hiera/bin
+fi

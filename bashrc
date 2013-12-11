@@ -99,6 +99,7 @@ alias chrome='/opt/google/chrome/chrome'
 alias tn='tmux new -s '
 alias ta='tmux attach -t '
 alias tl='tmux ls'
+alias ltmux="if tmux has-session -t $USER; then tmux attach -t $USER; else tmux new -s $USER; fi"
 
 # Backup
 rsyncopts='-avz --exclude=lost+found --no-perms --no-owner --no-group --append-verify'

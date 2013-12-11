@@ -31,3 +31,5 @@
 	excludesfile = /data/home/alex/.gitignore
 [branch]
         autosetuprebase = always
+[push]
+	default = upstream

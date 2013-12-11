@@ -248,7 +248,8 @@ fix_java () {
 
   # check dir
   [ -d /usr/$2 ] || curl $1 | sudo tar zxvf - -C /usr
-  ln -sf /usr/$2 /usr/java
+  [ -d /usr/java ] && sudo rm /usr/java
+  sudo ln -sf /usr/$2 /usr/java
 
   # fix google chrome plugin
   gcpplugins=/opt/google/chrome/plugins

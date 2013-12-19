@@ -1,4 +1,5 @@
 # i3 config file (v4)
+# get xwindow info: xprop
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
@@ -64,7 +65,7 @@ bindsym $mod+g exec chromium-browser --allow-outdated-plugins --proxy-pac-url=fi
 #bindsym $mod+q workspace chat;exec chromium-browser --app=https://webmail.melkweg-online.nl;split horizontal;exec pidgin;split vertical;exec skype
 bindsym $win+g exec gvim
 bindcode 180 exec chromium-browser --allow-outdated-plugins --proxy-pac-url=file:///home/alex/.proxy.pac
-for_window [class="(?i)chromium-browser"] border none
+for_window [class="(?i)Chromium"] border none
 
 # NVidia settings
 bindsym $win+n exec nvidia-settings

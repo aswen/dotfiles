@@ -48,8 +48,8 @@ bindcode 148 exec gnome-calculator
 for_window [class="(?i)gnome-calculator"] floating enable
 
 #start Zimbra in browser
-bindcode 163 exec chromium-browser --allow-outdated-plugins --app=https://webmail.melkweg-online.nl --proxy-pac-url=file:///home/alex/.proxy.pac
-bindsym $win+m exec chromium-browser --allow-outdated-plugins --app=https://webmail.melkweg-online.nl --proxy-pac-url=file:///home/alex/.proxy.pac
+bindcode 163 exec chromium-browser --allow-outdated-plugins --app=https://webmail.melkweg-online.nl
+bindsym $win+m exec chromium-browser --allow-outdated-plugins --app=https://webmail.melkweg-online.nl
 #for_window [class="(?i)webmail.melkwegit.nl"] floating enable
 for_window [title="(?i)Zimbra:"] border normal
 for_window [title="(?i)Zimbra: Compose"] floating enable
@@ -60,11 +60,11 @@ for_window [title="(?i)Zimbra: Forward"] floating enable
 for_window [title="(?i)Call with "] floating enable
 
 # start a browser
-bindsym $mod+p exec chromium-browser --allow-outdated-plugins --proxy-pac-url=file:///home/alex/.proxy.pac
-bindsym $mod+g exec chromium-browser --allow-outdated-plugins --proxy-pac-url=file:///home/alex/.proxy.pac
+bindsym $mod+p exec chromium-browser --allow-outdated-plugins
+bindsym $mod+g exec chromium-browser --allow-outdated-plugins
 #bindsym $mod+q workspace chat;exec chromium-browser --app=https://webmail.melkweg-online.nl;split horizontal;exec pidgin;split vertical;exec skype
 bindsym $win+g exec gvim
-bindcode 180 exec chromium-browser --allow-outdated-plugins --proxy-pac-url=file:///home/alex/.proxy.pac
+bindcode 180 exec chromium-browser --allow-outdated-plugins
 for_window [class="(?i)Chromium"] border none
 
 # NVidia settings

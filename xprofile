@@ -26,5 +26,5 @@ set -x
 ##http://www.webupd8.org/2009/11/ubuntu-automatically-disable-touchpad.html
 /usr/bin/syndaemon -dKti2 -v
 #
-/usr/bin/vidalia &
+#/usr/bin/vidalia &
 set +x

@@ -250,18 +250,29 @@ fix_java () {
   # check dir
   if [ ! -d /usr/$2 ];then
     sudo mkdir -p /usr/$2
-    wget -O - $1 | sudo tar zxvf - -C /usr
+    wget -O - $1 | sudo tar zxf - -C /usr
     sudo chown -R root:root /usr/$2
     sudo ln -sf /usr/$2 /usr/java
+
+    if $(uname -m | grep '64'); then
+      pluginsrc=/usr/java/lib/amd64/libnpjp2.so
+    else
+      pluginsrc=/usr/java/lib/i386/libnpjp2.so
+    fi
+
+    if [ ! -f ${pluginsrc} ];then
+      die 1 "pluginsource ${pluginsrc} not found"
+      return
+    fi
 
     # fix google chrome plugin
     gcpplugins=/opt/google/chrome/plugins
     [ -d ${gcplugins} ]|| sudo install -dm 755 ${gcplugins}
-    [ -L ${gcplugins}/libnpjp2.so ]|| sudo ln -s /usr/java/lib/amd64/libnpjp2.so ${gcplugins}/libnpjp2.so
+    [ -L ${gcplugins}/libnpjp2.so ]|| sudo ln -s ${pluginsrc} ${gcplugins}/libnpjp2.so
     # fix chromium plugin
     chromiumplugins=/usr/lib/chromium/plugins
     [ -d ${chromiumplugins} ]|| sudo install -dm 755 ${chromiumplugins}
-    [ -L ${chromiumplugins}/libnpjp2.so ]|| sudo ln -s /usr/java/lib/amd64/libnpjp2.so ${chromiumplugins}/libnpjp2.so
+    [ -L ${chromiumplugins}/libnpjp2.so ]|| sudo ln -s ${pluginsrc} ${chromiumplugins}/libnpjp2.so
 
     # fix ff plugin
     ffplugins=$(awk -v homedir=~ '/Path/ {sub (/Path=/, ""); print homedir"/.mozilla/firefox/"$1"/plugins" }' ~/.mozilla/firefox/profiles.ini)

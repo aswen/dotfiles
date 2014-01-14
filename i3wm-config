@@ -272,7 +272,7 @@ bindsym $win+F5 exec xrandr --output LVDS --auto --output DisplayPort-0 --auto -
 # finds out, if available)
 set $orange #d64937
 set $bgnorm #313131
-set $fgnorm #5882FA
+set $blue #5882FA
 set $bfoc   #7f7f7f
 set $bgunf  #3f3f3f
 set $bunf   #333333
@@ -297,7 +297,13 @@ bar {
       # class               border                 backgrd         text
       focused_workspace     $bfoc                 $orange         $white
       active_workspace      $orange               $bgunf          $white
-      inactive_workspace    $bunf                 $bgunf          $fgnorm
-      urgent_workspace      $bfoc                 #ff1203         $fgnorm
+      inactive_workspace    $bunf                 $bgunf          $blue
+      urgent_workspace      $bfoc                 #ff1203         $blue
     }
 }
+# class                 border  backgr. text    indicator
+client.focused          $bfoc   $orange $blue $bfoc
+client.focused_inactive $orange $bgunf  $blue #484e50
+client.unfocused        $bunf   $bgunf  $blue #292d2e
+client.urgent           $bfoc   $orange $blue #900000
+

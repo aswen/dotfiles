@@ -6,8 +6,7 @@
 set $mod Mod1
 set $win Mod4
 
-# is used in the bar {} block below. ISO 10646 = Unicode
-font xft:Dina 7
+workspace_auto_back_and_forth yes
 
 # since I use older driver I need xinerama
 #force_xinerama yes
@@ -63,9 +62,11 @@ for_window [title="(?i)Call with "] floating enable
 bindsym $mod+p exec chromium-browser --allow-outdated-plugins
 bindsym $mod+g exec chromium-browser --allow-outdated-plugins
 #bindsym $mod+q workspace chat;exec chromium-browser --app=https://webmail.melkweg-online.nl;split horizontal;exec pidgin;split vertical;exec skype
-bindsym $win+g exec gvim
 bindcode 180 exec chromium-browser --allow-outdated-plugins
 for_window [class="(?i)Chromium"] border none
+
+#gvim
+bindsym $win+g exec gvim
 
 # NVidia settings
 bindsym $win+n exec nvidia-settings
@@ -91,7 +92,14 @@ assign [class="(?i)gkrellm"] → meuk
 
 bindsym $win+t exec gscan2pdf
 
-bindsym $win+b exec vmware -x /data/vmware/vis/vis.vmx
+# take screenshot of entire workspace NOW
+bindsym Print exec /usr/bin/scrot '/tmp/%Y-%m-%d_%H:%M:%S.png' -m
+# take screenshot of this window NOW
+bindsym $mod+Print exec /usr/bin/scrot '/tmp/%Y-%m-%d_%H:%M:%S.png' -u
+# take screenshot selection
+bindsym $mod+Shift+Print exec /usr/bin/scrot '/tmp/%Y-%m-%d_%H:%M:%S.png' -s
+# take screenshot of this window with delay
+bindsym $win+Print exec /usr/bin/scrot '/tmp/%Y-%m-%d_%H:%M:%S.png' -u -d 2
 
 #bindsym $win+y exec spotify
 for_window [class="(?i)spotify"] border none
@@ -169,6 +177,8 @@ bindsym $mod+Ctrl+Shift+Right move workspace to output right
 bindsym $mod+Ctrl+Shift+Up move workspace to output up
 bindsym $mod+Ctrl+Shift+Down move workspace to output down
 
+bindsym $mod+comma workspace next
+bindsym $mod+semicolon workspace previous
 # split in horizontal orientation
 bindsym $mod+v split h
 
@@ -239,19 +249,19 @@ mode "resize" {
 # Pressing up will shrink the window’s height.
 # Pressing down will grow the window’s height.
   bindsym h resize shrink width 10 px or 10 ppt
-    bindsym j resize grow height 10 px or 10 ppt
-    bindsym k resize shrink height 10 px or 10 ppt
-    bindsym l resize grow width 10 px or 10 ppt
+  bindsym j resize grow height 10 px or 10 ppt
+  bindsym k resize shrink height 10 px or 10 ppt
+  bindsym l resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
-    bindsym Left resize shrink width 10 px or 10 ppt
-    bindsym Down resize shrink height 10 px or 10 ppt
-    bindsym Up resize grow  height 10 px or 10 ppt
-    bindsym Right resize grow width 10 px or 10 ppt
+  bindsym Left resize shrink width 10 px or 10 ppt
+  bindsym Down resize shrink height 10 px or 10 ppt
+  bindsym Up resize grow  height 10 px or 10 ppt
+  bindsym Right resize grow width 10 px or 10 ppt
 
 # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -281,25 +291,25 @@ set $white  #FFFFFF
 bar {
   status_command i3status -c ~/.i3/status
 #status_command i3status -c ~/.i3/status |dzen2 -fg white -ta r -w 1280 -fn "-misc-fixed-medium-r-normal--13-120-75-75-C-70-iso8859-1"
-    position bottom
-    mode     dock
-    modifier $mod
+  position bottom
+  mode     dock
+  modifier $mod
 
-    #workspace_buttons yes
+  #workspace_buttons yes
 
-    font pango:Inconsolata 10
+  font pango:Inconsolata 10
 
-    colors {
-      background #202020
-      statusline #5882FA
-      separator  #5882FA
+  colors {
+    background #202020
+    statusline #5882FA
+    separator  #5882FA
 
-      # class               border                 backgrd         text
-      focused_workspace     $bfoc                 $orange         $white
-      active_workspace      $orange               $bgunf          $white
-      inactive_workspace    $bunf                 $bgunf          $blue
-      urgent_workspace      $bfoc                 #ff1203         $blue
-    }
+    # class               border                 backgrd         text
+    focused_workspace     $bfoc                 $orange         $white
+    active_workspace      $orange               $bgunf          $white
+    inactive_workspace    $bunf                 $bgunf          $blue
+    urgent_workspace      $bfoc                 #ff1203         $blue
+  }
 }
 # class                 border  backgr. text    indicator
 client.focused          $bfoc   $orange $blue $bfoc

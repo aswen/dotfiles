@@ -1,6 +1,10 @@
 general {
-  colors   = true
-  interval = 5
+  output_format = "i3bar"
+  color_good     = "#5882FA"
+  color_degraded = "#FF8000"
+  color_bad      = "#FF0000"
+  colors         = true
+  interval       = 5
 }
 
 order += "run_watch EN"
@@ -12,10 +16,12 @@ order += "wireless wlan0"
 order += "ethernet eth0"
 order += "battery 0"
 order += "load"
+order += "cpu_temperature 0"
+order += "volume master"
 order += "time"
 
 wireless wlan0 {
-  format_up   = "wlan0: (%quality at %essid) %ip"
+  format_up   = "wlan0: (%quality at %essid, %bitrate) %ip"
   format_down = "wlan0: down"
 }
 
@@ -42,7 +48,9 @@ run_watch Whiskey {
 }
 
 battery 0 {
-  format = "%status %percentage %remaining"
+  format        = "%status %percentage %remaining"
+  #format       = "%status %percentage %remaining %emptytime %consumption"
+  #low_treshold = 10
 }
 
 run_watch DHCP {
@@ -59,4 +67,17 @@ load {
 
 disk "/" {
   format = "%free"
+}
+
+volume master {
+  format    = "♪: %volume"
+  device    = "default"
+  mixer     = "Master"
+  mixer_idx = 0
+}
+
+cpu_temperature 0 {
+  format       = "%degrees °C"
+  path         = "/sys/devices/platform/coretemp.0/temp1_input"
+  #max_treshold = 80
 }

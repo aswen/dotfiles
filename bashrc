@@ -281,7 +281,7 @@ fix_java () {
     # fix ff plugin
     if [ -f ~/.mozilla/firefox/profiles.ini ];then
       ffplugins=$(awk -v homedir=~ '/Path/ {sub (/Path=/, ""); print homedir"/.mozilla/firefox/"$1"/plugins" }' ~/.mozilla/firefox/profiles.ini)
-      [ -d $${ffplugins} ] || mkdir -p ${ffplugins}
+      [ -d ${ffplugins} ] || mkdir -p ${ffplugins}
       [ -L ${ffplugins}/libnpjp2.so ]|| sudo ln -s /usr/java/lib/amd64/libnpjp2.so ${ffplugins}/libnpjp2.so
     fi
   else

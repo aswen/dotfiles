@@ -297,7 +297,7 @@ bar {
 
   #workspace_buttons yes
 
-  font pango:Inconsolata 10
+  font pango:Dina 7
 
   colors {
     background #202020

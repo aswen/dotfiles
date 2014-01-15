@@ -248,15 +248,19 @@ fix_java () {
   fi
 
   # check dir
+
   if [ ! -d /usr/$2 ];then
     sudo mkdir -p /usr/$2
     wget -O - $1 | sudo tar zxf - -C /usr
     sudo chown -R root:root /usr/$2
+    sudo rm /usr/java
     sudo ln -sf /usr/$2 /usr/java
 
-    if $(uname -m | grep '64'); then
+    if [ "$(uname -m | grep '64')" ]; then
+      echo we are on 64bit
       pluginsrc=/usr/java/lib/amd64/libnpjp2.so
     else
+      echo we are on 32bit
       pluginsrc=/usr/java/lib/i386/libnpjp2.so
     fi
 
@@ -275,8 +279,11 @@ fix_java () {
     [ -L ${chromiumplugins}/libnpjp2.so ]|| sudo ln -s ${pluginsrc} ${chromiumplugins}/libnpjp2.so
 
     # fix ff plugin
-    ffplugins=$(awk -v homedir=~ '/Path/ {sub (/Path=/, ""); print homedir"/.mozilla/firefox/"$1"/plugins" }' ~/.mozilla/firefox/profiles.ini)
-    [ -L ${ffplugins}/libnpjp2.so ]|| sudo ln -s /usr/java/lib/amd64/libnpjp2.so ${ffplugins}/libnpjp2.so
+    if [ -f ~/.mozilla/firefox/profiles.ini ];then
+      ffplugins=$(awk -v homedir=~ '/Path/ {sub (/Path=/, ""); print homedir"/.mozilla/firefox/"$1"/plugins" }' ~/.mozilla/firefox/profiles.ini)
+      [ -d $${ffplugins} ] || mkdir -p ${ffplugins}
+      [ -L ${ffplugins}/libnpjp2.so ]|| sudo ln -s /usr/java/lib/amd64/libnpjp2.so ${ffplugins}/libnpjp2.so
+    fi
   else
     die 1 "dir /usr/$2 already exists"
   fi

@@ -1,72 +1,84 @@
 no-blackfilter = 1
 frontend = scanadf
-mode = True Gray
 <Paper>
-    <foto>
-        y = 130
+    <A4>
         l = 0
+        y = 297
+        x = 210
+        t = 0
+    </A4>
+    <"Raet loonstrook">
+        l = 0
+        y = 300
+        x = 176
+        t = 0
+    </"Raet loonstrook">
+    <a3>
+        l = 0
+        y = 420
+        x = 297
+        t = 0
+    </a3>
+    <foto>
+        l = 0
+        y = 130
         x = 88
         t = 0
     </foto>
     <a5>
-        y = 210
         l = 0
+        y = 210
         x = 148
         t = 0
     </a5>
     <a6>
-        y = 105
         l = 0
+        y = 105
         x = 148
         t = 0
     </a6>
-    <A4>
-        y = 297
+    <"Getronics loonstrook">
         l = 0
-        x = 210
+        y = 300
+        x = 180
         t = 0
-    </A4>
-    <a3>
-        y = 420
-        l = 0
-        x = 297
-        t = 0
-    </a3>
+    </"Getronics loonstrook">
     <A4+acceptgiro>
-        y = 400
         l = 0
+        y = 400
         x = 210
         t = 0
     </A4+acceptgiro>
 </Paper>
+mode = True Gray
 output-pages = 1
 ocr engine = ocropus
 no-blurfilter = 1
-y = 297
+y = 300
 keywords = 
 layout = single
-cwd = /data/home/alex/Documenten/huizen/Lochem, Hugo de Grootlaan 18
-image type = jpg
-Paper size = A4
+cwd = /home/alex/Documenten/archief/2004
+image type = pdf
+Paper size = Getronics loonstrook
 subject = 
 user_defined_tools = gimp %i
 default filename = %y-%m-%d %t
 startup warning = 1
 no-grayfilter = 1
-title = Tandarts vd Wal dossier Alex
-source = FlatBed
+title = Baas en Roost - Loonstroken 2004
+source = Automatic Document Feeder(centrally aligned)
 rotate facing = 0
 cache options = 1
 author = Alexander Swen
 view files toggle = 
-selection = 205
 selection = 0
-selection = 1324
-selection = 1504
-window_x = 0
-window_y = 14
+selection = 0
+selection = 1392
+selection = 2337
+window_x = 1920
+window_y = 18
 quality = 75
-date offset = -42
+date offset = -3462
 version = 1.0.4
 device = brother3:net1;dev0
 scan prefix = 
@@ -345,7 +357,7 @@ OCR output = replace
 OCR on scan = 
 t = 0
 Page range = selected
-window_height = 868
+window_height = 1044
 <default>
     <brother3:net1;dev0>
         br-x = 210
@@ -365,18 +377,18 @@ rotate reverse = 0
 cycle sane handle = 
 brightness = 0
 Dark threshold = 0.12
-pages to scan = 1
+pages to scan = all
 Blank threshold = 0
 resolution = 200
 unpaper on scan = 
 libsane-perl version = 0.05
-x = 210
+x = 180
 downsample dpi = 150
-window_width = 1596
+window_width = 1017
 threshold tool = 80
 deskew-scan-direction = left,right,top,bottom
 unsharp sigma = 1
-thumb panel = 252
+thumb panel = 148
 contrast = 0
 unsharp threshold = 0.05
 SANE version = 1.0.22

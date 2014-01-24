@@ -2,83 +2,95 @@ no-blackfilter = 1
 frontend = scanadf
 <Paper>
     <A4>
-        l = 0
         y = 297
+        l = 0
         x = 210
         t = 0
     </A4>
-    <"Raet loonstrook">
+    <A5>
+        y = 210
         l = 0
-        y = 300
-        x = 176
+        x = 148
         t = 0
-    </"Raet loonstrook">
-    <a3>
+    </A5>
+    <A6>
+        y = 105
         l = 0
+        x = 148
+        t = 0
+    </A6>
+    <A3>
         y = 420
+        l = 0
         x = 297
         t = 0
-    </a3>
-    <foto>
+    </A3>
+    <"foto klein">
+        y = 146
         l = 0
+        x = 98
+        t = 0
+    </"foto klein">
+    <"foto groot">
+        y = 184
+        l = 0
+        x = 123
+        t = 0
+    </"foto groot">
+    <foto>
         y = 130
+        l = 0
         x = 88
         t = 0
     </foto>
-    <a5>
-        l = 0
-        y = 210
-        x = 148
-        t = 0
-    </a5>
-    <a6>
-        l = 0
-        y = 105
-        x = 148
-        t = 0
-    </a6>
-    <"Getronics loonstrook">
-        l = 0
-        y = 300
-        x = 180
-        t = 0
-    </"Getronics loonstrook">
     <A4+acceptgiro>
-        l = 0
         y = 400
+        l = 0
         x = 210
         t = 0
     </A4+acceptgiro>
+    <"Raet loonstrook">
+        y = 300
+        l = 0
+        x = 176
+        t = 0
+    </"Raet loonstrook">
+    <"Getronics loonstrook">
+        y = 300
+        l = 0
+        x = 180
+        t = 0
+    </"Getronics loonstrook">
 </Paper>
 mode = True Gray
 output-pages = 1
 ocr engine = ocropus
 no-blurfilter = 1
-y = 300
+y = 297
 keywords = 
 layout = single
-cwd = /home/alex/Documenten/archief/2004
+cwd = /data/home/alex/Documenten/archief
 image type = pdf
-Paper size = Getronics loonstrook
+Paper size = A4
 subject = 
 user_defined_tools = gimp %i
 default filename = %y-%m-%d %t
 startup warning = 1
 no-grayfilter = 1
-title = Baas en Roost - Loonstroken 2004
+title = Getuigschift jeugd EHBO A
 source = Automatic Document Feeder(centrally aligned)
 rotate facing = 0
 cache options = 1
 author = Alexander Swen
 view files toggle = 
 selection = 0
-selection = 0
-selection = 1392
-selection = 2337
+selection = 49
+selection = 1205
+selection = 1857
 window_x = 1920
 window_y = 18
 quality = 75
-date offset = -3462
+date offset = -9058
 version = 1.0.4
 device = brother3:net1;dev0
 scan prefix = 
@@ -184,27 +196,6 @@ black-threshold = 0.33
         EOF
     </v4l:/dev/video0>
     <brother3:net1;dev0>
-        24bit Color = <<EOF
-        Usage: scanadf [OPTION]...
-        
-        Start image acquisition on a scanner device and write image data to
-        output files.
-        
-           [ -d | --device-name <device> ]   use a given scanner device.
-           [ -h | --help ]                   display this help message and exit.
-           [ -L | --list-devices ]           show available scanner devices.
-           [ -v | --verbose ]                give even more status messages.
-           [ -V | --version ]                print version information.
-           [ -N | --no-overwrite ]           don't overwrite existing files.
-        
-           [ -o | --output-file <name> ]     name of file to write image data
-                                             (%d replacement in output file name).
-           [ -S | --scan-script <name> ]     name of script to run after every scan.
-           [ --script-wait ]                 wait for scripts to finish before exit
-           [ -s | --start-count <num> ]      page count of first scanned image.
-           [ -e | --end-count <num> ]        last page number to scan.
-           [ -r | --raw ]                    write raw image data to file.
-        EOF
         True Gray = <<EOF
         Usage: scanadf [OPTION]...
         
@@ -252,6 +243,75 @@ black-threshold = 0.33
         
         List of available devices:
             brother3:net1;dev0
+        EOF
+        24bit Color = <<EOF
+        Usage: scanadf [OPTION]...
+        
+        Start image acquisition on a scanner device and write image data to
+        output files.
+        
+           [ -d | --device-name <device> ]   use a given scanner device.
+           [ -h | --help ]                   display this help message and exit.
+           [ -L | --list-devices ]           show available scanner devices.
+           [ -v | --verbose ]                give even more status messages.
+           [ -V | --version ]                print version information.
+           [ -N | --no-overwrite ]           don't overwrite existing files.
+        
+           [ -o | --output-file <name> ]     name of file to write image data
+                                             (%d replacement in output file name).
+           [ -S | --scan-script <name> ]     name of script to run after every scan.
+           [ --script-wait ]                 wait for scripts to finish before exit
+           [ -s | --start-count <num> ]      page count of first scanned image.
+           [ -e | --end-count <num> ]        last page number to scan.
+           [ -r | --raw ]                    write raw image data to file.
+        
+        Options specific to device `brother3:net1;dev0':
+          Mode:
+            --mode Black & White|Gray[Error Diffusion]|True Gray|24bit Color [24bit Color]
+                Select the scan mode
+            --resolution 100|150|200|300|400|600|1200|2400|4800|9600dpi [200]
+                Sets the resolution of the scanned image.
+            --source FlatBed|Automatic Document Feeder(left aligned)|Automatic Document Feeder(centrally aligned) [Automatic Document Feeder(left aligned)]
+                Selects the scan source (such as a document-feeder).
+            --brightness -50..50% (in steps of 1) [inactive]
+                Controls the brightness of the acquired image.
+            --contrast -50..50% (in steps of 1) [inactive]
+                Controls the contrast of the acquired image.
+          Geometry:
+            -l 0..297mm (in steps of 0.0999908) [0]
+                Top-left x position of scan area.
+            -t 0..420mm (in steps of 0.0999908) [0]
+                Top-left y position of scan area.
+            -x 0..297mm (in steps of 0.0999908) [296.973]
+                Width of scan-area.
+            -y 0..420mm (in steps of 0.0999908) [419.962]
+                Height of scan-area.
+        
+        Type ``scanadf --help -d DEVICE'' to get list of all options for DEVICE.
+        
+        List of available devices:
+            brother3:net1;dev0 v4l:/dev/video0
+        EOF
+        default = <<EOF
+        Usage: scanadf [OPTION]...
+        
+        Start image acquisition on a scanner device and write image data to
+        output files.
+        
+           [ -d | --device-name <device> ]   use a given scanner device.
+           [ -h | --help ]                   display this help message and exit.
+           [ -L | --list-devices ]           show available scanner devices.
+           [ -v | --verbose ]                give even more status messages.
+           [ -V | --version ]                print version information.
+           [ -N | --no-overwrite ]           don't overwrite existing files.
+        
+           [ -o | --output-file <name> ]     name of file to write image data
+                                             (%d replacement in output file name).
+           [ -S | --scan-script <name> ]     name of script to run after every scan.
+           [ --script-wait ]                 wait for scripts to finish before exit
+           [ -s | --start-count <num> ]      page count of first scanned image.
+           [ -e | --end-count <num> ]        last page number to scan.
+           [ -r | --raw ]                    write raw image data to file.
         EOF
         Black & White = <<EOF
         Usage: scanadf [OPTION]...
@@ -301,40 +361,9 @@ black-threshold = 0.33
         List of available devices:
             brother3:net1;dev0 v4l:/dev/video0
         EOF
-        default = <<EOF
-        Usage: scanadf [OPTION]...
-        
-        Start image acquisition on a scanner device and write image data to
-        output files.
-        
-           [ -d | --device-name <device> ]   use a given scanner device.
-           [ -h | --help ]                   display this help message and exit.
-           [ -L | --list-devices ]           show available scanner devices.
-           [ -v | --verbose ]                give even more status messages.
-           [ -V | --version ]                print version information.
-           [ -N | --no-overwrite ]           don't overwrite existing files.
-        
-           [ -o | --output-file <name> ]     name of file to write image data
-                                             (%d replacement in output file name).
-           [ -S | --scan-script <name> ]     name of script to run after every scan.
-           [ --script-wait ]                 wait for scripts to finish before exit
-           [ -s | --start-count <num> ]      page count of first scanned image.
-           [ -e | --end-count <num> ]        last page number to scan.
-           [ -r | --raw ]                    write raw image data to file.
-        EOF
     </brother3:net1;dev0>
 </cache>
 <profile>
-    <foto>
-        source = Automatic Document Feeder(centrally aligned)
-        Paper size = Bewerk
-        mode = 24bit Color
-        x = 130
-        y = 88
-        l = 0
-        resolution = 400
-        t = 0
-    </foto>
     <"brief meerdere pagina's">
         source = Automatic Document Feeder(centrally aligned)
         Paper size = A4
@@ -347,6 +376,16 @@ black-threshold = 0.33
         resolution = 200
         t = 0
     </"brief meerdere pagina's">
+    <foto>
+        source = FlatBed
+        Paper size = foto klein
+        mode = 24bit Color
+        x = 101
+        l = 0
+        y = 149
+        resolution = 600
+        t = 0
+    </foto>
 </profile>
 unsharp radius = 0
 window_maximize = 
@@ -377,14 +416,14 @@ rotate reverse = 0
 cycle sane handle = 
 brightness = 0
 Dark threshold = 0.12
-pages to scan = all
+pages to scan = 1
 Blank threshold = 0
 resolution = 200
 unpaper on scan = 
 libsane-perl version = 0.05
-x = 180
+x = 210
 downsample dpi = 150
-window_width = 1017
+window_width = 956
 threshold tool = 80
 deskew-scan-direction = left,right,top,bottom
 unsharp sigma = 1

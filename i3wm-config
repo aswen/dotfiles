@@ -42,6 +42,9 @@ bindsym $win+w exec libreoffice --nologo --writer
 bindsym $win+c exec libreoffice --nologo --calc
 bindsym $win+i exec libreoffice --nologo --impress
 
+# java config tool
+bindsym $win+j exec /usr/java/bin/jcontrol
+
 # start calculator
 bindcode 148 exec gnome-calculator
 for_window [class="(?i)gnome-calculator"] floating enable

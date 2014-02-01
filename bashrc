@@ -292,6 +292,7 @@ fix_java () {
 
 # This function should make extracting archives easy. I copied it from Hunner but it doesn't work for me and i never tried to find out why...
 ex () {
+  TAR=`which tar`
   if [ -s $1 ] ; then
     case $1 in
       *.tar.bz2|*.tbz2|*.tbz) $TAR xvjf $1  ;;

@@ -9,6 +9,7 @@ set -x
 /usr/bin/xset fp defaults
 /usr/bin/xset +fp ~/.fonts
 /usr/bin/xset +fp ~/.fonts/dina
+eval `/usr/bin/gnome-keyring-daemon --start --components=pkcs11`
 /usr/bin/gnome-sound-applet&
 /usr/bin/bluetooth-applet&
 /usr/bin/nm-applet&

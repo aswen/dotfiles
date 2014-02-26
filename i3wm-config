@@ -22,6 +22,10 @@ bindcode 123 exec amixer -qc 0 set Master 2dB+ unmute
 bindsym $win+Return exec uxterm -T HIER +bc -sl 100000 -si -sk -vb
 bindsym $mod+Return exec urxvt
 
+
+# reset wlan shit
+bindsym $mod+w sudo modprobe -r iwlwifi;sudo modprobe iwlwifi
+
 # start filemanager
 bindsym $win+e exec nautilus --no-desktop ~
 
@@ -280,6 +284,8 @@ bindsym $win+F3 exec xrandr --output LVDS --off --output DisplayPort-2 --auto --
 bindsym $win+F4 exec xrandr --output LVDS --auto --output VGA-0 --auto --right-of LVDS
 # scherm op displayport laptop
 bindsym $win+F5 exec xrandr --output LVDS --auto --output DisplayPort-0 --auto --right-of LVDS
+# tweede scherm op displayport-2 laptop
+bindsym $win+F6 exec xrandr --output LVDS --auto --output DisplayPort-2 --auto --right-of LVDS
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

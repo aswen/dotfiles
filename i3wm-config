@@ -23,9 +23,6 @@ bindsym $win+Return exec uxterm -T HIER +bc -sl 100000 -si -sk -vb
 bindsym $mod+Return exec urxvt
 
 
-# reset wlan shit
-bindsym $mod+w sudo modprobe -r iwlwifi;sudo modprobe iwlwifi
-
 # start filemanager
 bindsym $win+e exec nautilus --no-desktop ~
 
@@ -76,7 +73,7 @@ for_window [class="(?i)Chromium"] border none
 bindsym $win+g exec gvim
 
 # NVidia settings
-bindsym $win+n exec nvidia-settings
+#bindsym $win+n exec nvidia-settings
 for_window [class="(?i)nvidia-settings"] floating enable
 
 for_window [class="(?i)bluetooth-"] floating enable
@@ -85,6 +82,9 @@ assign [class="(?i)bluetooth-"] → meuk
 for_window [class="(?i)gnome-volume-control.gstreamer"] floating enable
 assign [class="(?i)gnome-volume-control.gstreamer"] → meuk
 
+# reset wlan shit
+bindsym $mod+w sudo modprobe -r iwlwifi;sudo modprobe iwlwifi
+bindsym $mod+n exec /data/git/alex/scripts/networktoggle
 bindsym $win+z exec /data/git/alex/scripts/touchpadtoggle
 
 for_window [class="(?i)tsclient"] floating enable

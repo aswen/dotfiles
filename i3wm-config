@@ -281,7 +281,7 @@ bindsym $win+F1 exec xrandr -s 1600x900 --output LVDS --auto --output DisplayPor
 # nedap
 bindsym $win+F2 exec xrandr --output LVDS --off --output DisplayPort-1 --auto --output DisplayPort-2 --auto --right-of DisplayPort-1
 # 3 schermen!!
-bindsym $win+F3 exec xrandr --output DisplayPort-1 --auto --pos 1600x0 --output LVDS --auto --pos 0x500 --output DisplayPort-2 --auto --pos 3520x0
+bindsym $win+F3 exec xrandr --output DisplayPort-1 --auto --pos 1600x0 --output LVDS --auto --pos 0x550 --output DisplayPort-2 --auto --pos 3520x0
 # home
 bindsym $win+F4 exec xrandr --output LVDS --off --output DisplayPort-2 --auto --output VGA-0 --auto --left-of DisplayPort-2
 # beamer

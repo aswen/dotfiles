@@ -86,6 +86,7 @@ assign [class="(?i)gnome-volume-control.gstreamer"] → meuk
 bindsym $mod+w sudo modprobe -r iwlwifi;sudo modprobe iwlwifi
 bindsym $mod+n exec /data/git/alex/scripts/networktoggle
 bindsym $win+z exec /data/git/alex/scripts/touchpadtoggle
+bindcode 199 exec /data/git/alex/scripts/touchpadtoggle
 
 for_window [class="(?i)tsclient"] floating enable
 for_window [class="(?i)remmina"] floating enable

@@ -3,6 +3,9 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# let's set a background first
+exec --no-startup-id /usr/bin/feh --bg-scale /usr/share/wallpapers/joy/contents/images/1920x1200.png
+
 set $mod Mod1
 set $win Mod4
 

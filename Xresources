@@ -81,6 +81,7 @@ xterm*fadeColor              : Solarized_light_base03
 xterm*cursorColor            : Solarized_light_base1
 xterm*pointerColorBackground : Solarized_light_base01
 xterm*pointerColorForeground : Solarized_light_base1
+xterm*antialias              : true
 
 xterm*color0  : Solarized_light_base02
 xterm*color1  : Solarized_red
@@ -122,6 +123,7 @@ URxvt*url-launcher           : x-www-browser
 URxvt*urlLauncher            : x-www-browser
 URxvt*iso14755               : false
 URxvt*iso14755_52            : false
+URxvt*antialias              : true
 
 !URxvt Molokai
 !URxvt*background  : Molokai_black

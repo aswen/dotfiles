@@ -21,6 +21,10 @@ bindcode 121 exec amixer -q set Master toggle
 bindcode 122 exec amixer -qc 0 set Master 2dB- unmute
 bindcode 123 exec amixer -qc 0 set Master 2dB+ unmute
 
+#brightness
+bindcode 233 exec sudo /data/git/alex/scripts/brightctl up
+bindcode 232 exec sudo /data/git/alex/scripts/brightctl down
+
 # start a terminal
 bindsym $win+Return exec uxterm -T HIER +bc -sl 100000 -si -sk -vb
 bindsym $mod+Return exec urxvt

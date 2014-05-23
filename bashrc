@@ -121,7 +121,7 @@ alias tailf='tail -f'
 alias dusort='du -h --time --max-depth=1|sort -hr'
 
 # ssh add
-alias sad='ssh-add ~/.ssh/id_rsa_nedap.local;ssh-add ~/.ssh/id_rsa_nedap_moves;ssh-add ~/.ssh/id_rsa_swen.nu'
+alias sad='for key in ~/.ssh/*.priv;do ssh-add -t 28800 ${key};done'
 
 # just for fun
 alias say='echo "$1" | espeak -s 120 2>/dev/null'

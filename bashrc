@@ -354,3 +354,10 @@ fi
 if [ -d /data/git/nedap/puppet/modules/hiera/bin ];then
   export PATH=$PATH:/data/git/nedap/puppet/modules/hiera/bin
 fi
+
+# thanks to commandlineFu (User Klisanor) (http://www.commandlinefu.com/commands/view/13468/google-translate)
+translate () {
+  lang=nl
+  text=$*
+  wget -U "Mozilla/5.0" -qO - "http://translate.google.com/translate_a/t?client=t&text=${text}&sl=auto&tl=${lang}" | sed 's/\[\[\[\"//' | cut -d \" -f 1
+}

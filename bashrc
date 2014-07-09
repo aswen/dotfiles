@@ -165,6 +165,15 @@ log_msg () {
   echo "${time_running} $1"|tee -a ${short_log}
 }
 
+# This fetches my dotvim
+getdotvim () {
+  [ -d ~/.vim ]&& mv .vim{,.old}
+  cd ~
+  git clone git@github.com:aswen/dotvim
+  cd dotvim
+  ./createlinks
+}
+
 # This lists all available luks encrypted partitions
 listluks () {
 sudo fdisk -l 2>&1|awk '/^\/dev\/sd[a-z][0-9]/ {print $1}'|while read part;do

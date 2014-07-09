@@ -2,8 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# let's work in vi mode (http://www.catonmat.net/download/bash-vi-editing-mode-cheat-sheet.txt)
-set -o vi
 # set some bindings
 [ -f ~/.bash_bindings ] && . ~/.bash_bindings
 

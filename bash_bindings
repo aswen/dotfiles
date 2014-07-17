@@ -20,12 +20,6 @@ bind -m vi-command 'Control-e: vi-append-eol'
 bind -m vi-command '"ZZ": emacs-editing-mode'
 
 ## Insert-mode bindings
-# up arrow or PgUp: append to previous history line
-bind -m vi-insert '"\M-[A": ""'
-bind -m vi-insert '"\M-[5~": ""'
-# dn arrow or PgDn: append to next history line
-bind -m vi-insert '"\M-[B": ""'
-bind -m vi-insert '"\M-[6~": ""'
 # Ctrl-A: insert at line start like in emacs mode
 bind -m vi-insert 'Control-a: beginning-of-line'
 # Ctrl-E: append at line end like in emacs mode

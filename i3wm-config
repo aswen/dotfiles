@@ -4,7 +4,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # let's set a background first
-exec --no-startup-id /usr/bin/feh --bg-scale /usr/share/wallpapers/joy/contents/images/1920x1200.png
+exec --no-startup-id /usr/bin/feh --bg-scale /home/alex/P1150009.JPG
 
 set $mod Mod1
 set $win Mod4
@@ -299,7 +299,7 @@ bindsym $win+F6 exec --no-startup-id xrandr --output LVDS --auto --output Displa
 # tweede scherm op displayport-2 laptop
 bindsym $win+F7 exec --no-startup-id xrandr --output LVDS --auto --output DisplayPort-2 --auto --right-of LVDS
 
-bindsym $mod+x "exec /usr/bin/setxkbmap -variant euro -option -option compose:menu -option lv3:ralt_switch -option eurosign:5 -option ctrl:nocaps ;exec xmodmap ~/.xmodmap;exec feh --bg-scale /usr/share/wallpapers/joy/contents/images/1920x1200.png"
+bindsym $mod+x "exec /usr/bin/setxkbmap -variant euro -option -option compose:menu -option lv3:ralt_switch -option eurosign:5 -option ctrl:nocaps ;exec xmodmap ~/.xmodmap;exec feh --bg-scale /home/alex/P1150009.JPG"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

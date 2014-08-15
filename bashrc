@@ -2,11 +2,11 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# set some bindings
-[ -f ~/.bash_bindings ] && . ~/.bash_bindings
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
+
+# set some bindings
+[ -f ~/.bash_bindings ] && . ~/.bash_bindings
 
 # don't put duplicate lines in the history. See bash(1) for more options
 # ... or force ignoredups and ignorespace

@@ -3,71 +3,71 @@ frontend = scanadf
 mode = True Gray
 <Paper>
     <A6>
-        y = 105
         l = 0
+        y = 105
         x = 148
         t = 0
     </A6>
     <A5>
-        y = 210
         l = 0
+        y = 210
         x = 148
         t = 0
     </A5>
     <A4>
-        y = 297
         l = 0
+        y = 297
         x = 210
         t = 0
     </A4>
     <"Raet loonstrook">
-        y = 300
         l = 0
+        y = 300
         x = 176
         t = 0
     </"Raet loonstrook">
     <A3>
-        y = 420
         l = 0
+        y = 420
         x = 297
         t = 0
     </A3>
     <foto>
-        y = 130
         l = 0
+        y = 130
         x = 88
         t = 0
     </foto>
-    <"Getronics loonstrook">
-        y = 300
+    <ASNafschrift>
         l = 0
+        y = 148
+        x = 211
+        t = 0
+    </ASNafschrift>
+    <"Getronics loonstrook">
+        l = 0
+        y = 300
         x = 180
         t = 0
     </"Getronics loonstrook">
     <"foto groot">
-        y = 184
         l = 0
+        y = 184
         x = 123
         t = 0
     </"foto groot">
-    <ASNafschrift>
-        y = 148
-        l = 0
-        x = 211
-        t = 0
-    </ASNafschrift>
-    <"foto klein">
-        y = 146
-        l = 0
-        x = 98
-        t = 0
-    </"foto klein">
     <A4+acceptgiro>
-        y = 400
         l = 0
+        y = 400
         x = 210
         t = 0
     </A4+acceptgiro>
+    <"foto klein">
+        l = 0
+        y = 146
+        x = 98
+        t = 0
+    </"foto klein">
 </Paper>
 output-pages = 1
 ocr engine = ocropus
@@ -94,7 +94,7 @@ selection = 0
 selection = 0
 selection = 692
 selection = 461
-window_x = 1920
+window_x = 2880
 window_y = 18
 quality = 75
 date offset = -1
@@ -325,54 +325,6 @@ black-threshold = 0.33
         EOF
     </v4l:/dev/video0>
     <brother3:net1;dev0>
-        True Gray = <<EOF
-        Usage: scanadf [OPTION]...
-        
-        Start image acquisition on a scanner device and write image data to
-        output files.
-        
-           [ -d | --device-name <device> ]   use a given scanner device.
-           [ -h | --help ]                   display this help message and exit.
-           [ -L | --list-devices ]           show available scanner devices.
-           [ -v | --verbose ]                give even more status messages.
-           [ -V | --version ]                print version information.
-           [ -N | --no-overwrite ]           don't overwrite existing files.
-        
-           [ -o | --output-file <name> ]     name of file to write image data
-                                             (%d replacement in output file name).
-           [ -S | --scan-script <name> ]     name of script to run after every scan.
-           [ --script-wait ]                 wait for scripts to finish before exit
-           [ -s | --start-count <num> ]      page count of first scanned image.
-           [ -e | --end-count <num> ]        last page number to scan.
-           [ -r | --raw ]                    write raw image data to file.
-        
-        Options specific to device `brother3:net1;dev0':
-          Mode:
-            --mode Black & White|Gray[Error Diffusion]|True Gray|24bit Color [True Gray]
-                Select the scan mode
-            --resolution 100|150|200|300|400|600|1200|2400|4800|9600dpi [200]
-                Sets the resolution of the scanned image.
-            --source FlatBed|Automatic Document Feeder(left aligned)|Automatic Document Feeder(centrally aligned) [Automatic Document Feeder(left aligned)]
-                Selects the scan source (such as a document-feeder).
-            --brightness -50..50% (in steps of 1) [0]
-                Controls the brightness of the acquired image.
-            --contrast -50..50% (in steps of 1) [0]
-                Controls the contrast of the acquired image.
-          Geometry:
-            -l 0..297mm (in steps of 0.0999908) [0]
-                Top-left x position of scan area.
-            -t 0..420mm (in steps of 0.0999908) [0]
-                Top-left y position of scan area.
-            -x 0..297mm (in steps of 0.0999908) [296.973]
-                Width of scan-area.
-            -y 0..420mm (in steps of 0.0999908) [419.962]
-                Height of scan-area.
-        
-        Type ``scanadf --help -d DEVICE'' to get list of all options for DEVICE.
-        
-        List of available devices:
-            brother3:net1;dev0
-        EOF
         24bit Color = <<EOF
         Usage: scanadf [OPTION]...
         
@@ -421,7 +373,103 @@ black-threshold = 0.33
         List of available devices:
             brother3:net1;dev0 v4l:/dev/video0
         EOF
+        True Gray = <<EOF
+        Usage: scanadf [OPTION]...
+        
+        Start image acquisition on a scanner device and write image data to
+        output files.
+        
+           [ -d | --device-name <device> ]   use a given scanner device.
+           [ -h | --help ]                   display this help message and exit.
+           [ -L | --list-devices ]           show available scanner devices.
+           [ -v | --verbose ]                give even more status messages.
+           [ -V | --version ]                print version information.
+           [ -N | --no-overwrite ]           don't overwrite existing files.
+        
+           [ -o | --output-file <name> ]     name of file to write image data
+                                             (%d replacement in output file name).
+           [ -S | --scan-script <name> ]     name of script to run after every scan.
+           [ --script-wait ]                 wait for scripts to finish before exit
+           [ -s | --start-count <num> ]      page count of first scanned image.
+           [ -e | --end-count <num> ]        last page number to scan.
+           [ -r | --raw ]                    write raw image data to file.
+        
+        Options specific to device `brother3:net1;dev0':
+          Mode:
+            --mode Black & White|Gray[Error Diffusion]|True Gray|24bit Color [True Gray]
+                Select the scan mode
+            --resolution 100|150|200|300|400|600|1200|2400|4800|9600dpi [200]
+                Sets the resolution of the scanned image.
+            --source FlatBed|Automatic Document Feeder(left aligned)|Automatic Document Feeder(centrally aligned) [Automatic Document Feeder(left aligned)]
+                Selects the scan source (such as a document-feeder).
+            --brightness -50..50% (in steps of 1) [0]
+                Controls the brightness of the acquired image.
+            --contrast -50..50% (in steps of 1) [0]
+                Controls the contrast of the acquired image.
+          Geometry:
+            -l 0..297mm (in steps of 0.0999908) [0]
+                Top-left x position of scan area.
+            -t 0..420mm (in steps of 0.0999908) [0]
+                Top-left y position of scan area.
+            -x 0..297mm (in steps of 0.0999908) [296.973]
+                Width of scan-area.
+            -y 0..420mm (in steps of 0.0999908) [419.962]
+                Height of scan-area.
+        
+        Type ``scanadf --help -d DEVICE'' to get list of all options for DEVICE.
+        
+        List of available devices:
+            brother3:net1;dev0
+        EOF
         Gray = 
+        Black & White = <<EOF
+        Usage: scanadf [OPTION]...
+        
+        Start image acquisition on a scanner device and write image data to
+        output files.
+        
+           [ -d | --device-name <device> ]   use a given scanner device.
+           [ -h | --help ]                   display this help message and exit.
+           [ -L | --list-devices ]           show available scanner devices.
+           [ -v | --verbose ]                give even more status messages.
+           [ -V | --version ]                print version information.
+           [ -N | --no-overwrite ]           don't overwrite existing files.
+        
+           [ -o | --output-file <name> ]     name of file to write image data
+                                             (%d replacement in output file name).
+           [ -S | --scan-script <name> ]     name of script to run after every scan.
+           [ --script-wait ]                 wait for scripts to finish before exit
+           [ -s | --start-count <num> ]      page count of first scanned image.
+           [ -e | --end-count <num> ]        last page number to scan.
+           [ -r | --raw ]                    write raw image data to file.
+        
+        Options specific to device `brother3:net1;dev0':
+          Mode:
+            --mode Black & White|Gray[Error Diffusion]|True Gray|24bit Color [Black & White]
+                Select the scan mode
+            --resolution 100|150|200|300|400|600|1200|2400|4800|9600dpi [200]
+                Sets the resolution of the scanned image.
+            --source FlatBed|Automatic Document Feeder(left aligned)|Automatic Document Feeder(centrally aligned) [Automatic Document Feeder(left aligned)]
+                Selects the scan source (such as a document-feeder).
+            --brightness -50..50% (in steps of 1) [0]
+                Controls the brightness of the acquired image.
+            --contrast -50..50% (in steps of 1) [inactive]
+                Controls the contrast of the acquired image.
+          Geometry:
+            -l 0..297mm (in steps of 0.0999908) [0]
+                Top-left x position of scan area.
+            -t 0..420mm (in steps of 0.0999908) [0]
+                Top-left y position of scan area.
+            -x 0..297mm (in steps of 0.0999908) [296.973]
+                Width of scan-area.
+            -y 0..420mm (in steps of 0.0999908) [419.962]
+                Height of scan-area.
+        
+        Type ``scanadf --help -d DEVICE'' to get list of all options for DEVICE.
+        
+        List of available devices:
+            brother3:net1;dev0 v4l:/dev/video0
+        EOF
         default = <<EOF
         Usage: scanadf [OPTION]...
         
@@ -481,54 +529,6 @@ black-threshold = 0.33
         
         List of available devices:
             hpaio:/net/Officejet_7300_series?ip=10.107.120.11 brother3:net1;dev0
-        EOF
-        Black & White = <<EOF
-        Usage: scanadf [OPTION]...
-        
-        Start image acquisition on a scanner device and write image data to
-        output files.
-        
-           [ -d | --device-name <device> ]   use a given scanner device.
-           [ -h | --help ]                   display this help message and exit.
-           [ -L | --list-devices ]           show available scanner devices.
-           [ -v | --verbose ]                give even more status messages.
-           [ -V | --version ]                print version information.
-           [ -N | --no-overwrite ]           don't overwrite existing files.
-        
-           [ -o | --output-file <name> ]     name of file to write image data
-                                             (%d replacement in output file name).
-           [ -S | --scan-script <name> ]     name of script to run after every scan.
-           [ --script-wait ]                 wait for scripts to finish before exit
-           [ -s | --start-count <num> ]      page count of first scanned image.
-           [ -e | --end-count <num> ]        last page number to scan.
-           [ -r | --raw ]                    write raw image data to file.
-        
-        Options specific to device `brother3:net1;dev0':
-          Mode:
-            --mode Black & White|Gray[Error Diffusion]|True Gray|24bit Color [Black & White]
-                Select the scan mode
-            --resolution 100|150|200|300|400|600|1200|2400|4800|9600dpi [200]
-                Sets the resolution of the scanned image.
-            --source FlatBed|Automatic Document Feeder(left aligned)|Automatic Document Feeder(centrally aligned) [Automatic Document Feeder(left aligned)]
-                Selects the scan source (such as a document-feeder).
-            --brightness -50..50% (in steps of 1) [0]
-                Controls the brightness of the acquired image.
-            --contrast -50..50% (in steps of 1) [inactive]
-                Controls the contrast of the acquired image.
-          Geometry:
-            -l 0..297mm (in steps of 0.0999908) [0]
-                Top-left x position of scan area.
-            -t 0..420mm (in steps of 0.0999908) [0]
-                Top-left y position of scan area.
-            -x 0..297mm (in steps of 0.0999908) [296.973]
-                Width of scan-area.
-            -y 0..420mm (in steps of 0.0999908) [419.962]
-                Height of scan-area.
-        
-        Type ``scanadf --help -d DEVICE'' to get list of all options for DEVICE.
-        
-        List of available devices:
-            brother3:net1;dev0 v4l:/dev/video0
         EOF
         Color = <<EOF
         Usage: scanadf [OPTION]...
@@ -590,7 +590,7 @@ OCR output = replace
 OCR on scan = 
 t = 0
 Page range = selected
-window_height = 1044
+window_height = 1041
 <default>
     <brother3:net1;dev0>
         br-x = 210
@@ -617,7 +617,7 @@ unpaper on scan =
 libsane-perl version = 0.05
 x = 210
 downsample dpi = 150
-window_width = 1916
+window_width = 954
 threshold tool = 80
 deskew-scan-direction = left,right,top,bottom
 unsharp sigma = 1

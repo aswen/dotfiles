@@ -301,23 +301,23 @@ fix_java () {
 # This function should make extracting archives easy. I copied it from Hunner but it doesn't work for me and i never tried to find out why...
 ex () {
   TAR=`which tar`
-  if [ -s $1 ] ; then
-    case $1 in
-      *.tar.bz2|*.tbz2|*.tbz) $TAR xvjf $1  ;;
-      *.tar.gz|*.tgz)         $TAR xvzf $1  ;;
-      *.tar.xz|*.txz)         $TAR xvJf $1  ;;
-      *.tar)                  $TAR xvf $1   ;;
-      *.bz2)                  bunzip2 $1    ;;
-      *.rar)                  unrar x $1    ;;
-      *.gz)                   gunzip $1     ;;
-      *.xz)                   unxz $1       ;;
-      *.zip)                  unzip $1      ;;
-      *.Z)                    uncompress $1 ;;
-      *.7z)                   7z x $1       ;;
-      *) echo "don't know how to extract '$1'..." ;;
+  if [ -s "${1}" ] ; then
+    case "${1}" in
+      *.tar.bz2|*.tbz2|*.tbz) ${TAR} xvjf "${1}"  ;;
+      *.tar.gz|*.tgz)         ${TAR} xvzf "${1}"  ;;
+      *.tar.xz|*.txz)         ${TAR} xvJf "${1}"  ;;
+      *.tar)                  ${TAR} xvf "${1}"   ;;
+      *.bz2)                  bunzip2 "${1}"    ;;
+      *.rar)                  unrar x "${1}"    ;;
+      *.gz)                   gunzip "${1}"     ;;
+      *.xz)                   unxz "${1}"       ;;
+      *.zip)                  unzip "${1}"      ;;
+      *.Z)                    uncompress "${1}" ;;
+      *.7z)                   7z x "${1}"       ;;
+      *) echo "don't know how to extract '${1}'..." ;;
     esac
   else
-    echo "'$1' is not a valid file!"
+    echo "'${1}' is not a valid file!"
   fi
 }
 

@@ -297,8 +297,6 @@ fix_java () {
   fi
 }
 
-
-# This function should make extracting archives easy. I copied it from Hunner but it doesn't work for me and i never tried to find out why...
 ex () {
   TAR=`which tar`
   if [ -s "${1}" ] ; then

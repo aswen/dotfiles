@@ -323,7 +323,7 @@ ex () {
 
 # This is to have a branch indication in PS1 when in a git repo
 parse_git_branch () {
-ref=$(git symbolic-ref HEAD 2> /dev/null) && echo "$(date +%H:%M:%S) $(pwd) ("${ref#refs/heads/}")" || echo "$(date +%H:%M:%S) ${USERNAME}@${HOSTNAME} $(pwd)"
+ref=$(git symbolic-ref HEAD 2> /dev/null) && echo "$(date +%H:%M:%S) $(pwd) ("${ref#refs/heads/}")" || echo "$(date +%H:%M:%S) ${USER}@${HOSTNAME} $(pwd)"
 }
 PS1="\$(parse_git_branch)\$ "
 

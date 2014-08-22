@@ -89,6 +89,7 @@ alias gr='/usr/bin/git rm'
 alias gs='/usr/bin/git status'
 alias gstash='/usr/bin/git stash'
 alias gstashdep='gstash && gpp && gpop && cap deploy'
+alias gitcleanbranches='go consuela;gb|egrep -v "master|consuela"|while read branch hash omschr;do gl|grep $hash && gb -D $branch || echo $branch needs to be pulled;done'
 
 alias capdep='cap deploy'
 alias chrome='/opt/google/chrome/chrome'

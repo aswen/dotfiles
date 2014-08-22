@@ -66,31 +66,31 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 # git aliasses
+alias ga='/usr/bin/git add'
+alias gaf='/usr/bin/git add --force'
+alias gb='/usr/bin/git branch -vvv'
 alias gc='/usr/bin/git commit'
-alias gs='/usr/bin/git status'
-alias gpush='/usr/bin/git push'
-alias gpp='/usr/bin/git pull && /usr/bin/git push'
+alias gd='/usr/bin/git diff'
+alias gdc='/usr/bin/git diff --cached'
 alias gdep='/usr/bin/git pull && /usr/bin/git push && cap deploy'
-alias gstash='/usr/bin/git stash'
+alias gdt='/usr/bin/git difftool'
+alias gdw='/usr/bin/git diff --color-words'
+alias gitx='gitg --all'
+alias gl='/usr/bin/git lg'
+alias gla='/usr/bin/git lg --all'
+alias gm='/usr/bin/git mv'
+alias go='/usr/bin/git checkout'
+alias gob='/usr/bin/git checkout -b'
 alias gpop='/usr/bin/git stash pop'
-alias gstashdep='gstash && gpp && gpop && cap deploy'
+alias gpp='/usr/bin/git pull && /usr/bin/git push'
 alias gpull='/usr/bin/git pull'
-alias gl="/usr/bin/git lg"
-alias gla="/usr/bin/git lg --all"
-alias gm="/usr/bin/git mv"
-alias gr="/usr/bin/git rm"
-alias ga="/usr/bin/git add"
-alias gaf="/usr/bin/git add --force"
-alias gb="/usr/bin/git branch"
-alias gd="/usr/bin/git diff"
-alias gdc="/usr/bin/git diff --cached"
-alias gdw="/usr/bin/git diff --color-words"
-alias gdt="/usr/bin/git difftool"
-alias go="/usr/bin/git checkout"
-alias gob="/usr/bin/git checkout -b"
-alias gitx="gitg --all"
-alias capdep='cap deploy'
+alias gpush='/usr/bin/git push'
+alias gr='/usr/bin/git rm'
+alias gs='/usr/bin/git status'
+alias gstash='/usr/bin/git stash'
+alias gstashdep='gstash && gpp && gpop && cap deploy'
 
+alias capdep='cap deploy'
 alias chrome='/opt/google/chrome/chrome'
 
 # TMUX aliasses

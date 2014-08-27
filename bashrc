@@ -103,6 +103,7 @@ alias ltmux="if tmux has-session -t $USER; then tmux attach -t $USER; else tmux 
 # Backup
 rsyncopts='-avz --exclude=lost+found --no-perms --no-owner --no-group --append-verify'
 alias bck_foto='rsync ${rsyncopts} --exclude-from=/data/foto/.excludefile  /data/foto/ /netwerk/foto/'
+alias bck_foto_usb='rsync ${rsyncopts} --exclude-from=/data/foto/.excludefile  /data/foto/ /mnt/1500g_2/foto/'
 alias bck_foto_cider='rsync ${rsyncopts} --exclude-from=/data/foto/.excludefile  /data/foto/ /netwerk/fileserver-foto/'
 alias bck_home='rsync ${rsyncopts} --exclude-from=/home/alex/.excludelist --delete /home/alex/ alex@cider.lochem.swen.nu:/home/alex/'
 alias bck_home_remote='rsync ${rsyncopts} --exclude-from=/home/alex/.excludelist --delete /home/alex/ alex@lochem.swen.nu:/home/alex/'

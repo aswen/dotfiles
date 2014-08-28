@@ -168,6 +168,19 @@ log_msg () {
   echo "${time_running} $1"|tee -a ${short_log}
 }
 
+# shows first and last 5 lines of a file
+headtail () {
+  [ $# -lt 1 ] && die 1 "You have to tell me what file."
+
+  for file in $@;do
+    echo ${file}
+    head -5 "${file}"
+    echo
+    tail -5 "${file}"
+    echo
+  done
+}
+
 # This fetches my dotvim
 getdotvim () {
   [ -d ~/.vim ]&& mv .vim{,.old}

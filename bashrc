@@ -23,6 +23,19 @@ HISTFILESIZE=200000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# cd into a dir if it was typed without cd
+shopt -s autocd
+
+# allow for small typo's
+shopt -s cdspell
+shopt -s dirspell
+
+# check for background jobs
+shopt -s checkjobs
+
+# ** and **/
+shopt -s globstar
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 

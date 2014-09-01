@@ -7,11 +7,11 @@ general {
   interval       = 5
 }
 
-order += "run_watch EN"
-order += "run_watch ZW"
-order += "run_watch Santpoort"
-order += "run_watch Menno"
-order += "run_watch Whiskey"
+#order += "run_watch EN"
+#order += "run_watch ZW"
+#order += "run_watch Santpoort"
+#order += "run_watch Menno"
+#order += "run_watch Whiskey"
 order += "wireless wlan0"
 order += "ethernet eth0"
 order += "battery 0"

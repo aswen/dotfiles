@@ -77,6 +77,7 @@ fi
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias mkdir='mkdir -p'
 
 # git aliasses
 alias ga='/usr/bin/git add'

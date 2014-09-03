@@ -24,7 +24,7 @@ deb http://ftp.nl.debian.org/debian wheezy-backports main non-free contrib
 #deb-src http://apt.puppetlabs.com/ wheezy main
 
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
-#deb http://repository.spotify.com stable non-free
+deb http://repository.spotify.com stable non-free
 
 # uit ivm ffmpeg
 # apt-get install deb-multimedia-keyring

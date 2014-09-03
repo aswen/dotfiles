@@ -233,6 +233,7 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 bindsym $mod+F1 workspace meuk
 bindsym $mod+F2 workspace chat
+bindsym $mod+F3 workspace music
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -247,6 +248,7 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+F1 move container to workspace meuk
 bindsym $mod+Shift+F2 move container to workspace chat
+bindsym $mod+Shift+F3 move container to workspace music
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

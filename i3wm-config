@@ -134,7 +134,7 @@ bindcode 174 exec qmmp -s
 bindcode 179 exec qmmp
 for_window [class="(?i)qmmp"] border none
 for_window [class="(?i)qmmp"] floating enable
-assign [class="(?i)qmmp"] → meuk
+assign [class="(?i)qmmp"] → music
 
 bindsym $win+k exec keepassx ~/KeepassX/Alex.kdb
 bindsym $win+o exec keepassx ~/Documenten/Nedap/Steppingstone-pass/Stepping\ Stone.kdb

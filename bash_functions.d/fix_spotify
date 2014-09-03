@@ -1,0 +1,35 @@
+# vim: set filetype=sh:
+
+# This is a modified version from the script found in http://forums.debian.net/viewtopic.php?f=6&t=114590#p546372
+
+fix_spotify () {
+  # fetch libc and patchelf from packages.debian.org
+  cd /tmp
+  curl -O http://ftp.nl.debian.org/debian/pool/main/p/patchelf/patchelf_0.8-2_amd64.deb
+  curl -O http://ftp.nl.debian.org/debian/pool/main/g/glibc/libc6_2.19-10_amd64.deb
+
+  LIBC_DIR=/usr/local/bin/spotify-libc
+  LIBC_DEB=/tmp/libc6_2.19-10_amd64.deb
+  PATCHELF_DEB=/tmp/patchelf_0.8-2_amd64.deb
+  PATCHELF_DIR=`mktemp -d --tmpdir patchelf.XXXXXXXX`
+
+  LIBS="$LIBC_DIR/lib/x86_64-linux-gnu"
+  LDSO="$LIBS/ld-linux-x86-64.so.2"
+  PATCHELF="$PATCHELF_DIR/usr/bin/patchelf"
+
+  sudo install -dm755 "$LIBC_DIR"
+  sudo dpkg -x "$LIBC_DEB" "$LIBC_DIR"
+  sudo dpkg -x "$PATCHELF_DEB" "$PATCHELF_DIR"
+
+  sudo "$LDSO" --library-path "$LIBS" "$PATCHELF" --set-interpreter "$LDSO" /opt/spotify/spotify-client/spotify
+  sudo "$LDSO" --library-path "$LIBS" "$PATCHELF" --set-interpreter "$LDSO" /opt/spotify/spotify-client/Data/SpotifyHelper
+
+  sudo "$LDSO" --library-path "$LIBS" "$PATCHELF" --set-rpath "\$ORIGIN:\$ORIGIN/Data:$LIBS" /opt/spotify/spotify-client/spotify
+  sudo "$LDSO" --library-path "$LIBS" "$PATCHELF" --set-rpath "\$ORIGIN:$LIBS" /opt/spotify/spotify-client/Data/SpotifyHelper
+
+  sudo "$LDSO" --library-path "$LIBS" "$PATCHELF" --set-rpath "$LIBS" /opt/spotify/spotify-client/Data/libcef.so
+  sudo "$LDSO" --library-path "$LIBS" "$PATCHELF" --set-rpath "$LIBS" /opt/spotify/spotify-client/Data/libffmpegsumo.so
+
+  [ -n "${PATCHELF_DIR}" -a -d "${PATCHELF_DIR}" ] && sudo rm -rf "$PATCHELF_DIR"
+  rm $LIBC_DEB $PATCHELF_DEB
+}

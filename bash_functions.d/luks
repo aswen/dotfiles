@@ -1,0 +1,73 @@
+# vim: set filetype=sh:
+
+# This lists all available luks encrypted partitions
+listluks () {
+  sudo fdisk -l 2>&1|awk '/^\/dev\/sd[a-z][0-9]/ {print $1}'|while read part;do
+    sudo cryptsetup isLuks ${part} && echo -n "$part "
+  done
+}
+
+mnt_cryptdisk () {
+  # this function needs a file that holds a table of uuid => name matches
+  listfile=~/.cryptvolumes
+  # without that file this excercise doesn't make sense
+  if [ ! -s "${listfile}" ];then
+    die 1 "Listfile ${listfile} not found"
+    return
+  fi
+
+  # I need to know what to do
+  if [ -z "$1" ];then
+    die 1 "you have to tell which volume"
+    return
+  fi
+
+  # $1 has to be declared in $listfile
+  uuid=$(awk -v vol="$1" '$0 ~ " "vol {print $1}' ${listfile})
+  # if uuid is empty exit
+  if [ -z "${uuid}" ];then
+    die 1 "no uuid found in ${listfile} for $1"
+    return
+  fi
+
+  # check if there is a volume available with this uuid
+  part=$(sudo blkid|awk -v uuid="${uuid}" '$2 ~ uuid {sub (/:/, ""); print $1}')
+  # if the partition is not found stop
+  if [ -z "${part}" ];then
+    die 1 "no partition found for ${uuid}. Is the device plugged?"
+    return
+  fi
+
+  # let's try to open the vault
+  sudo cryptsetup luksOpen ${part} $1
+  # this should result is a special device /dev/mapper/$1
+  if [ ! -L /dev/mapper/$1 ];then
+    die 1 "cryptsetup failed"
+    return
+  fi
+
+  # now let's mount
+  [ -d /mnt/$1 ]|| sudo mkdir -p /mnt/$1
+  sudo mount /dev/mapper/$1 /mnt/$1
+  sudo mount -o remount,uid=${UID},gid=${UID} /dev/mapper/$1 /mnt/$1
+
+  echo "I mounted a cryptdisk with the name $1 and uuid ${uuid} on partition ${part} to /mnt/$1"
+  df -TH /mnt/$1
+  l /mnt/$1
+}
+
+# remove a mounted disk properly
+umnt_cryptdisk () {
+
+  # I need to know what to do
+  if [ -z "$1" ];then
+    die 1 "you have to tell which volume"
+    return
+  fi
+
+  # if mounted umount
+  [ "$(grep /mnt/$1 /proc/mounts)" ] && sudo umount /mnt/$1
+
+  # if luksopened close
+  [ -b /dev/mapper/$1 ] && sudo cryptsetup luksClose $1
+}

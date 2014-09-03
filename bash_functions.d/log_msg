@@ -1,0 +1,7 @@
+# vim: set filetype=sh:
+
+log_msg () {
+  duration ${before_total}
+  message="$1"
+  echo "${time_running} $1"|tee -a ${short_log}
+}

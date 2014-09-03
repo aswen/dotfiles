@@ -1,3 +1,5 @@
+# vim: set filetype=sh:
+
 die () {
   # if you use die, then use return after die to make sure the rest of a function is not executed
   rc=$1

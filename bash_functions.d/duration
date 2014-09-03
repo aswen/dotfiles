@@ -1,0 +1,12 @@
+# vim: set filetype=sh:
+
+duration () {
+  before=$1
+  after="$(date +%s)"
+  elapsed="$(expr $after - $before)"
+  hours=$(($elapsed / 3600))
+  elapsed=$(($elapsed - $hours * 3600))
+  minutes=$(($elapsed / 60))
+  seconds=$(($elapsed - $minutes * 60))
+  time_running="${hours}:${minutes}:${seconds}"
+}

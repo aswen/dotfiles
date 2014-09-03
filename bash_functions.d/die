@@ -1,0 +1,10 @@
+die () {
+  # if you use die, then use return after die to make sure the rest of a function is not executed
+  rc=$1
+  shift
+  echo "==========================">&2
+  echo "====    FATAL  ERROR  ====" >&2
+  echo "==========================">&2
+  echo "" >&2
+  echo $@ >&2
+}

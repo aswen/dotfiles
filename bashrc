@@ -155,16 +155,11 @@ alias date_time='date +%Y-%m-%d\ %T'
 alias date_time_short='date +%Y%m%d%H%M%S'
 
 # FUNCTIONS
-die () {
-  # if you use die, then use return after die to make sure the rest of a function is not executed
-  rc=$1
-  shift
-  echo "==========================">&2
-  echo "====    FATAL  ERROR  ====" >&2
-  echo "==========================">&2
-  echo "" >&2
-  echo $@ >&2
-}
+if [ -d ~/.bash_functions.d ];then
+  for function in ~/.bash_functions.d/*;do
+    source ${function}
+  done
+fi
 
 duration () {
   before=$1

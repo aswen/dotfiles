@@ -12,7 +12,7 @@
 date=$(date +%Y%m%d)
 me=$(basename $0)
 mydir=$(dirname $0)
-dotfiles="bash_logout bashrc cryptvolumes gitconfig gitignore gscan2pdf gtk-bookmarks profile tmux.conf xmodmap xprofile Xresources bash_bindings fonts puppet-lint.rc"
+dotfiles="bash_logout bashrc cryptvolumes gitconfig gitignore gscan2pdf gtk-bookmarks profile tmux.conf xmodmap xprofile Xresources bash_bindings fonts puppet-lint.rc bash_functions.d"
 
 # FUNCTIONS
 die () {
@@ -40,4 +40,5 @@ ln -s ~/dotfiles/i3status ~/.i3/status
 
 ln -sf ~/dotfiles/dircolors-dark ~/.dircolors
 
+source ~/.bashrc
 # END

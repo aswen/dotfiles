@@ -117,9 +117,10 @@ bindsym $mod+Shift+Print exec /usr/bin/scrot '/tmp/%Y-%m-%d_%H:%M:%S.png' -s
 bindsym $win+Print exec /usr/bin/scrot '/tmp/%Y-%m-%d_%H:%M:%S.png' -u -d 2
 
 #bindsym $win+y exec spotify
-for_window [class="(?i)spotify"] border none
-for_window [class="(?i)spotify"] floating enable
-assign [class="(?i)spotify"] → meuk
+bindsym $win+s exec spotify
+assign [class="(?i)spotify"] → music
+#for_window [class="(?i)spotify"] border none
+#for_window [class="(?i)spotify"] floating enable
 
 bindsym $win+v exec gnome-volume-control
 for_window [class="(?i)gnome-volume-control.gstreamer"] floating enable
@@ -146,8 +147,6 @@ assign [class="(?i)Pidgin"] → chat
 assign [class="(?i)empathy"] → chat
 bindsym $win+x exec xchat
 assign [class="(?i)xchat"] → chat
-bindsym $win+s exec skype
-assign [class="(?i)skype"] → chat
 
 # disable auto focus when mouse moves over window
 focus_follows_mouse no

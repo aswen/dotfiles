@@ -1,0 +1,11 @@
+# vim: set filetype=sh:
+
+mkcd () {
+  if [ $# -lt 1 ];then
+    echo "mkcd should be told what to create and change to..."
+    return
+  fi
+  createdir="$@"
+  mkdir "${createdir}" && cd "${createdir}"
+  unset createdir
+}

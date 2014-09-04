@@ -136,10 +136,10 @@ for_window [class="(?i)qmmp"] border none
 for_window [class="(?i)qmmp"] floating enable
 assign [class="(?i)qmmp"] → music
 
-bindsym $win+k exec keepassx ~/KeepassX/Alex.kdb
+bindsym $win+k exec keepass2 ~/KeepassX/Alex.kdbx
 bindsym $win+o exec keepassx ~/Documenten/Nedap/Steppingstone-pass/Stepping\ Stone.kdb
-#for_window [class="(?i)keepassx"] floating enable
-assign [class="(?i)keepassx"] → meuk
+#for_window [class="(?i)keepass"] floating enable
+assign [Title="(?i)keepass"] → meuk
 
 bindsym $win+p exec pidgin
 assign [class="(?i)Pidgin"] → chat

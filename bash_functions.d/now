@@ -1,0 +1,9 @@
+# vim: set filetype=sh:
+
+date_now () {
+  date +%F %T
+}
+
+time_now () {
+  date +%T
+}

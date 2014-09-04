@@ -44,10 +44,15 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
   debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-  xterm-color) color_prompt=yes;;
-esac
+# FUNCTIONS
+if [ -d ~/.bash_functions.d ];then
+  for function in ~/.bash_functions.d/*;do
+    source ${function}
+  done
+fi
+
+# get colours
+[ -f ~/.bash_colours ] && . ~/.bash_colours
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -58,6 +63,11 @@ if [ -x /usr/bin/dircolors ]; then
   alias egrep='egrep --color=auto'
 fi
 
+PS1="\$(parse_git_branch) \$ "
+
+# have some colour support in tmux
+[ -n "$TMUX" ] && export TERM=xterm-256color
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -65,6 +75,7 @@ alias l='ls -lah'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
+# requires package libnotify-bin
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # enable programmable completion features (you don't need to enable
@@ -153,22 +164,6 @@ alias xra_beamer_1024='xrandr --output LVDS --auto --output VGA-0 --auto --right
 alias date_ymd='date +%Y%m%d'
 alias date_time='date +%Y-%m-%d\ %T'
 alias date_time_short='date +%Y%m%d%H%M%S'
-
-# FUNCTIONS
-if [ -d ~/.bash_functions.d ];then
-  for function in ~/.bash_functions.d/*;do
-    source ${function}
-  done
-fi
-
-# This is to have a branch indication in PS1 when in a git repo
-parse_git_branch () {
-ref=$(git symbolic-ref HEAD 2> /dev/null) && echo "$(date +%H:%M:%S) $(pwd) ("${ref#refs/heads/}")" || echo "$(date +%H:%M:%S) ${USER}@${HOSTNAME} $(pwd)"
-}
-PS1="\$(parse_git_branch)\$ "
-
-# have some colour support in tmux
-[ -z "$TMUX" ] && export TERM=xterm-256color
 
 # setup my favorite editor
 export EDITOR=`which vim`

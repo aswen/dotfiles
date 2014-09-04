@@ -1,0 +1,67 @@
+# vim: set filetype=sh:
+
+parse_git_branch_colour () {
+  # colourize the branchname when uncommitted changes.
+  branchstate=$(git status --porcelain|wc -l)
+  if [ $branchstate -eq 0 ];then
+    echo -en ${Green}
+  else
+    echo -en ${Yellow}
+  fi
+}
+
+# This is to have a branch indication in PS1 when in a git repo
+parse_git_branch () {
+  unset ref branch
+  ref=$(git symbolic-ref HEAD 2> /dev/null)
+  if [ -n "${ref}" ];then
+    branch="(${ref#refs/heads/})"
+    #branch="$(parse_git_branch_colour)(${ref#refs/heads/})"
+    echo "$(echo -en ${BCyan})$(time_now) $(basename $(pwd)) $(parse_git_branch_colour)${branch}$(echo -en ${NC})"
+  else
+    echo "$(echo -en ${Cyan})$(time_now) ${USER}@${HOSTNAME} $(pwd)$(echo -en ${NC})"
+  fi
+}
+
+# From http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/bash-prompt-escape-sequences.html
+# when  executing  interactively,  bash displays the primary
+# prompt ps1 when it is ready to read  a  command,  and  the
+# secondary  prompt ps2 when it needs more input to complete
+# a command.  bash allows these prompt strings  to  be  cus­
+# tomized by inserting a number of backslash-escaped special
+# characters that are decoded as follows:
+#  \a   an ascii bell character (07)
+#  \d   the date  in  "weekday  month  date"  format
+#       (e.g., "tue may 26")
+#  \e   an ascii escape character (033)
+#  \h   the hostname up to the first `.'
+#  \h   the hostname
+#  \j   the  number of jobs currently managed by the
+#       shell
+#  \l   the basename of the shell's terminal  device
+#       name
+#  \n   newline
+#  \r   carriage return
+#  \s   the  name  of  the shell, the basename of $0
+#       (the portion following the final slash)
+#  \t   the current time in 24-hour hh:mm:ss format
+#  \t   the current time in 12-hour hh:mm:ss format
+#  \@   the current time in 12-hour am/pm format
+#  \u   the username of the current user
+#  \v   the version of bash (e.g., 2.00)
+#  \v   the release of bash,  version  +  patchlevel
+#       (e.g., 2.00.0)
+#  \w   the current working directory
+#  \w   the  basename  of the current working direc­
+#       tory
+#  \!   the history number of this command
+#  \#   the command number of this command
+#  \$   if the effective uid is 0, a #, otherwise  a
+#       $
+#  \nn  the  character  corresponding  to  the octal
+#       number nnn
+#  \\   a backslash
+#  \[   begin a sequence of non-printing characters,
+#       which could be used to embed a terminal con­
+#       trol sequence into the prompt
+#  \]   end a sequence of non-printing characters

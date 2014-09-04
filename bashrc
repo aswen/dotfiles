@@ -2,6 +2,16 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# TODO: (some advices from emg in #bash)
+#0) Fix colorprompt: http://mywiki.wooledge.org/BashFAQ/037
+#1) using raw color escapes instead of tput (addressed in that faq I linked)
+#2) all capital variable names
+#3) echo's -e and -n (not as big of a deal, still recommend against it)
+#4) unquoted expansions (you should always quote expansions, I can count the number of exceptinos on one hand)
+#5) echo expansions
+#6) use of [ instead of [[ (can be done safely, but when in bash just use [[)
+#7) you should pm greybot the following to read more: varcap, echo, quotewhen, test, which
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 

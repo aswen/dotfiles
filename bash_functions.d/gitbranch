@@ -12,14 +12,14 @@ parse_git_branch_colour () {
 
 # This is to have a branch indication in PS1 when in a git repo
 parse_git_branch () {
-  unset ref branch
-  ref=$(git symbolic-ref HEAD 2> /dev/null)
-  if [ -n "${ref}" ];then
+  if [ -d ./.git ];then
+    unset ref branch
+    ref=$(git symbolic-ref HEAD 2> /dev/null)
     branch="(${ref#refs/heads/})"
     #branch="$(parse_git_branch_colour)(${ref#refs/heads/})"
-    echo "$(echo -en ${BCyan})$(time_now) $(basename $(pwd)) $(parse_git_branch_colour)${branch}$(echo -en ${NC})"
+    echo "\[$Bold$Cyan\]$(time_now) $(basename $(pwd)) \[$(parse_git_branch_colour)\]${branch}\[${NC}\]"
   else
-    echo "$(echo -en ${Cyan})$(time_now) ${USER}@${HOSTNAME} $(pwd)$(echo -en ${NC})"
+    echo "\[$Cyan\]$(time_now) $USER@$HOSTNAME $(pwd)\[$NC\]"
   fi
 }
 

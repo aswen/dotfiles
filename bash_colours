@@ -42,7 +42,7 @@ colours256 () {
 # Found this list on http://tldp.org/LDP/abs/html/sample-bashrc.html
 # Normal Colors
 Red=$(tput setaf 1)      # Red
-Green=$(tput setaf 196)  # Green
+Green=$(tput setaf 10)  # Green
 Yellow=$(tput setaf 11)  # Yellow
 Orange=$(tput setaf 202) # Orange
 Blue=$(tput setaf 21)    # Blue

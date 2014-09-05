@@ -4,9 +4,9 @@ parse_git_branch_colour () {
   # colourize the branchname when uncommitted changes.
   branchstate=$(git status --porcelain|wc -l)
   if [ $branchstate -eq 0 ];then
-    echo -en ${Green}
+    printf '\1%s' "${Green}"
   else
-    echo -en ${Yellow}
+    printf '\1%s' "${Yellow}"
   fi
 }
 
@@ -17,9 +17,9 @@ parse_git_branch () {
     ref=$(git symbolic-ref HEAD 2> /dev/null)
     branch="(${ref#refs/heads/})"
     #branch="$(parse_git_branch_colour)(${ref#refs/heads/})"
-    echo "\[$Bold$Cyan\]$(time_now) $(basename $(pwd)) \[$(parse_git_branch_colour)\]${branch}\[${NC}\]"
+    printf '\1%s\2%s\1%s\2%s' "$Bold$Cyan" "$(time_now) $(basename $(pwd)) $(parse_git_branch_colour)$branch" "$NC"
   else
-    echo "\[$Cyan\]$(time_now) $USER@$HOSTNAME $(pwd)\[$NC\]"
+    printf '\1%s\2%s\1%s\2%s' "$Cyan" "$(time_now) $USER@$HOSTNAME $(pwd)" "$NC"
   fi
 }
 

@@ -3,8 +3,6 @@
 # for examples
 
 # TODO: (some advices from emg in #bash)
-#0) Fix colorprompt: http://mywiki.wooledge.org/BashFAQ/037
-#1) using raw color escapes instead of tput (addressed in that faq I linked)
 #2) all capital variable names
 #3) echo's -e and -n (not as big of a deal, still recommend against it)
 #4) unquoted expansions (you should always quote expansions, I can count the number of exceptinos on one hand)
@@ -73,7 +71,7 @@ if [ -x /usr/bin/dircolors ]; then
   alias egrep='egrep --color=auto'
 fi
 
-PS1="\$(parse_git_branch) \$ "
+PS1="\$(parse_git_branch) # "
 
 # have some colour support in tmux
 [ -n "$TMUX" ] && export TERM=xterm-256color

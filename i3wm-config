@@ -119,7 +119,7 @@ bindsym $win+Print exec /usr/bin/scrot '/tmp/%Y-%m-%d_%H:%M:%S.png' -u -d 2
 #bindsym $win+y exec spotify
 bindsym $win+s exec spotify
 assign [class="(?i)spotify"] → music
-#for_window [class="(?i)spotify"] border none
+for_window [class="(?i)spotify"] border none
 #for_window [class="(?i)spotify"] floating enable
 
 bindsym $win+v exec gnome-volume-control

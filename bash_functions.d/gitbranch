@@ -17,7 +17,7 @@ parse_git_branch () {
     ref=$(git symbolic-ref HEAD 2> /dev/null)
     branch="(${ref#refs/heads/})"
     # \1 and \2 tell bash that the colour params don't use a space.
-    printf '\1%s\2%s\1%s\2%s' "$Bold$Cyan" "$(time_now) $(basename $(pwd)) $(parse_git_branch_colour)$branch" "$NC"
+    printf '\1%s\2%s\1%s\2%s' "$Bold$Cyan" "$(time_now) $(basename $(pwd)) " "$(parse_git_branch_colour)" "$branch" "$NC"
   else
     printf '\1%s\2%s\1%s\2%s' "$Cyan" "$(time_now) $USER@$HOSTNAME $(pwd)" "$NC"
   fi

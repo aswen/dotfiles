@@ -12,7 +12,7 @@ parse_git_branch_colour () {
 
 # This is to have a branch indication in PS1 when in a git repo
 parse_git_branch () {
-  if [ -d ./.git ];then
+  if git symbolic-ref HEAD > /dev/null 2>&1 ; then
     unset ref branch
     ref=$(git symbolic-ref HEAD 2> /dev/null)
     branch="(${ref#refs/heads/})"

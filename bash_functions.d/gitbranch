@@ -14,10 +14,15 @@ parse_git_branch_colour () {
 parse_git_branch () {
   if git symbolic-ref HEAD > /dev/null 2>&1 ; then
     unset ref branch
-    ref=$(git symbolic-ref HEAD 2> /dev/null)
-    branch="(${ref#refs/heads/})"
+    local ref=$(git symbolic-ref HEAD 2> /dev/null)
+    local branch="(${ref#refs/heads/})"
     # \1 and \2 tell bash that the colour params don't use a space.
-    printf '\1%s\2%s\1%s\2%s' "$Bold$Cyan" "$(time_now) $(basename $(pwd)) " "$(parse_git_branch_colour)" "$branch" "$NC"
+    local subdir=$(git rev-parse --show-prefix)
+    if [[ -n "${subdir}" ]];then
+      printf '\1%s\2%s\1%s\2%s\1%s\2%s' "$Bold$Cyan" "$(time_now) $(basename $(git rev-parse --show-toplevel)) " "$(parse_git_branch_colour)" "$branch " "$Cyan" "$subdir" "$NC"
+    else
+      printf '\1%s\2%s\1%s\2%s' "$Bold$Cyan" "$(time_now) " "$(basename $(git rev-parse --show-toplevel)) " "$(parse_git_branch_colour)" "$branch" "$NC"
+    fi
   else
     printf '\1%s\2%s\1%s\2%s' "$Cyan" "$(time_now) $USER@$HOSTNAME $(pwd)" "$NC"
   fi

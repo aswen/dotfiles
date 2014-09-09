@@ -54,13 +54,15 @@ fi
 
 # FUNCTIONS
 if [ -d ~/.bash_functions.d ];then
-  for function in ~/.bash_functions.d/*;do
-    source ${function}
+  for FUNCTION in ~/.bash_functions.d/*;do
+    source ${FUNCTION}
   done
 fi
 
 # get colours
 [ -f ~/.bash_colours ] && . ~/.bash_colours
+
+PROMPT_COMMAND=prompt
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

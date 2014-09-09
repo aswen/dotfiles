@@ -1,34 +1,24 @@
 # vim: set filetype=sh:
 
-parse_git_branch_colour () {
-  # colourize the branchname when uncommitted changes.
-  branchstate=$(git status --porcelain|wc -l)
-  if [ $branchstate -eq 0 ];then
-    printf '\1%s' "${Green}"
-  else
-    printf '\1%s' "${Yellow}"
-  fi
-}
-
 # This is to have a branch indication in PS1 when in a git repo
-parse_git_branch () {
+prompt () {
   if git symbolic-ref HEAD > /dev/null 2>&1 ; then
     unset ref branch
     local ref=$(git symbolic-ref HEAD 2> /dev/null)
     local branch="(${ref#refs/heads/})"
-    # \1 and \2 tell bash that the colour params don't use a space.
+    local reponame="$(basename $(git rev-parse --show-toplevel))"
     local subdir=$(git rev-parse --show-prefix)
+    branchstate=$(git status --porcelain|wc -l)
+    [ $branchstate -eq 0 ] && branch_colour=$Green || branch_colour=$Yellow
     if [[ -n "${subdir}" ]];then
-      printf '\1%s\2%s\1%s\2%s\1%s\2%s\1%s\2' "$Bold$Cyan" "$(time_now) $(basename $(git rev-parse --show-toplevel)) " "$(parse_git_branch_colour)" "$branch " "$Cyan" "$subdir" "$NC"
+      PS1="\[$Bold$Cyan\]\t $reponame \[$branch_colour\]$branch\[$Cyan\]$subdir\[$NC\] # "
     else
-      printf '\1%s\2%s\1%s\2%s\1%s\2' "$Bold$Cyan" "$(time_now) $(basename $(git rev-parse --show-toplevel)) " "$(parse_git_branch_colour)" "$branch" "$NC"
+      PS1="\[$Bold$Cyan\]\t $reponame \[$branch_colour\]$branch\[$NC\] # "
     fi
   else
-    printf '\1%s\2%s\1%s\2' "$Cyan" "$(time_now) $USER@$HOSTNAME $(pwd)" "$NC"
+    PS1="\[$Cyan\]\t \u@\h \w\[$NC\] # "
   fi
 }
-
-PS1="\$(parse_git_branch) # "
 
 # From http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/bash-prompt-escape-sequences.html
 # when  executing  interactively,  bash displays the primary

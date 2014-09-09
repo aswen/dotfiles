@@ -21,12 +21,14 @@ parse_git_branch () {
     if [[ -n "${subdir}" ]];then
       printf '\1%s\2%s\1%s\2%s\1%s\2%s' "$Bold$Cyan" "$(time_now) $(basename $(git rev-parse --show-toplevel)) " "$(parse_git_branch_colour)" "$branch " "$Cyan" "$subdir" "$NC"
     else
-      printf '\1%s\2%s\1%s\2%s' "$Bold$Cyan" "$(time_now) " "$(basename $(git rev-parse --show-toplevel)) " "$(parse_git_branch_colour)" "$branch" "$NC"
+      printf '\1%s\2%s\1%s\2%s\1%s\2%s' "$Bold$Cyan" "$(time_now) " "$(basename $(git rev-parse --show-toplevel)) " "$(parse_git_branch_colour)" "$branch" "$NC"
     fi
   else
     printf '\1%s\2%s\1%s\2%s' "$Cyan" "$(time_now) $USER@$HOSTNAME $(pwd)" "$NC"
   fi
 }
+
+PS1="\$(parse_git_branch) # "
 
 # From http://www.tldp.org/HOWTO/Bash-Prompt-HOWTO/bash-prompt-escape-sequences.html
 # when  executing  interactively,  bash displays the primary

@@ -71,8 +71,6 @@ if [ -x /usr/bin/dircolors ]; then
   alias egrep='egrep --color=auto'
 fi
 
-PS1="\$(parse_git_branch) # "
-
 # have some colour support in tmux
 [ -n "$TMUX" ] && export TERM=xterm-256color
 

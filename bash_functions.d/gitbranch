@@ -19,12 +19,12 @@ parse_git_branch () {
     # \1 and \2 tell bash that the colour params don't use a space.
     local subdir=$(git rev-parse --show-prefix)
     if [[ -n "${subdir}" ]];then
-      printf '\1%s\2%s\1%s\2%s\1%s\2%s' "$Bold$Cyan" "$(time_now) $(basename $(git rev-parse --show-toplevel)) " "$(parse_git_branch_colour)" "$branch " "$Cyan" "$subdir" "$NC"
+      printf '\1%s\2%s\1%s\2%s\1%s\2%s\1%s\2' "$Bold$Cyan" "$(time_now) $(basename $(git rev-parse --show-toplevel)) " "$(parse_git_branch_colour)" "$branch " "$Cyan" "$subdir" "$NC"
     else
-      printf '\1%s\2%s\1%s\2%s\1%s\2%s' "$Bold$Cyan" "$(time_now) " "$(basename $(git rev-parse --show-toplevel)) " "$(parse_git_branch_colour)" "$branch" "$NC"
+      printf '\1%s\2%s\1%s\2%s\1%s\2' "$Bold$Cyan" "$(time_now) $(basename $(git rev-parse --show-toplevel)) " "$(parse_git_branch_colour)" "$branch" "$NC"
     fi
   else
-    printf '\1%s\2%s\1%s\2%s' "$Cyan" "$(time_now) $USER@$HOSTNAME $(pwd)" "$NC"
+    printf '\1%s\2%s\1%s\2' "$Cyan" "$(time_now) $USER@$HOSTNAME $(pwd)" "$NC"
   fi
 }
 

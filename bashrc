@@ -84,7 +84,7 @@ alias l='ls -lah'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 # requires package libnotify-bin
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && printf '%s' "terminal" || printf '%s' "error")" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -159,7 +159,7 @@ alias dusort='du -h --time --max-depth=1|sort -hr'
 alias sad='for key in ~/.ssh/*.priv;do ssh-add -t 28800 ${key};done'
 
 # just for fun
-alias say='echo "$1" | espeak -s 120 2>/dev/null'
+alias say='printf '%s' $1 | espeak -s 120 2>/dev/null'
 
 # XrandR
 alias xra_home='xrandr --output LVDS --off --output DisplayPort-2 --auto --output VGA-0 --auto --left-of DisplayPort-2 --verbose'
@@ -174,7 +174,7 @@ alias date_time='date +%Y-%m-%d\ %T'
 alias date_time_short='date +%Y%m%d%H%M%S'
 
 # setup my favorite editor
-export EDITOR=`which vim`
+export EDITOR=/usr/bin/vim
 
 # source specific stuff for my work
 [ -x ~/.nedaprc ] && . ~/.nedaprc

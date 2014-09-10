@@ -2,10 +2,9 @@
 
 mkcd () {
   if [ $# -lt 1 ];then
-    echo "mkcd should be told what to create and change to..."
+    printf '%s\n' "mkcd should be told what to create and change to..."
     return
   fi
-  createdir="$@"
+  local createdir="$@"
   mkdir "${createdir}" && cd "${createdir}"
-  unset createdir
 }

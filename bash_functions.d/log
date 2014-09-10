@@ -1,0 +1,3 @@
+# vim: set filetype=sh:
+
+log () { printf '%(%F %T)T %s\n' -1 "$@"; }

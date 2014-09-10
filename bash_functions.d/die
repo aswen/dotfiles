@@ -4,9 +4,9 @@ die () {
   # if you use die, then use return after die to make sure the rest of a function is not executed
   rc=$1
   shift
-  echo "==========================">&2
-  echo "====    FATAL  ERROR  ====" >&2
-  echo "==========================">&2
-  echo "" >&2
-  echo $@ >&2
+  printf '\1%s\2%s\1%s\2\n' "$RED" "=====================" "$NC" >&2
+  printf '\1%s\2%s\1%s\2\n' "$RED" "==== FATAL ERROR ====" "$NC" >&2
+  printf '\1%s\2%s\1%s\2\n\n' "$RED" "=====================" "$NC" >&2
+  printf '\1%s\2%s\1%s\2\n\n' "$RED" "$@" "$NC" >&2
+  return $rc
 }

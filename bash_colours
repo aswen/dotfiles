@@ -41,27 +41,27 @@ colours256 () {
 # Define colours in params
 # Found this list on http://tldp.org/LDP/abs/html/sample-bashrc.html
 # Normal Colors
-Red=$(tput setaf 1)      # Red
-Green=$(tput setaf 10)  # Green
-Yellow=$(tput setaf 11)  # Yellow
-Orange=$(tput setaf 202) # Orange
-Blue=$(tput setaf 21)    # Blue
-Purple=$(tput setaf 5)   # Purple
-Cyan=$(tput setaf 14)    # Cyan
-White=$(tput setaf 15)   # White
+RED=$(tput setaf 1)      # Red
+GREEN=$(tput setaf 10)  # Green
+YELLOW=$(tput setaf 11)  # Yellow
+ORANGE=$(tput setaf 202) # Orange
+BLUE=$(tput setaf 21)    # Blue
+PURPLE=$(tput setaf 5)   # Purple
+CYAN=$(tput setaf 14)    # Cyan
+WHITE=$(tput setaf 15)   # White
 
 # Bold
-Bold=$(tput bold)
+BOLD=$(tput bold)
 
 # Background
-BRed=$(tput setab 1)      # Red
-BGreen=$(tput setab 196)  # Green
-BYellow=$(tput setab 11)  # Yellow
-BOrange=$(tput setab 202) # Orange
-BBlue=$(tput setab 21)    # Blue
-BPurple=$(tput setab 5)   # Purple
-BCyan=$(tput setab 14)    # Cyan
-BWhite=$(tput setab 15)   # White
+BRED=$(tput setab 1)      # Red
+BGREEN=$(tput setab 196)  # Green
+BYELLOW=$(tput setab 11)  # Yellow
+BORANGE=$(tput setab 202) # Orange
+BBLUE=$(tput setab 21)    # Blue
+BPURPLE=$(tput setab 5)   # Purple
+BCYAN=$(tput setab 14)    # Cyan
+BWHITE=$(tput setab 15)   # White
 
 NC=$(tput sgr0) # Color Reset
 

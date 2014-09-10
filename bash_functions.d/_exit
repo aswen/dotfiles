@@ -1,6 +1,6 @@
 # vim: set filetype=sh:
 
 _exit () {
-  echo -e "${BRed}Bye ${USER}!${NC}"
+  printf '%s\2%s\1%s\2\n' "$BOLD$PURPLE" "Bye ${USER}!" "${NC}"
 }
 trap _exit EXIT

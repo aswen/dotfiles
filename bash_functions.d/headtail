@@ -5,10 +5,10 @@ headtail () {
   [ $# -lt 1 ] && die 1 "You have to tell me what file."
 
   for file in $@;do
-    echo ${file}
+    printf '%s\n' $file
     head -5 "${file}"
-    echo
+    printf '\n'
     tail -5 "${file}"
-    echo
+    printf '\n'
   done
 }

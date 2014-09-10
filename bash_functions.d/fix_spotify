@@ -8,14 +8,14 @@ fix_spotify () {
   curl -O http://ftp.nl.debian.org/debian/pool/main/p/patchelf/patchelf_0.8-2_amd64.deb
   curl -O http://ftp.nl.debian.org/debian/pool/main/g/glibc/libc6_2.19-10_amd64.deb
 
-  LIBC_DIR=/usr/local/bin/spotify-libc
-  LIBC_DEB=/tmp/libc6_2.19-10_amd64.deb
-  PATCHELF_DEB=/tmp/patchelf_0.8-2_amd64.deb
-  PATCHELF_DIR=`mktemp -d --tmpdir patchelf.XXXXXXXX`
+  local LIBC_DIR=/usr/local/bin/spotify-libc
+  local LIBC_DEB=/tmp/libc6_2.19-10_amd64.deb
+  local PATCHELF_DEB=/tmp/patchelf_0.8-2_amd64.deb
+  local PATCHELF_DIR=`mktemp -d --tmpdir patchelf.XXXXXXXX`
 
-  LIBS="$LIBC_DIR/lib/x86_64-linux-gnu"
-  LDSO="$LIBS/ld-linux-x86-64.so.2"
-  PATCHELF="$PATCHELF_DIR/usr/bin/patchelf"
+  local LIBS="$LIBC_DIR/lib/x86_64-linux-gnu"
+  local LDSO="$LIBS/ld-linux-x86-64.so.2"
+  local PATCHELF="$PATCHELF_DIR/usr/bin/patchelf"
 
   sudo install -dm755 "$LIBC_DIR"
   sudo dpkg -x "$LIBC_DEB" "$LIBC_DIR"

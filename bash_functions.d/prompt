@@ -11,7 +11,7 @@ prompt () {
     branchstate=$(git status --porcelain|wc -l)
     [ $branchstate -eq 0 ] && branch_colour=$Green || branch_colour=$Yellow
     if [[ -n "${subdir}" ]];then
-      PS1="\[$Bold$Cyan\]\t $reponame \[$branch_colour\]$branch\[$Cyan\]$subdir\[$NC\] # "
+      PS1="\[$Bold$Cyan\]\t $reponame \[$branch_colour\]$branch\[$Cyan\] ${subdir%/}\[$NC\] # "
     else
       PS1="\[$Bold$Cyan\]\t $reponame \[$branch_colour\]$branch\[$NC\] # "
     fi

@@ -107,14 +107,14 @@ assign [class="(?i)gkrellm"] → meuk
 
 bindsym $win+t exec gscan2pdf
 
-# take screenshot of entire workspace NOW
-bindsym Print exec /usr/bin/scrot '/tmp/%Y-%m-%d_%H:%M:%S.png' -m
-# take screenshot of this window NOW
-bindsym $mod+Print exec /usr/bin/scrot '/tmp/%Y-%m-%d_%H:%M:%S.png' -u
 # take screenshot selection
-bindsym $mod+Shift+Print exec /usr/bin/scrot '/tmp/%Y-%m-%d_%H:%M:%S.png' -s
+bindsym --release Shift+Print exec --no-startup-id /usr/bin/scrot -s '/tmp/%Y-%m-%d_%H:%M:%S.png'
+# take screenshot of this window NOW
+bindsym --release $mod+Print exec --no-startup-id /usr/bin/scrot -u '/tmp/%Y-%m-%d_%H:%M:%S.png'
+# take screenshot of entire workspace NOW
+bindsym --release Print exec /usr/bin/scrot -m '/tmp/%Y-%m-%d_%H:%M:%S.png'
 # take screenshot of this window with delay
-bindsym $win+Print exec /usr/bin/scrot '/tmp/%Y-%m-%d_%H:%M:%S.png' -u -d 2
+bindsym --release $win+Print exec --no-startup-id /usr/bin/scrot -u -d2 '/tmp/%Y-%m-%d_%H:%M:%S.png'
 
 #bindsym $win+y exec spotify
 bindsym $win+s exec spotify

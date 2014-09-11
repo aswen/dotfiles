@@ -191,9 +191,7 @@ alias note_disconnect='fusermount -u /mnt/note'
 
 alias ':qa'='exit'
 
-if [ -d "$HOME/bin" ];then
-  PATH="$HOME/bin:$PATH"
-fi
+[ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
 
 # this is here for the sake of ruby puppet
 # export RUBYLIB=/data/git/nedap/puppet/modules/hiera/lib:/data/git/nedap/puppet/modules/hiera-puppet/lib

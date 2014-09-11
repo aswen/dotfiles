@@ -195,11 +195,6 @@ if [ -d "$HOME/bin" ];then
   PATH="$HOME/bin:$PATH"
 fi
 
-if [ -d "$HOME/.rvm/bin" ];then
-  PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-fi
-
 # this is here for the sake of ruby puppet
 # export RUBYLIB=/data/git/nedap/puppet/modules/hiera/lib:/data/git/nedap/puppet/modules/hiera-puppet/lib
 if [ -d /data/git/nedap/puppet/modules/hiera/bin ];then

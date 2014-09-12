@@ -193,9 +193,8 @@ alias ':qa'='exit'
 
 [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
 
-# this is here for the sake of ruby puppet
-# export RUBYLIB=/data/git/nedap/puppet/modules/hiera/lib:/data/git/nedap/puppet/modules/hiera-puppet/lib
-if [ -d /data/git/nedap/puppet/modules/hiera/bin ];then
-  export PATH=$PATH:/data/git/nedap/puppet/modules/hiera/bin
+# Add rbenv to path
+if [ -d $HOME/.rbenv/bin ];then
+  export PATH="$PATH:$HOME/.rbenv/bin"
+  eval "$(rbenv init -)"
 fi
-

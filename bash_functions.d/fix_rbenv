@@ -1,0 +1,23 @@
+# vim: set filetype=sh:
+
+# Following instructions from https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-debian-7-wheezy
+fix_rbenv () {
+  cd ~
+  [ -d ~/.rbenv ] && die 1 "There is a ~/.rbenv dir already."
+
+  git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+
+  [ -d $HOME/.rbenv/bin ] && export PATH="$PATH:$HOME/.rbenv/bin"
+  eval "$(rbenv init -)"
+  log "You should see something like 'rbenv is a function'."
+  type rbenv
+  git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+  git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+  sudo apt-get install build-essential libssl-dev libcurl4-openssl-dev libreadline-dev -y
+  #rbenv install --list
+  rbenv install 1.9.3-p547 -k
+  rbenv install 2.1.2 -k
+  rbenv global 2.1.2
+  log "you should see a ruby version now:"
+  ruby -v
+}

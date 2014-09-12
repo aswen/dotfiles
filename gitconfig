@@ -30,6 +30,6 @@
 [core]
 	excludesfile = /data/home/alex/.gitignore
 [branch]
-        autosetuprebase = always
+  autosetuprebase = always
 [push]
 	default = current

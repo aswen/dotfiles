@@ -33,3 +33,5 @@
   autosetuprebase = always
 [push]
 	default = current
+[help]
+  autocorrect = -1

@@ -1,3 +1,4 @@
 # vim: set filetype=sh:
 
-log () { printf '%(%F %T)T %s\n' -1 "$@"; }
+log () { printf '%(%T)T %s\n' -1 "$@"; }
+log_err () { printf '\1%s\2%(%T)T %s\1%s\2\n' "$RED" -1 "$@" "$NC"; }

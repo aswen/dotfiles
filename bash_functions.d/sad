@@ -1,0 +1,14 @@
+# vim: set filetype=sh:
+
+# this asks for password and then loads ssh keys. Then it unsets password.
+sad () {
+  if [ $# = 0 ];then
+    for key in ~/.ssh/*.priv;do ssh-add ${key};done
+  else
+    if [ -n "$1" -a -f ~/.ssh/id_rsa_${1}*.priv ];then
+      ssh-add ~/.ssh/id_rsa_${1}*.priv
+    else
+      log_err "No such key: ~/.ssh/id_rsa_${1}*.priv."
+    fi
+  fi
+}

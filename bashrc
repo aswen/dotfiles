@@ -156,9 +156,6 @@ alias top='top -cHd1'
 alias tailf='tail -f'
 alias dusort='du -h --time --max-depth=1|sort -hr'
 
-# ssh add
-alias sad='for key in ~/.ssh/*.priv;do ssh-add -t 28800 ${key};done'
-
 # just for fun
 alias say='printf '%s' $1 | espeak -s 120 2>/dev/null'
 

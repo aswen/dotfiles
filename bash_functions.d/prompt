@@ -2,6 +2,10 @@
 
 # This is to have a branch indication in PS1 when in a git repo
 prompt () {
+  case $USER in
+    root) local prompt_colour=$RED ;;
+    *)    local prompt_colour=$CYAN ;;
+  esac
   if git symbolic-ref HEAD > /dev/null 2>&1 ; then
     unset ref branch
     local ref=$(git symbolic-ref HEAD 2> /dev/null)
@@ -11,12 +15,12 @@ prompt () {
     local branchstate=$(git status --porcelain|wc -l)
     [ $branchstate -eq 0 ] && local branch_colour=$GREEN || local branch_colour=$YELLOW
     if [[ -n "${subdir}" ]];then
-      PS1="\[$BOLD$CYAN\]\t $reponame \[$branch_colour\]$branch\[$CYAN\] ${subdir%/}\[$NC\] # "
+      PS1="\[$BOLD$prompt_colour\]\t $reponame \[$branch_colour\]$branch\[$prompt_colour\] ${subdir%/}\[$NC\] # "
     else
-      PS1="\[$BOLD$CYAN\]\t $reponame \[$branch_colour\]$branch\[$NC\] # "
+      PS1="\[$BOLD$prompt_colour\]\t $reponame \[$branch_colour\]$branch\[$NC\] # "
     fi
   else
-    PS1="\[$CYAN\]\t \u@\h \w\[$NC\] # "
+    PS1="\[$prompt_colour\]\t \u@\h \w\[$NC\] # "
   fi
 }
 

@@ -30,6 +30,7 @@ die () {
 [ -d ~/dotfiles ]|| die 1 "have you cloned dotfiles to your homedir?"
 
 for dotfile in ${dotfiles};do
+  [ -L ~/.${dotfile} ] && rm ~/.${dotfile}
   [ -f ~/.${dotfile} -o -d ~/.${dotfile} ] && mv ~/.${dotfile} ~/.${dotfile}-bck-dotfiles-${date}
   ln -s ~/dotfiles/${dotfile} ~/.${dotfile}
 done

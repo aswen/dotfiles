@@ -3,8 +3,14 @@
 # This is to have a branch indication in PS1 when in a git repo
 prompt () {
   case $USER in
-    root) local prompt_colour=$RED ;;
-    *)    local prompt_colour=$CYAN ;;
+    root)
+      local prompt_suffix='$'
+      local prompt_colour=$RED
+      ;;
+    *)
+      local prompt_suffix='#'
+      local prompt_colour=$CYAN
+      ;;
   esac
   if git symbolic-ref HEAD > /dev/null 2>&1 ; then
     unset ref branch
@@ -15,12 +21,12 @@ prompt () {
     local branchstate=$(git status --porcelain|wc -l)
     [ $branchstate -eq 0 ] && local branch_colour=$GREEN || local branch_colour=$YELLOW
     if [[ -n "${subdir}" ]];then
-      PS1="\[$BOLD$prompt_colour\]\t $reponame \[$branch_colour\]$branch\[$prompt_colour\] ${subdir%/}\[$NC\] # "
+      PS1="\[$BOLD$prompt_colour\]\t $reponame \[$branch_colour\]$branch\[$prompt_colour\] ${subdir%/}\[$NC\] $prompt_suffix "
     else
-      PS1="\[$BOLD$prompt_colour\]\t $reponame \[$branch_colour\]$branch\[$NC\] # "
+      PS1="\[$BOLD$prompt_colour\]\t $reponame \[$branch_colour\]$branch\[$NC\] $prompt_suffix "
     fi
   else
-    PS1="\[$prompt_colour\]\t \u@\h \w\[$NC\] # "
+    PS1="\[$prompt_colour\]\t \u@\h \w\[$NC\] $prompt_suffix "
   fi
 }
 

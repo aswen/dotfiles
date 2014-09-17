@@ -73,9 +73,6 @@ if [ -x /usr/bin/dircolors ]; then
   alias egrep='egrep --color=auto'
 fi
 
-# have some colour support in tmux
-[ -n "$TMUX" ] && export TERM=xterm-256color
-
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'

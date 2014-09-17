@@ -1,4 +1,5 @@
 # vim: set filetype=sh:
 
 log () { printf '%s %s\n' "$(date +%F' '%T)" "$@"; }
+log_warn () { printf '\1%s\2%s %s\1%s\2\n' "$ORANGE" "$(date +%F' '%T)" "$@" "$NC"; }
 log_err () { printf '\1%s\2%s %s\1%s\2\n' "$RED" "$(date +%F' '%T)" "$@" "$NC"; }

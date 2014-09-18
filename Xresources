@@ -1,3 +1,8 @@
+!To reread your .Xresources file, and throw away your old resources:
+!xrdb ~/.Xresources
+!To reread your .Xresources file, and keep your old resources:
+!xrdb -merge ~/.Xresources
+
 ! define some colourschemes
 
 ! Solarized color scheme for the X Window System

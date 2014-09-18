@@ -74,41 +74,42 @@ chatnets = {
 };
 
 channels = (
-  { name = "#android"; chatnet = "Tweakers"; autojoin = "Yes"; },
-  { name = "#bash"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#bitsoffreedom"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#cassandra"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#debian"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#drupal"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#drupal-support"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#fosdem"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#fotografie"; chatnet = "Tweakers"; autojoin = "Yes"; },
-  { name = "#git"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#i3"; chatnet = "Twice-irc"; autojoin = "Yes"; },
-  { name = "#icinga"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#irssi"; chatnet = "IRCnet"; autojoin = "Yes"; },
-  { name = "#keepassx"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#libreoffice"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#ligfiets"; chatnet = "OFTC"; autojoin = "Yes"; },
-  { name = "#linux"; chatnet = "Tweakers"; autojoin = "Yes"; },
-  { name = "#mcollective"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#nachtploeg"; chatnet = "Tweakers"; autojoin = "Yes"; },
-  { name = "#nagios"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#nautilus"; chatnet = "Gnome"; autojoin = "Yes"; },
-  { name = "#nllgg"; chatnet = "OFTC"; autojoin = "Yes"; },
-  { name = "#nluug"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#nos"; chatnet = "Tweakers"; autojoin = "Yes"; },
-  { name = "##pfsense"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#postgresql"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "##proxmox"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#puppet"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#qgis"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#t-dose"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#tmux"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#tweakdsl"; chatnet = "Tweakers"; autojoin = "Yes"; },
-  { name = "#tweakers.net"; chatnet = "Tweakers"; autojoin = "Yes"; },
-  { name = "#vim"; chatnet = "Freenode"; autojoin = "Yes"; },
-  { name = "#zimbra"; chatnet = "Freenode"; autojoin = "Yes"; }
+  { name = "#test"; chatnet = "Freenode"; autojoin = "Yes"; },
+  { name = "#android"; chatnet = "Tweakers"; autojoin = "No"; },
+  { name = "#bash"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#bitsoffreedom"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#cassandra"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#debian"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#drupal"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#drupal-support"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#fosdem"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#fotografie"; chatnet = "Tweakers"; autojoin = "No"; },
+  { name = "#git"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#i3"; chatnet = "Twice-irc"; autojoin = "No"; },
+  { name = "#icinga"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#irssi"; chatnet = "IRCnet"; autojoin = "No"; },
+  { name = "#keepassx"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#libreoffice"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#ligfiets"; chatnet = "OFTC"; autojoin = "No"; },
+  { name = "#linux"; chatnet = "Tweakers"; autojoin = "No"; },
+  { name = "#mcollective"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#nachtploeg"; chatnet = "Tweakers"; autojoin = "No"; },
+  { name = "#nagios"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#nautilus"; chatnet = "Gnome"; autojoin = "No"; },
+  { name = "#nllgg"; chatnet = "OFTC"; autojoin = "No"; },
+  { name = "#nluug"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#nos"; chatnet = "Tweakers"; autojoin = "No"; },
+  { name = "##pfsense"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#postgresql"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "##proxmox"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#puppet"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#qgis"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#t-dose"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#tmux"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#tweakdsl"; chatnet = "Tweakers"; autojoin = "No"; },
+  { name = "#tweakers.net"; chatnet = "Tweakers"; autojoin = "No"; },
+  { name = "#vim"; chatnet = "Freenode"; autojoin = "No"; },
+  { name = "#zimbra"; chatnet = "Freenode"; autojoin = "No"; }
 );
 
 aliases = {
@@ -161,7 +162,7 @@ aliases = {
   RESET = "set -default";
 };
 
-statusbar = {
+stat
   # formats:
   # when using {templates}, the template is shown only if it's argument isn't
   # empty unless no argument is given. for example {sb} is printed always,
@@ -188,10 +189,10 @@ statusbar = {
     topic = " $topic";
     topic_empty = " Irssi v$J - http://www.irssi.org";
 
-    # Solarized
-    lag = "{sb Lag: %m$0-%n}";
-    act = "{sb Act: $0-}";
-    more = "%k%3-- more --%n";
+    ## Solarized
+    #lag = "{sb Lag: %m$0-%n}";
+    #act = "{sb Act: $0-}";
+    #more = "%k%3-- more --%n";
   };
 
   # there's two type of statusbars. root statusbars are either at the top
@@ -272,8 +273,9 @@ statusbar = {
     };
   };
 };
+
 hilights = (
-  { text = "aswen"; color = "%M"; nick = "yes"; word = "yes"; }
+  { text = "aswen"; nick = "yes"; word = "yes"; }
 );
 settings = {
   core = {

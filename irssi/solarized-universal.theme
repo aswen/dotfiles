@@ -154,21 +154,21 @@ abstracts = {
   #  privmsgnick = "%K{msgnick  %R$*%K}%n";
 
   # $0 = nick mode, $1 = nick
-  ownmsgnick = "{msgnick $0 $1-}%b";
+  ownmsgnick = "{msgnick $0 $1-}%w";
   ownnick = "%b$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
-  pubmsgnick = "{msgnick $0 $1-}";
+  pubmsgnick = "{msgnick $0 $1-}%w";
   pubnick = "%N%_$*%_%n";
 
   # public message in channel meant for me, $0 = nick mode, $1 = nick
-  pubmsgmenick = "{msgnick $0 $1-}";
+  pubmsgmenick = "{msgnick $0 $1-}%m";
   # %m = magenta
   menick = "%m$*%n";
 
   # public highlighted message in channel
   # $0 = highlight color, $1 = nick mode, $2 = nick
-  pubmsghinick = "{msgnick $1 $0$2-%n}";
+  pubmsghinick = "{msgnick $1 $2-}%m";
 
   # channel name is printed with message
   # This is printed whenever the channel name is printed for disambiguation, e.g.
@@ -201,10 +201,10 @@ abstracts = {
   action_core = "%_*%n $*";
 
   # generic one that's used by most actions
-  action = "{action_core %_$*%n} ";
+  action = "{action_core %b$*%n}%b ";
 
   # own action, both private/public
-  ownaction = "{action_core %b$*%n} ";
+  ownaction = "{action_core %b$*%n}%b ";
 
   # own action with target, both private/public
   # NOTE: to test: /action NICK farted.  (This will tell NICK that you farted)
@@ -341,7 +341,7 @@ abstracts = {
   # This also affects the color of the window with activity in adv_windowlist
   sb_act_text = "%w$*";
   # public message (ordinary messages)
-  sb_act_msg = "%R$*";
+  sb_act_msg = "%w$*";
   # hilight (when people actually chat)
   # This also affects the color of the window with direct message in adv_windowlist
   sb_act_hilight = "%m$*";
@@ -370,3 +370,4 @@ formats = {
     daychange = "           %g-----%w-%W-%n Day changed to %%D %W-%w-%g-----%n";
   };
 };
+

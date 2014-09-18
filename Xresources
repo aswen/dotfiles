@@ -118,7 +118,8 @@ URxvt*reverseVideo           : false
 URxvt*saveLines              : 100000
 URxvt*cursorBlink            : false
 URxvt*meta8                  : false
-!URxvt*modifer               : alt
+URxvt*modifer                : ctrl
+Rxvt*modifer                 : ctrl
 !URxvt.keysym.Control-Return : \037\036
 !URxvt*keysym.Control-Insert : 10.200.21.
 !URxvt*keysym.M-o            : $OLDPWD

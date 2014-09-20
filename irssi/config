@@ -87,7 +87,7 @@ channels = (
   { name = "#git"; chatnet = "Freenode"; autojoin = "No"; },
   { name = "#i3"; chatnet = "Twice-irc"; autojoin = "No"; },
   { name = "#icinga"; chatnet = "Freenode"; autojoin = "No"; },
-  { name = "#irssi"; chatnet = "IRCnet"; autojoin = "No"; },
+  { name = "#irssi"; chatnet = "IRCnet"; autojoin = "yes"; },
   { name = "#keepassx"; chatnet = "Freenode"; autojoin = "No"; },
   { name = "#libreoffice"; chatnet = "Freenode"; autojoin = "No"; },
   { name = "#ligfiets"; chatnet = "OFTC"; autojoin = "No"; },

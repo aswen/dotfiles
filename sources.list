@@ -10,18 +10,24 @@ deb-src http://ftp.nl.debian.org/debian/ wheezy-updates main non-free contrib
 deb http://ftp.nl.debian.org/debian/ wheezy-proposed-updates non-free contrib main
 deb-src http://ftp.nl.debian.org/debian/ wheezy-proposed-updates non-free contrib main
 
-# curl http://deb.opera.com/archive.key | sudo apt-key add -
-deb http://deb.opera.com/opera stable non-free
-
-# curl http://mozilla.debian.net/pkg-mozilla-archive-keyring_1.1_all.deb -o /tmp/bla.deb&&dpkg -i /tmp/bla.deb
-deb http://mozilla.debian.net/ wheezy-backports iceweasel-release
-
 # Backports
 deb http://ftp.nl.debian.org/debian wheezy-backports main non-free contrib
 
-# curl http://apt.puppetlabs.com/pubkey.gpg|sudo apt-key add -
-#deb http://apt.puppetlabs.com/ wheezy main
-#deb-src http://apt.puppetlabs.com/ wheezy main
+# Add the testing repos (link testing.pref to prefer this over stable)
+deb http://ftp.nl.debian.org/debian/ testing main non-free contrib
+deb-src http://ftp.nl.debian.org/debian/ testing main non-free contrib
+
+deb http://security.debian.org/ testing/updates main non-free contrib
+deb-src http://security.debian.org/ testing/updates main non-free contrib
+
+deb http://ftp.nl.debian.org/debian/ testing-updates main non-free contrib
+deb-src http://ftp.nl.debian.org/debian/ testing-updates main non-free contrib
+
+deb http://ftp.nl.debian.org/debian/ testing-proposed-updates non-free contrib main
+deb-src http://ftp.nl.debian.org/debian/ testing-proposed-updates non-free contrib main
+
+# curl http://deb.opera.com/archive.key | sudo apt-key add -
+deb http://deb.opera.com/opera testing non-free
 
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
 deb http://repository.spotify.com stable non-free
@@ -30,28 +36,13 @@ deb http://repository.spotify.com stable non-free
 # apt-get install deb-multimedia-keyring
 #deb http://www.deb-multimedia.org wheezy main non-free
 
-# TOR
-#gpg --keyserver keys.gnupg.net --recv 886DDD89
-#gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
-deb     http://deb.torproject.org/torproject.org wheezy main
-
 # mozilla.debian.net
-deb http://ftp.nl.debian.org/debian experimental main
-
-# debian testing
-#deb http://ftp.nl.debian.org/debian/ testing main non-free contrib
-
-#i3wm
-#deb http://build.i3wm.org/debian/sid sid main
-# apt-get --allow-unauthenticated install sur5r-keyring
-#deb http://debian.sur5r.net/i3/ wheezy main
+deb http://cdn.debian.net/debian unstable main
+deb http://cdn.debian.net/debian experimental main
 
 # virtualbox
 # curl http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc|sudo apt-key add -
 deb http://download.virtualbox.org/virtualbox/debian wheezy contrib
-
-# fishshell
-deb http://download.opensuse.org/repositories/shells:/fish:/release:/2/Debian_7.0/ ./
 
 # OSM
 #gpg --recv-key 47765B75
@@ -63,18 +54,6 @@ deb-src http://qgis.org/debian wheezy main
 deb http://repo.percona.com/apt wheezy main
 
 deb http://apt.postgresql.org/pub/repos/apt/ wheezy-pgdg main
-
-# Puppetlabs products
-deb http://apt.puppetlabs.com wheezy main
-deb-src http://apt.puppetlabs.com wheezy main
-
-# Puppetlabs dependencies
-deb http://apt.puppetlabs.com wheezy dependencies
-deb-src http://apt.puppetlabs.com wheezy dependencies
-
-# Puppetlabs devel (uncomment to activate)
-# deb http://apt.puppetlabs.com wheezy devel
-# deb-src http://apt.puppetlabs.com wheezy devel
 
 # Cassandra
 deb http://www.apache.org/dist/cassandra/debian/ 20x main

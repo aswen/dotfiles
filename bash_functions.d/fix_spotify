@@ -3,6 +3,7 @@
 # This is a modified version from the script found in http://forums.debian.net/viewtopic.php?f=6&t=114590#p546372
 
 fix_spotify () {
+  sudo apt-get install spotify-client
   # fetch libc and patchelf from packages.debian.org
   cd /tmp
   curl -O http://ftp.nl.debian.org/debian/pool/main/p/patchelf/patchelf_0.8-2_amd64.deb

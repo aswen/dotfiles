@@ -53,7 +53,7 @@ mnt_cryptdisk () {
 
   printf '%s\n' "I mounted a cryptdisk with the name $1 and uuid ${uuid} on partition ${part} to /mnt/$1"
   df -TH /mnt/$1
-  l /mnt/$1
+  ls -lah /mnt/$1
 }
 
 # remove a mounted disk properly

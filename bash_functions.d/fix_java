@@ -13,9 +13,9 @@ fix_java () {
 
   if [ ! -d /usr/$2 ];then
     sudo mkdir -p /usr/$2
-    curl $1 | sudo tar zxf - -C /usr
+    curl -L $1 | sudo tar zxf - -C /usr
     sudo chown -R root:root /usr/$2
-    sudo rm /usr/java
+    [ -L /usr/java ] && sudo rm /usr/java
     sudo ln -sf /usr/$2 /usr/java
 
     if [ "$(uname -m | grep '64')" ]; then
@@ -31,14 +31,14 @@ fix_java () {
       return 1
     fi
 
-    # fix google chrome plugin
-    local gcpplugins=/opt/google/chrome/plugins
-    [ -d ${gcplugins} ]|| sudo install -dm 755 ${gcplugins}
-    [ -L ${gcplugins}/libnpjp2.so ]|| sudo ln -s ${pluginsrc} ${gcplugins}/libnpjp2.so
-    # fix chromium plugin
-    local chromiumplugins=/usr/lib/chromium/plugins
-    [ -d ${chromiumplugins} ]|| sudo install -dm 755 ${chromiumplugins}
-    [ -L ${chromiumplugins}/libnpjp2.so ]|| sudo ln -s ${pluginsrc} ${chromiumplugins}/libnpjp2.so
+#    # fix google chrome plugin
+#    local gcpplugins=/opt/google/chrome/plugins
+#    [ -d ${gcplugins} ]|| sudo install -dm 755 ${gcplugins}
+#    [ -L ${gcplugins}/libnpjp2.so ]|| sudo ln -s ${pluginsrc} ${gcplugins}/libnpjp2.so
+#    # fix chromium plugin
+#    local chromiumplugins=/usr/lib/chromium/plugins
+#    [ -d ${chromiumplugins} ]|| sudo install -dm 755 ${chromiumplugins}
+#    [ -L ${chromiumplugins}/libnpjp2.so ]|| sudo ln -s ${pluginsrc} ${chromiumplugins}/libnpjp2.so
 
     # fix ff plugin
     if [ -f ~/.mozilla/firefox/profiles.ini ];then

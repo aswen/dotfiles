@@ -27,7 +27,7 @@ deb http://ftp.nl.debian.org/debian/ testing-proposed-updates non-free contrib m
 deb-src http://ftp.nl.debian.org/debian/ testing-proposed-updates non-free contrib main
 
 # curl http://deb.opera.com/archive.key | sudo apt-key add -
-deb http://deb.opera.com/opera testing non-free
+deb http://deb.opera.com/opera stable non-free
 
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
 deb http://repository.spotify.com stable non-free
@@ -45,15 +45,23 @@ deb http://cdn.debian.net/debian experimental main
 deb http://download.virtualbox.org/virtualbox/debian wheezy contrib
 
 # OSM
-#gpg --recv-key 47765B75
-#gpg --export --armor 47765B75 | sudo apt-key add -
-deb     http://qgis.org/debian wheezy main
-deb-src http://qgis.org/debian wheezy main
+#gpg --recv-key DD45F6C3
+#gpg --export --armor DD45F6C3 | sudo apt-key add -
+deb     http://qgis.org/debian testing main
+deb-src http://qgis.org/debian testing main
 
 #Mysql_Percona
+# apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
 deb http://repo.percona.com/apt wheezy main
 
+# curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 deb http://apt.postgresql.org/pub/repos/apt/ wheezy-pgdg main
 
 # Cassandra
+#gpg --keyserver pgp.mit.edu --recv-keys F758CE318D77295D
+#gpg --export --armor F758CE318D77295D | sudo apt-key add -
+#gpg --keyserver pgp.mit.edu --recv-keys 2B5C1B00
+#gpg --export --armor 2B5C1B00 | sudo apt-key add -
+#gpg --keyserver pgp.mit.edu --recv-keys 0353B12C
+#gpg --export --armor 0353B12C | sudo apt-key add -
 deb http://www.apache.org/dist/cassandra/debian/ 20x main

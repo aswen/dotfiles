@@ -287,19 +287,19 @@ bindsym $mod+r mode "resize"
 bindsym $mod+a exec arandr
 for_window [class="(?i)arandr"] floating enable
 # laptop
-bindsym $win+F1 exec --no-startup-id xrandr -s 1600x900 --output LVDS --auto --output DisplayPort-0 --off --output DisplayPort-1 --off --output DisplayPort-2 --off --output VGA-0 --off
+bindsym $win+F1 exec --no-startup-id xrandr -s 1920x1080 --output eDP1 --auto --output DP1 --off --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VITRUAL --off
 # nedap
-bindsym $win+F2 exec --no-startup-id xrandr --output LVDS --off --output DisplayPort-1 --auto --output DisplayPort-2 --auto --right-of DisplayPort-1
+bindsym $win+F2 exec --no-startup-id xrandr --output eDP1 --auto --output DP1 --auto --right-of eDP1 --output DP2 --auto --right-of DP1
 # 3 schermen!!
-bindsym $win+F3 exec --no-startup-id xrandr --output DisplayPort-1 --auto --pos 1600x0 --output LVDS --auto --pos 0x750 --output DisplayPort-2 --auto --pos 3520x0
+bindsym $win+F3 exec --no-startup-id xrandr --output DP1 --auto --pos 1920x0 --output eDP1 --auto --pos 0x750 --output DP2 --auto --pos 3840x0
 # home
-bindsym $win+F4 exec --no-startup-id xrandr --output LVDS --off --output DisplayPort-2 --auto --output VGA-0 --auto --left-of DisplayPort-2
+bindsym $win+F4 exec --no-startup-id xrandr --output eDP1 --auto --output DP2 --auto --right-of eDP1
 # beamer
-bindsym $win+F5 exec --no-startup-id xrandr --output LVDS --auto --output VGA-0 --auto --right-of LVDS
+bindsym $win+F5 exec --no-startup-id xrandr --output eDP1 --auto --output DP2 --auto --right-of eDP1
 # scherm op displayport laptop
-bindsym $win+F6 exec --no-startup-id xrandr --output LVDS --auto --output DisplayPort-0 --auto --right-of LVDS
+bindsym $win+F6 exec --no-startup-id xrandr --output eDP1 --auto --output DP1 --auto --right-of eDP1
 # tweede scherm op displayport-2 laptop
-bindsym $win+F7 exec --no-startup-id xrandr --output LVDS --auto --output DisplayPort-2 --auto --right-of LVDS
+bindsym $win+F7 exec --no-startup-id xrandr --output eDP1 --auto --output DP2 --auto --right-of eDP1
 
 bindsym $mod+x "exec /usr/bin/setxkbmap -variant euro -option -option compose:menu -option lv3:ralt_switch -option eurosign:5 -option ctrl:nocaps ;exec xmodmap ~/.xmodmap;exec feh --bg-scale /home/alex/P1150009.JPG"
 

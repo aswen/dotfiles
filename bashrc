@@ -145,7 +145,6 @@ alias restore_vis='cd /data/vmware;pigz -cd vis.tar.gz|tar xvf -'
 alias bck_nico='rsync ${rsyncopts} Documenten/Nicoline/ nico@cider:~/Documenten/'
 
 # admin aliasses
-alias pagrep='ps auxf|grep'
 alias hgrep='history|grep'
 alias sudi='sudo -i'
 alias meminfo='ps -eo pid,user,pmem,rss,vsz,cmd --sort rss'

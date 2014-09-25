@@ -189,6 +189,6 @@ alias ':qa'='exit'
 
 # Add rbenv to path
 if [ -d $HOME/.rbenv/bin ];then
-  export PATH="$PATH:$HOME/.rbenv/bin"
+  export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi

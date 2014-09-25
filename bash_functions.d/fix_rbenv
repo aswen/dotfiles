@@ -7,7 +7,7 @@ fix_rbenv () {
 
   git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 
-  [ -d $HOME/.rbenv/bin ] && export PATH="$PATH:$HOME/.rbenv/bin"
+  [ -d $HOME/.rbenv/bin ] && export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
   log "You should see something like 'rbenv is a function'."
   type rbenv

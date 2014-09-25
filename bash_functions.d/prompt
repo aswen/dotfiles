@@ -12,14 +12,23 @@ prompt () {
       local prompt_colour=$CYAN
       ;;
   esac
-  if git symbolic-ref HEAD > /dev/null 2>&1 ; then
+  if git status --porcelain > /dev/null 2>&1 ; then
     unset ref branch
     local ref=$(git symbolic-ref HEAD 2> /dev/null)
     local branch="(${ref#refs/heads/})"
     local reponame="$(basename $(git rev-parse --show-toplevel))"
     local subdir=$(git rev-parse --show-prefix)
     local branchstate=$(git status --porcelain|wc -l)
-    [ $branchstate -eq 0 ] && local branch_colour=$GREEN || local branch_colour=$YELLOW
+    if [ $branchstate -eq 0 ];then
+      local branch_colour=$GREEN
+    else
+      if git status --porcelain|grep "^UU " >/dev/null 2>&1;then
+        local branch_colour=$RED
+        local branch="Rebase in progress"
+      else
+        local branch_colour=$YELLOW
+      fi
+    fi
     if [[ -n "${subdir}" ]];then
       PS1="\[$BOLD$prompt_colour\]\t $reponame \[$branch_colour\]$branch\[$prompt_colour\] ${subdir%/}\[$NC\] $prompt_suffix "
     else

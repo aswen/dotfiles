@@ -40,7 +40,7 @@ bindsym $win+d exec su-to-root -X -c /usr/bin/palimpsest
 for_window [class="(?i)palimpsest"] floating enable
 
 # i3lock
-bindsym $win+l exec i3lock -i /home/alex/mug.png
+bindsym $win+l exec i3lock -c 000000
 
 # start FF
 bindsym $win+f exec --no-startup-id iceweasel

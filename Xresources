@@ -172,3 +172,11 @@ URxvt*color12     : Lucius_light_blue
 URxvt*color13     : Lucius_light_purple
 URxvt*color14     : Lucius_light_cyan
 URxvt*color15     : Lucius_white
+
+Xautolock.corners:     +000
+Xautolock.cornersize:  10
+Xautolock.locker:      /usr/bin/i3lock -c 000000
+Xautolock.time:        5
+Xautolock.cornerdelay: 5
+Xautolock.notify:      5
+Xautolock.notifier:    /usr/bin/notify-send

@@ -151,6 +151,7 @@ alias meminfo='ps -eo pid,user,pmem,rss,vsz,cmd --sort rss'
 alias top='top -cHd1'
 alias tailf='tail -f'
 alias dusort='du -h --time --max-depth=1|sort -hr'
+alias upgrade='sudo apt-get update;sudo apt-get dist-upgrade'
 
 # just for fun
 alias say='printf '%s' $1 | espeak -s 120 2>/dev/null'

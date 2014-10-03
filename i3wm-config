@@ -91,8 +91,8 @@ for_window [class="(?i)gnome-volume-control.gstreamer"] floating enable
 assign [class="(?i)gnome-volume-control.gstreamer"] → meuk
 
 # reset wlan shit
-bindsym $mod+w sudo modprobe -r iwlwifi;sudo modprobe iwlwifi
-bindsym $mod+n exec /data/git/alex/scripts/networktoggle
+#bindsym $mod+w sudo modprobe -r iwlwifi;sudo modprobe iwlwifi
+#bindsym $mod+n exec /data/git/alex/scripts/networktoggle
 bindsym $win+z exec /data/git/alex/scripts/touchpadtoggle
 bindcode 199 exec /data/git/alex/scripts/touchpadtoggle
 

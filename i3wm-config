@@ -297,7 +297,10 @@ bindsym $win+F2 exec --no-startup-id xrandr --output eDP1 --auto --output DP1 --
 # 3 schermen!!
 bindsym $win+F3 exec --no-startup-id xrandr --output DP1 --auto --pos 1920x0 --output eDP1 --auto --pos 0x750 --output DP2 --auto --pos 3840x0
 # home
-bindsym $win+F4 exec --no-startup-id xrandr --output eDP1 --auto --output DP2 --auto --right-of eDP1
+# This might require the following commands executed before:
+# xrandr --newmode "3840x2160_29.97"  338.50  3840 4080 4488 5136  2160 2163 2168 2200 -hsync +vsync
+# xrandr --addmode DP1 "3840x2160_29.97"
+bindsym $win+F4 exec --no-startup-id xrandr --output eDP1 --auto --pos 0x1500 --output DP1 --mode 3840x2160_29.97 --pos 1920x0 --output DP2 --auto --pos 5760x1000
 # beamer
 bindsym $win+F5 exec --no-startup-id xrandr --output eDP1 --auto --output DP2 --auto --right-of eDP1
 # scherm op displayport laptop

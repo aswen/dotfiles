@@ -149,7 +149,7 @@ assign [class="(?i)empathy"] → chat
 bindsym $win+x exec uxterm -T Weechat +bc -sl 100000 -si -sk -vb weechat
 assign [Title="(?i)weechat"] → chat
 assign [class="(?i)xchat"] → chat
-for_window [Title="(?i)weechat"] move container to workspace chat
+#for_window [Title="(?i)weechat"] move container to workspace chat
 
 # disable auto focus when mouse moves over window
 focus_follows_mouse no

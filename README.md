@@ -18,8 +18,8 @@ working with fonts:
 commands to remember:
 ```bash
 fc-cache -fv
-mkfontsdir
-mkfontscale
+mkfontdir
+mkfontcale
 xset -q (query settings)
 xset fp default
 xset +fp ~/.fonts

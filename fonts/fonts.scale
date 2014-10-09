@@ -1,4 +1,4 @@
-820
+822
 Aller_Bd.ttf -misc-aller-bold-r-normal--0-0-0-0-p-0-adobe-standard
 Aller_Bd.ttf -misc-aller-bold-r-normal--0-0-0-0-p-0-ascii-0
 Aller_Bd.ttf -misc-aller-bold-r-normal--0-0-0-0-p-0-iso10646-1
@@ -88,6 +88,7 @@ DejaVuSansMono-Bold-Powerline.ttf -misc-dejavu sans mono for powerline-bold-r-no
 DejaVuSansMono-Bold-Powerline.ttf -misc-dejavu sans mono for powerline-bold-r-normal--0-0-0-0-m-0-iso8859-3
 DejaVuSansMono-Bold-Powerline.ttf -misc-dejavu sans mono for powerline-bold-r-normal--0-0-0-0-m-0-iso8859-4
 DejaVuSansMono-Bold-Powerline.ttf -misc-dejavu sans mono for powerline-bold-r-normal--0-0-0-0-m-0-iso8859-5
+DejaVuSansMono-Bold-Powerline.ttf -misc-dejavu sans mono for powerline-bold-r-normal--0-0-0-0-m-0-iso8859-6
 DejaVuSansMono-Bold-Powerline.ttf -misc-dejavu sans mono for powerline-bold-r-normal--0-0-0-0-m-0-iso8859-6.16
 DejaVuSansMono-Bold-Powerline.ttf -misc-dejavu sans mono for powerline-bold-r-normal--0-0-0-0-m-0-iso8859-6.8x
 DejaVuSansMono-Bold-Powerline.ttf -misc-dejavu sans mono for powerline-bold-r-normal--0-0-0-0-m-0-iso8859-9
@@ -155,6 +156,7 @@ DejaVuSansMono-Powerline.ttf -misc-dejavu sans mono for powerline-medium-r-norma
 DejaVuSansMono-Powerline.ttf -misc-dejavu sans mono for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-3
 DejaVuSansMono-Powerline.ttf -misc-dejavu sans mono for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-4
 DejaVuSansMono-Powerline.ttf -misc-dejavu sans mono for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-5
+DejaVuSansMono-Powerline.ttf -misc-dejavu sans mono for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-6
 DejaVuSansMono-Powerline.ttf -misc-dejavu sans mono for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-6.16
 DejaVuSansMono-Powerline.ttf -misc-dejavu sans mono for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-6.8x
 DejaVuSansMono-Powerline.ttf -misc-dejavu sans mono for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-9
@@ -251,22 +253,22 @@ Envy Code R Italic-Powerline.ttf -misc-envy code r for powerline-medium-i-normal
 Envy Code R Italic-Powerline.ttf -misc-envy code r for powerline-medium-i-normal--0-0-0-0-m-0-iso8859-4
 Envy Code R Italic-Powerline.ttf -misc-envy code r for powerline-medium-i-normal--0-0-0-0-m-0-iso8859-9
 Envy Code R Italic-Powerline.ttf -misc-envy code r for powerline-medium-i-normal--0-0-0-0-m-0-microsoft-cp1252
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-adobe-standard
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-ascii-0
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-ibm-cp437
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-ibm-cp850
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-ibm-cp852
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso10646-1
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-1
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-10
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-13
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-15
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-16
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-2
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-3
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-4
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-9
-Envy Code R Powerline.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-microsoft-cp1252
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-adobe-standard
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-ascii-0
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-ibm-cp437
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-ibm-cp850
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-ibm-cp852
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso10646-1
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-1
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-10
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-13
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-15
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-16
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-2
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-3
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-4
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-iso8859-9
+Envy.ttf -misc-envy code r for powerline-medium-r-normal--0-0-0-0-m-0-microsoft-cp1252
 Franchise-Bold.ttf -misc-franchise-bold-r-normal--0-0-0-0-m-0-iso10646-1
 Inconsolata.otf -misc-inconsolata dz for powerline-medium-r-normal--0-0-0-0-p-0-ascii-0
 Inconsolata.otf -misc-inconsolata dz for powerline-medium-r-normal--0-0-0-0-p-0-iso10646-1

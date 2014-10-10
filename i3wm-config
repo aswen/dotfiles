@@ -127,12 +127,12 @@ bindsym $win+v exec gnome-volume-control
 for_window [class="(?i)gnome-volume-control.gstreamer"] floating enable
 assign [class="(?i)gnome-volume-control.gstreamer"] → meuk
 
-bindsym $win+q exec qmmp
-bindcode 171 exec qmmp --next
-bindcode 172 exec qmmp -t
-bindcode 173 exec qmmp --previous
-bindcode 174 exec qmmp -s
-bindcode 179 exec qmmp
+bindsym $win+q exec --no-startup-id qmmp
+bindcode 171 exec --no-startup-id qmmp --next
+bindcode 172 exec --no-startup-id qmmp -t
+bindcode 173 exec --no-startup-id qmmp --previous
+bindcode 174 exec --no-startup-id qmmp -s
+bindcode 179 exec --no-startup-id qmmp
 for_window [class="(?i)qmmp"] border none
 for_window [class="(?i)qmmp"] floating enable
 assign [class="(?i)qmmp"] → music

@@ -78,6 +78,6 @@ volume master {
 
 cpu_temperature 0 {
   format       = "%degrees °C"
-  path         = "/sys/devices/platform/coretemp.0/temp1_input"
-  #max_treshold = 80
+  path         = "/sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input"
+#  max_treshold = 100
 }

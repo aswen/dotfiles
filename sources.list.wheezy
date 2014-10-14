@@ -1,0 +1,54 @@
+deb http://ftp.nl.debian.org/debian/ wheezy main non-free contrib
+deb-src http://ftp.nl.debian.org/debian/ wheezy main non-free contrib
+
+deb http://security.debian.org/ wheezy/updates main non-free contrib
+deb-src http://security.debian.org/ wheezy/updates main non-free contrib
+
+deb http://ftp.nl.debian.org/debian/ wheezy-updates main non-free contrib
+deb-src http://ftp.nl.debian.org/debian/ wheezy-updates main non-free contrib
+
+deb http://ftp.nl.debian.org/debian/ wheezy-proposed-updates non-free contrib main
+deb-src http://ftp.nl.debian.org/debian/ wheezy-proposed-updates non-free contrib main
+
+# Backports
+deb http://ftp.nl.debian.org/debian wheezy-backports main non-free contrib
+
+# curl http://deb.opera.com/archive.key | sudo apt-key add -
+deb http://deb.opera.com/opera stable non-free
+
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
+deb http://repository.spotify.com stable non-free
+
+# uit ivm ffmpeg
+# apt-get install deb-multimedia-keyring
+#deb http://www.deb-multimedia.org wheezy main non-free
+
+# mozilla.debian.net
+deb http://cdn.debian.net/debian unstable main
+deb http://cdn.debian.net/debian experimental main
+
+# virtualbox
+# curl http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc|sudo apt-key add -
+deb http://download.virtualbox.org/virtualbox/debian wheezy contrib
+
+# OSM
+#gpg --recv-key DD45F6C3
+#gpg --export --armor DD45F6C3 | sudo apt-key add -
+deb     http://qgis.org/debian testing main
+deb-src http://qgis.org/debian testing main
+
+#Mysql_Percona
+# apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
+deb http://repo.percona.com/apt wheezy main
+
+# curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+deb http://apt.postgresql.org/pub/repos/apt/ wheezy-pgdg main
+
+# Cassandra
+#gpg --keyserver pgp.mit.edu --recv-keys F758CE318D77295D
+#gpg --export --armor F758CE318D77295D | sudo apt-key add -
+#gpg --keyserver pgp.mit.edu --recv-keys 2B5C1B00
+#gpg --export --armor 2B5C1B00 | sudo apt-key add -
+#gpg --keyserver pgp.mit.edu --recv-keys 0353B12C
+#gpg --export --armor 0353B12C | sudo apt-key add -
+deb http://www.apache.org/dist/cassandra/debian/ 20x main

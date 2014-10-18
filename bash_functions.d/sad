@@ -11,4 +11,5 @@ sad () {
       log_err "No such key: ~/.ssh/id_rsa_${1}*.priv."
     fi
   fi
+  ssh-add -l
 }

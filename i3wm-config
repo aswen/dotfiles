@@ -30,9 +30,12 @@ bindcode 232 exec sudo /data/git/alex/scripts/brightctl down
 bindsym $win+Return exec uxterm -T HIER +bc -sl 100000 -si -sk -vb
 bindsym $mod+Return exec urxvt
 
-
-# start filemanager
-bindsym $win+e exec nautilus --no-desktop ~
+# Start filemanager
+# Try pcmanfm for a while.
+# Should also try thunar.
+bindsym $win+e exec pcmanfm
+# There are moments I want nautilus though...
+bindsym Shift+$win+e exec nautilus --no-desktop ~
 
 # sysadmmeuk
 bindsym $mod+y exec su-to-root -X -c /usr/sbin/synaptic

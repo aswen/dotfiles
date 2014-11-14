@@ -36,10 +36,11 @@ for dotfile in ${dotfiles};do
 done
 
 [ -d ~/.i3 ]||install -dm 775 ~/.i3
-ln -s ~/dotfiles/i3wm-config ~/.i3/config
-ln -s ~/dotfiles/i3status ~/.i3/status
+[ -L ~/.i3/config ]||ln -s ~/dotfiles/i3wm-config ~/.i3/config
+[ -L ~/.i3/status ]||ln -s ~/dotfiles/i3status ~/.i3/status
 
-ln -sf ~/dotfiles/dircolors-dark ~/.dircolors
+[ -L ~/.dircolors ]||ln -sf ~/dotfiles/dircolors-dark ~/.dircolors
 
 source ~/.bashrc
+
 # END

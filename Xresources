@@ -114,6 +114,8 @@ URxvt*boldFont      : -windows-dina-bold-r-normal-*-13-*-*-*-c-*-iso8859-1,-misc
 URxvt*title                  : HIER
 URxvt*letterspace            : -1
 URxvt*scrollBar              : false
+URxvt*scrollTtyOutput        : false
+URxvt*scrollTtyKeypress      : true
 URxvt*reverseVideo           : false
 URxvt*saveLines              : 100000
 URxvt*cursorBlink            : false

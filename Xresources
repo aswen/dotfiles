@@ -118,6 +118,7 @@ URxvt*scrollTtyOutput        : false
 URxvt*scrollTtyKeypress      : true
 URxvt*reverseVideo           : false
 URxvt*saveLines              : 100000
+URxvt*pointerBlank           : true
 URxvt*cursorBlink            : false
 URxvt*meta8                  : false
 URxvt*modifer                : ctrl

@@ -37,8 +37,8 @@ deb http://repository.spotify.com stable non-free
 #deb http://www.deb-multimedia.org wheezy main non-free
 
 # mozilla.debian.net
-deb http://cdn.debian.net/debian unstable main
-deb http://cdn.debian.net/debian experimental main
+#deb http://cdn.debian.net/debian unstable main
+#deb http://cdn.debian.net/debian experimental main
 
 # virtualbox
 # curl http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc|sudo apt-key add -

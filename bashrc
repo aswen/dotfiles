@@ -137,11 +137,16 @@ alias bck_foto='rsync ${rsyncopts} --exclude-from=/data/foto/.excludefile  /data
 alias bck_foto_usb='rsync ${rsyncopts} --exclude-from=/data/foto/.excludefile  /data/foto/ /mnt/1500g_2/foto/'
 alias bck_foto_cider_usb='rsync ${rsyncopts} --exclude-from=/data/foto/.excludefile  /netwerk/foto/ /mnt/1500g_2/foto/'
 alias bck_foto_cider='rsync ${rsyncopts} --exclude-from=/data/foto/.excludefile  /data/foto/ /netwerk/foto/'
-alias bck_home='rsync ${rsyncopts} --exclude-from=/home/alex/.excludelist --delete /home/alex/ alex@cider.lochem.swen.nu:/home/alex/'
-alias bck_home_remote='rsync ${rsyncopts} --exclude-from=/home/alex/.excludelist --delete /home/alex/ alex@lochem.swen.nu:/home/alex/'
-alias bck_home_usb='rsync ${rsyncopts} --exclude-from=/home/alex/.excludelist --delete /home/alex/ /mnt/1500g_1/home/alex/'
-alias bck_vis='cd /data/vmware;tar cvf - vis|pigz -c >vis.tar.gz'
-alias restore_vis='cd /data/vmware;pigz -cd vis.tar.gz|tar xvf -'
+
+alias bck_home='rsync ${rsyncopts} --exclude-from=/home/alex/.excludelist /home/alex/ alex@cider.lochem.swen.nu:/home/alex/'
+alias bck_docs='rsync ${rsyncopts} --exclude-from=/home/alex/.excludelist /home/alex/Documenten/ alex@cider.lochem.swen.nu:/home/alex/Documenten/'
+alias fetch_docs='rsync ${rsyncopts} --exclude-from=/home/alex/.excludelist alex@cider.lochem.swen.nu:/home/alex/Documenten/ /home/alex/Documenten/'
+alias fetch_home='rsync ${rsyncopts} --exclude-from=/home/alex/.excludelist alex@cider.lochem.swen.nu:/home/alex/ /home/alex/'
+alias bck_home_remote='rsync ${rsyncopts} --exclude-from=/home/alex/.excludelist /home/alex/ alex@lochem.swen.nu:/home/alex/'
+alias bck_docs_remote='rsync ${rsyncopts} --exclude-from=/home/alex/.excludelist /home/alex/Documenten/ alex@lochem.swen.nu:/home/alex/Documenten/'
+alias fetch_home_remote='rsync ${rsyncopts} --exclude-from=/home/alex/.excludelist alex@lochem.swen.nu:/home/alex/ /home/alex/'
+alias fetch_docs_remote='rsync ${rsyncopts} --exclude-from=/home/alex/.excludelist alex@lochem.swen.nu:/home/alex/Documenten/ /home/alex/Documenten/'
+alias bck_home_usb='rsync ${rsyncopts} --exclude-from=/home/alex/.excludelist /home/alex/ /mnt/1500g_1/home/alex/'
 alias bck_nico='rsync ${rsyncopts} Documenten/Nicoline/ nico@cider:~/Documenten/'
 
 # admin aliasses

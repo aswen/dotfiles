@@ -34,8 +34,8 @@ deb http://download.virtualbox.org/virtualbox/debian wheezy contrib
 # OSM
 #gpg --recv-key DD45F6C3
 #gpg --export --armor DD45F6C3 | sudo apt-key add -
-deb     http://qgis.org/debian testing main
-deb-src http://qgis.org/debian testing main
+deb     http://qgis.org/debian stable main
+deb-src http://qgis.org/debian stable main
 
 #Mysql_Percona
 # apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A

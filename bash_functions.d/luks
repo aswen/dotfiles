@@ -8,38 +8,14 @@ listluks () {
 }
 
 mnt_cryptdisk () {
-  # this function needs a file that holds a table of uuid => name matches
-  local listfile=~/.cryptvolumes
-  # without that file this excercise doesn't make sense
-  if [ ! -s "${listfile}" ];then
-    die 1 "Listfile ${listfile} not found"
-    return 1
-  fi
-
   # I need to know what to do
   if [ -z "$1" ];then
     die 1 "you have to tell which volume"
     return 1
   fi
 
-  # $1 has to be declared in $listfile
-  local uuid=$(awk -v vol="$1" '$0 ~ " "vol {print $1}' ${listfile})
-  # if uuid is empty exit
-  if [ -z "${uuid}" ];then
-    die 1 "no uuid found in ${listfile} for $1"
-    return 1
-  fi
-
-  # check if there is a volume available with this uuid
-  local part=$(sudo blkid|awk -v uuid="${uuid}" '$2 ~ uuid {sub (/:/, ""); print $1}')
-  # if the partition is not found stop
-  if [ -z "${part}" ];then
-    die 1 "no partition found for ${uuid}. Is the device plugged?"
-    return 1
-  fi
-
   # let's try to open the vault
-  sudo cryptsetup luksOpen ${part} $1
+  sudo cryptdisks_start $1
   # this should result is a special device /dev/mapper/$1
   if [ ! -L /dev/mapper/$1 ];then
     die 1 "cryptsetup failed"
@@ -69,5 +45,6 @@ umnt_cryptdisk () {
   [ "$(grep /mnt/$1 /proc/mounts)" ] && sudo umount /mnt/$1
 
   # if luksopened close
-  [ -b /dev/mapper/$1 ] && sudo cryptsetup luksClose $1
+  [ -b /dev/mapper/$1 ] && sudo cryptdisks_stop $1
+
 }

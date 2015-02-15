@@ -29,7 +29,7 @@ eval `/usr/bin/gnome-keyring-daemon --start --components=pkcs11`
 #
 
 # This is here so cron can use notify-send to warn me if batery gets empty
-[ -d $HOEM/.dbus ] || mkdir $HOME/.dbus
+[ -d $HOME/.dbus ] || mkdir $HOME/.dbus
 env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
 echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
 chmod 600 $HOME/.dbus/Xdbus

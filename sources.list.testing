@@ -1,30 +1,30 @@
-deb http://ftp.nl.debian.org/debian/ wheezy main non-free contrib
-deb-src http://ftp.nl.debian.org/debian/ wheezy main non-free contrib
+deb https://mirrors.kernel.org/debian/ wheezy main non-free contrib
+deb-src https://mirrors.kernel.org/debian/ wheezy main non-free contrib
 
 deb http://security.debian.org/ wheezy/updates main non-free contrib
 deb-src http://security.debian.org/ wheezy/updates main non-free contrib
 
-deb http://ftp.nl.debian.org/debian/ wheezy-updates main non-free contrib
-deb-src http://ftp.nl.debian.org/debian/ wheezy-updates main non-free contrib
+deb https://mirrors.kernel.org/debian/ wheezy-updates main non-free contrib
+deb-src https://mirrors.kernel.org/debian/ wheezy-updates main non-free contrib
 
-deb http://ftp.nl.debian.org/debian/ wheezy-proposed-updates non-free contrib main
-deb-src http://ftp.nl.debian.org/debian/ wheezy-proposed-updates non-free contrib main
+deb https://mirrors.kernel.org/debian/ wheezy-proposed-updates non-free contrib main
+deb-src https://mirrors.kernel.org/debian/ wheezy-proposed-updates non-free contrib main
 
 # Backports
-deb http://ftp.nl.debian.org/debian wheezy-backports main non-free contrib
+deb https://mirrors.kernel.org/debian wheezy-backports main non-free contrib
 
 # Add the testing repos (link testing.pref to prefer this over stable)
-deb http://ftp.nl.debian.org/debian/ testing main non-free contrib
-deb-src http://ftp.nl.debian.org/debian/ testing main non-free contrib
+deb https://mirrors.kernel.org/debian/ testing main non-free contrib
+deb-src https://mirrors.kernel.org/debian/ testing main non-free contrib
 
 deb http://security.debian.org/ testing/updates main non-free contrib
 deb-src http://security.debian.org/ testing/updates main non-free contrib
 
-deb http://ftp.nl.debian.org/debian/ testing-updates main non-free contrib
-deb-src http://ftp.nl.debian.org/debian/ testing-updates main non-free contrib
+deb https://mirrors.kernel.org/debian/ testing-updates main non-free contrib
+deb-src https://mirrors.kernel.org/debian/ testing-updates main non-free contrib
 
-deb http://ftp.nl.debian.org/debian/ testing-proposed-updates non-free contrib main
-deb-src http://ftp.nl.debian.org/debian/ testing-proposed-updates non-free contrib main
+deb https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
+deb-src https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
 
 # curl http://deb.opera.com/archive.key | sudo apt-key add -
 deb http://deb.opera.com/opera stable non-free
@@ -55,13 +55,5 @@ deb-src http://qgis.org/debian testing main
 deb http://repo.percona.com/apt wheezy main
 
 # curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-deb http://apt.postgresql.org/pub/repos/apt/ wheezy-pgdg main
+deb https://apt.postgresql.org/pub/repos/apt/ wheezy-pgdg main
 
-# Cassandra
-#gpg --keyserver pgp.mit.edu --recv-keys F758CE318D77295D
-#gpg --export --armor F758CE318D77295D | sudo apt-key add -
-#gpg --keyserver pgp.mit.edu --recv-keys 2B5C1B00
-#gpg --export --armor 2B5C1B00 | sudo apt-key add -
-#gpg --keyserver pgp.mit.edu --recv-keys 0353B12C
-#gpg --export --armor 0353B12C | sudo apt-key add -
-deb http://www.apache.org/dist/cassandra/debian/ 20x main

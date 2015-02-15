@@ -27,5 +27,11 @@ eval `/usr/bin/gnome-keyring-daemon --start --components=pkcs11`
 ##http://www.webupd8.org/2009/11/ubuntu-automatically-disable-touchpad.html
 /usr/bin/syndaemon -dKti2 -v
 #
-#/usr/bin/vidalia &
+
+# This is here so cron can use notify-send to warn me if batery gets empty
+[ -d $HOEM/.dbus ] || mkdir $HOME/.dbus
+env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
+echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
+chmod 600 $HOME/.dbus/Xdbus
+
 set +x

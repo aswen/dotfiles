@@ -96,8 +96,8 @@ xterm*color4  : Solarized_blue
 xterm*color5  : Solarized_magenta
 xterm*color6  : Solarized_cyan
 xterm*color7  : Solarized_light_base2
-xterm*color9  : Solarized_orange
 xterm*color8  : Solarized_light_base03
+xterm*color9  : Solarized_orange
 xterm*color10 : Solarized_light_base01
 xterm*color11 : Solarized_light_base00
 xterm*color12 : Solarized_light_base0
@@ -112,8 +112,12 @@ URxvt*font          : -windows-dina-medium-r-normal-*-13-*-*-*-c-*-iso8859-1,-mi
 URxvt*boldFont      : -windows-dina-bold-r-normal-*-13-*-*-*-c-*-iso8859-1,-misc-fixed-bold-r-normal-*-15-*-*-*-*-*-iso10646-1,xft:AR PL UKai CN:bold:pixelsize=16
 
 URxvt*title                  : HIER
+URxvt*depth                  : 32
+URxvt*transparent            : false
 URxvt*letterspace            : -1
 URxvt*scrollBar              : false
+URxvt*scrollBar_Right        : true
+URxvt*scrollstyle            : plain
 URxvt*scrollTtyOutput        : false
 URxvt*scrollTtyKeypress      : true
 URxvt*reverseVideo           : false
@@ -128,8 +132,8 @@ Rxvt*modifer                 : ctrl
 !URxvt*keysym.M-o            : $OLDPWD
 ! URxvt.perl-ext-common      : matcher,searchable-scrollback<M-s>,selection
 URxvt.perl-ext-common        : matcher
-URxvt*url-launcher           : x-www-browser
-URxvt*urlLauncher            : x-www-browser
+URxvt*url-launcher           : /usr/bin/firefox
+URxvt*urlLauncher            : /usr/bin/firefox
 URxvt*iso14755               : false
 URxvt*iso14755_52            : false
 URxvt*antialias              : true
@@ -156,30 +160,60 @@ URxvt*antialias              : true
 !URxvt*color15     : Molokai_white
 
 !URxvt Lucius theme, light
-URxvt*background  : Lucius_white
-URxvt*foreground  : Lucius_black
-URxvt*cursorColor : Lucius_brown
-URxvt*color0      : Lucius_black
-URxvt*color1      : Lucius_red
-URxvt*color2      : Lucius_green
-URxvt*color3      : Lucius_brown
-URxvt*color4      : Lucius_blue
-URxvt*color5      : Lucius_purple
-URxvt*color6      : Lucius_cyan
-URxvt*color7      : Lucius_light_grey
-URxvt*color8      : Lucius_dark_grey
-URxvt*color9      : Lucius_light_red
-URxvt*color10     : Lucius_light_green
-URxvt*color11     : Lucius_yellow
-URxvt*color12     : Lucius_light_blue
-URxvt*color13     : Lucius_light_purple
-URxvt*color14     : Lucius_light_cyan
-URxvt*color15     : Lucius_white
+URxvt*background             : Solarized_light_base03
+URxvt*foreground             : Solarized_light_base1
+! Fade if focus moves away
+!URxvt*fading                 : 40
+!URxvt*fadeColor              : Lucius_white
+URxvt*cursorColor            : Lucius_brown
+URxvt*pointerColorBackground : Solarized_light_base03
+URxvt*pointerColorForeground : Solarized_light_base0
+URxvt*color0                 : Lucius_black
+URxvt*color1                 : Lucius_red
+URxvt*color2                 : Lucius_green
+URxvt*color3                 : Lucius_brown
+URxvt*color4                 : Lucius_blue
+URxvt*color5                 : Lucius_purple
+URxvt*color6                 : Lucius_cyan
+URxvt*color7                 : Lucius_light_grey
+URxvt*color8                 : Lucius_dark_grey
+URxvt*color9                 : Lucius_light_red
+URxvt*color10                : Lucius_light_green
+URxvt*color11                : Lucius_yellow
+URxvt*color12                : Lucius_light_blue
+URxvt*color13                : Lucius_light_purple
+URxvt*color14                : Lucius_light_cyan
+URxvt*color15                : Lucius_white
 
-Xautolock.corners:     +000
-Xautolock.cornersize:  10
-Xautolock.locker:      /usr/bin/i3lock -c 000000
-Xautolock.time:        5
-Xautolock.cornerdelay: 5
-Xautolock.notify:      5
-Xautolock.notifier:    /usr/bin/notify-send
+!URxvt Solarized theme, light
+!URxvt*background             : Solarized_light_base03
+!URxvt*foreground             : Solarized_light_base0
+!URxvt*fading                 : 40
+!URxvt*fadeColor              : Solarized_light_base03
+!URxvt*cursorColor            : Solarized_light_base1
+!URxvt*pointerColorBackground : Solarized_light_base01
+!URxvt*pointerColorForeground : Solarized_light_base1
+!URxvt*color0                 : Solarized_light_base2
+!URxvt*color1                 : Solarized_red
+!URxvt*color2                 : Solarized_green
+!URxvt*color3                 : Solarized_yellow
+!URxvt*color4                 : Solarized_blue
+!URxvt*color5                 : Solarized_magenta
+!URxvt*color6                 : Solarized_cyan
+!URxvt*color7                 : Solarized_light_base2
+!URxvt*color8                 : Solarized_light_base03
+!URxvt*color9                 : Solarized_orange
+!URxvt*color10                : Solarized_light_base01
+!URxvt*color11                : Solarized_light_base00
+!URxvt*color12                : Solarized_light_base0
+!URxvt*color13                : Solarized_violet
+!URxvt*color14                : Solarized_light_base1
+!URxvt*color15                : Solarized_light_base3
+
+Xautolock.corners     : +000
+Xautolock.cornersize  : 10
+Xautolock.locker      : /usr/bin/i3lock -c 000000
+Xautolock.time        : 5
+Xautolock.cornerdelay : 5
+Xautolock.notify      : 5
+Xautolock.notifier    : /usr/bin/notify-send

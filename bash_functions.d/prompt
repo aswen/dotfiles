@@ -26,7 +26,7 @@ prompt () {
         local branch_colour=$RED
         local branch="Rebase in progress"
       else
-        local branch_colour=$YELLOW
+        local branch_colour=$ORANGE
       fi
     fi
     if [[ -n "${subdir}" ]];then

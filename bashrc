@@ -186,9 +186,7 @@ export EDITOR=/usr/bin/vim
 # source specific stuff for my network
 [ -x ~/.swenrc ] && . ~/.swenrc
 
-# mtp shit (http://www.omgubuntu.co.uk/2011/12/how-to-connect-your-android-ice-cream-sandwich-phone-to-ubuntu-for-file-access)
-alias note_connect='mtpfs -o allow_other /mnt/note'
-alias note_disconnect='fusermount -u /mnt/note'
+alias vagrant='/usr/bin/vagrant'
 
 alias ':qa'='exit'
 

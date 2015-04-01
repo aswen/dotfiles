@@ -1,149 +1,134 @@
-pages to scan = 0
-scan_window_width = 537
-rotate reverse = 0
-window_x = 3840
-ocr engine = ocropus
-l = 0
-OCR on scan = 
-downsample = 
-author = Alexander Swen
-<visible-scan-options>
-    overscan-bottom = 1
-    threshold = 1
-    page-width = 1
-    x = 1
-    l = 1
-    y = 1
-    gain = 1
-    Paper size = 1
-    compression = 1
-    mode = 1
-    t = 1
-    button-wait = 1
-    adf_mode = 1
-    contrast = 1
-    wait-for-button = 1
-    batch-scan = 1
-    overscan-top = 1
-    page-height = 1
-    pagewidth = 1
-    pageheight = 1
-    source = 1
-    speed = 1
-    calibration-cache = 1
-    resolution = 1
-    brightness = 1
-    adf-mode = 1
-</visible-scan-options>
-pdf compression = auto
-thumb panel = 148
+window_y = 18
+window_x = 960
+unsharp threshold = 0.05
+unsharp amount = 1
 <Paper>
+    <A4+acceptgiro>
+        t = 0
+        y = 400
+        l = 0
+        x = 210
+    </A4+acceptgiro>
     <A3>
+        x = 297
         l = 0
         y = 420
         t = 0
-        x = 297
     </A3>
-    <A4+acceptgiro>
+    <"foto klein">
+        t = 0
+        l = 0
+        y = 146
+        x = 98
+    </"foto klein">
+    <ASNafschrift>
+        y = 148
+        l = 0
+        x = 211
+        t = 0
+    </ASNafschrift>
+    <A4>
+        y = 297
+        l = 0
         x = 210
-        y = 400
         t = 0
-        l = 0
-    </A4+acceptgiro>
+    </A4>
     <A5>
-        l = 0
-        y = 210
         t = 0
+        y = 210
+        l = 0
         x = 148
     </A5>
     <"foto groot">
+        t = 0
         x = 123
         l = 0
-        t = 0
         y = 184
     </"foto groot">
-    <A4>
-        t = 0
-        y = 297
-        l = 0
-        x = 210
-    </A4>
     <"Getronics loonstrook">
-        l = 0
-        y = 300
         t = 0
         x = 180
-    </"Getronics loonstrook">
-    <foto>
-        y = 130
-        t = 0
         l = 0
-        x = 88
-    </foto>
-    <A6>
-        l = 0
-        y = 105
-        t = 0
-        x = 148
-    </A6>
-    <ASNafschrift>
-        x = 211
-        l = 0
-        y = 148
-        t = 0
-    </ASNafschrift>
-    <"foto klein">
-        x = 98
-        l = 0
-        y = 146
-        t = 0
-    </"foto klein">
-    <"Raet loonstrook">
-        x = 176
-        l = 0
-        t = 0
         y = 300
+    </"Getronics loonstrook">
+    <A6>
+        y = 105
+        l = 0
+        x = 148
+        t = 0
+    </A6>
+    <"Raet loonstrook">
+        y = 300
+        l = 0
+        x = 176
+        t = 0
     </"Raet loonstrook">
-</Paper>
-no-noisefilter = 1
-batch-scan = yes
-quality = 75
-layout = single
-title = VKG - aanpassing voorwaarden rechtsbijstand- en autoverzekering
-white-threshold = 0.9
-Paper size = A4
-libsane-perl version = 0.05
-contrast = 0
-no-mask-scan = 1
-compression = JPEG
-mode = True Gray
-t = 0
-pid = 3133
-cache options = 1
-<profile>
     <foto>
-        source = FlatBed
-        Paper size = foto klein
-        mode = 24bit Color
-        t = 0
-        resolution = 600
-        x = 101
         l = 0
-        y = 149
+        y = 130
+        x = 88
+        t = 0
     </foto>
-    <"brief meerdere pagina's">
-        source = Automatic Document Feeder(centrally aligned)
-        Paper size = A4
-        t = 0
-        resolution = 200
-        mode = True Gray
-        contrast = 0
-        brightness = 0
-        x = 210
-        y = 297
-        l = 0
-    </"brief meerdere pagina's">
-</profile>
+</Paper>
+user_defined_tools = gimp %i
+subject = 
+mode = True Gray
+Page range = selected
+auto-open-scan-dialog = 1
+no-blurfilter = 1
+cache options = 1
+unsharp sigma = 1
+x = 211
+scan_window_width = 537
+quality = 75
+libsane-perl version = 0.05
+restore window = 1
+downsample dpi = 150
+Paper size = A4
+startup warning = 1
+<visible-scan-options>
+    resolution = 1
+    page-height = 1
+    batch-scan = 1
+    adf-mode = 1
+    mode = 1
+    wait-for-button = 1
+    calibration-cache = 1
+    y = 1
+    Paper size = 1
+    overscan-bottom = 1
+    gain = 1
+    compression = 1
+    speed = 1
+    x = 1
+    source = 1
+    button-wait = 1
+    contrast = 1
+    page-width = 1
+    overscan-top = 1
+    adf_mode = 1
+    pageheight = 1
+    brightness = 1
+    threshold = 1
+    l = 1
+    t = 1
+    pagewidth = 1
+</visible-scan-options>
+pdf compression = auto
+ocr engine = ocropus
+author = Alexander Swen
+cwd = /home/alex/Documenten/ASR
+deskew-scan-direction = left,right,top,bottom
+unsharp radius = 0
+window_height = 1044
+default filename = %y-%m-%d %t
+cycle sane handle = 
+rotate reverse = 0
+unpaper on scan = 
+thumb panel = 148
+pages to scan = 0
+pdf font = /home/alex/.fonts/Aller_Bd.ttf
+layout = single
 <default-scan-options>
     Paper size = A4
 </default-scan-options>
@@ -174,50 +159,72 @@ cache options = 1
 <default-scan-options>
     br-y = 297
 </default-scan-options>
-date offset = -17
-image type = pdf
-startup warning = 1
-user_defined_tools = gimp %i
+compression = JPEG
 frontend = libsane-perl
-unsharp sigma = 1
-downsample dpi = 150
-default filename = %y-%m-%d %t
-unsharp radius = 0
-window_height = 1494
-scan-reload-triggers = mode
-no-blurfilter = 1
-cwd = /home/alex/Documenten/ASR
-restore window = 1
-view files toggle = 
-default profile = brief meerdere pagina's
-y = 148
-auto-open-scan-dialog = 1
-version = 1.2.7
+batch-scan = yes
 no-blackfilter = 1
+l = 0
+OCR output = replace
+no-noisefilter = 1
+no-mask-scan = 1
+OCR on scan = 
+device = brother3:net1;dev0
+default profile = brief meerdere pagina's
+output-pages = 1
+scan_window_height = 811
+<profile>
+    <foto>
+        resolution = 600
+        x = 101
+        source = FlatBed
+        mode = 24bit Color
+        l = 0
+        y = 149
+        Paper size = foto klein
+        t = 0
+    </foto>
+    <"brief meerdere pagina's">
+        t = 0
+        Paper size = A4
+        brightness = 0
+        y = 297
+        l = 0
+        mode = True Gray
+        x = 210
+        resolution = 200
+        contrast = 0
+        source = Automatic Document Feeder(centrally aligned)
+    </"brief meerdere pagina's">
+</profile>
+image type = pdf
 Blank threshold = 0
+window_maximize = 
+no-grayfilter = 1
+y = 148
+white-threshold = 0.9
+rotate facing = 0
+keywords = 
+date offset = -17
+pid = 3133
+resolution = 200
+window_width = 956
+black-threshold = 0.33
+title = VKG - aanpassing voorwaarden rechtsbijstand- en autoverzekering
+downsample = 
 selection = 0
 selection = 0
 selection = 1013
 selection = 1164
-unsharp threshold = 0.05
-output-pages = 1
-rotate facing = 0
-unsharp amount = 1
-device = brother3:net1;dev0
-scan prefix = 
-Page range = selected
-keywords = 
-unpaper on scan = 
-OCR output = replace
-window_y = 648
-x = 211
-no-grayfilter = 1
-Dark threshold = 0.12
-source = Automatic Document Feeder(centrally aligned)
-pdf font = /home/alex/.fonts/Aller_Bd.ttf
-window_width = 1916
-black-threshold = 0.33
+scan-reload-triggers = mode
 brightness = 0
+Dark threshold = 0.12
+threshold tool = 80
+SANE version = 1.0.24
+t = 0
+contrast = 0
+source = Automatic Document Feeder(centrally aligned)
+version = 1.2.7
+view files toggle = 
 <default>
     <brother3:net1;dev0>
         br-x = 210
@@ -232,11 +239,4 @@ brightness = 0
         source = Automatic Document Feeder(centrally aligned)
     </brother3:net1;dev0>
 </default>
-threshold tool = 80
-resolution = 200
-SANE version = 1.0.24
-deskew-scan-direction = left,right,top,bottom
-cycle sane handle = 
-subject = 
-window_maximize = 
-scan_window_height = 811
+scan prefix = 

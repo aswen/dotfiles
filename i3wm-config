@@ -127,9 +127,7 @@ assign [class="(?i)spotify"] → music
 for_window [class="(?i)spotify"] border none
 #for_window [class="(?i)spotify"] floating enable
 
-bindsym $win+v exec gnome-volume-control
-for_window [class="(?i)gnome-volume-control.gstreamer"] floating enable
-assign [class="(?i)gnome-volume-control.gstreamer"] → meuk
+bindsym $win+v exec vlc
 
 bindsym $win+q exec --no-startup-id qmmp
 bindcode 171 exec --no-startup-id qmmp --next

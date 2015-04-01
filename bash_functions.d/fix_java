@@ -17,7 +17,11 @@ fix_java () {
     sudo chown -R root:root /usr/$2
     [ -L /usr/java ] && sudo rm /usr/java
     sudo ln -sf /usr/$2 /usr/java
-    sudo ln -sf /usr/java/bin/java /etc/alternatives/java
+    for x in java{,ws} keytool orbd {,un}pack200 policytool rmid rmiregistry servertool tnameserv;do
+      sudo ln -sf /usr/java/bin/$x /etc/alternatives/$x
+    done
+    sudo ln -sf /usr/java/lib/jexec /etc/alternatives/jexec
+    sudo ln -sf /usr/java/lib/jexec-binfmt /etc/alternatives/jexec-binfmt
 
     if [ "$(uname -m | grep '64')" ]; then
       printf '%s\n' "we are on 64bit"

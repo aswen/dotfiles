@@ -17,6 +17,7 @@ fix_java () {
     sudo chown -R root:root /usr/$2
     [ -L /usr/java ] && sudo rm /usr/java
     sudo ln -sf /usr/$2 /usr/java
+    sudo ln -sf /usr/java/bin/java /etc/alternatives/java
 
     if [ "$(uname -m | grep '64')" ]; then
       printf '%s\n' "we are on 64bit"

@@ -56,6 +56,7 @@ bindsym $win+i exec libreoffice --nologo --impress
 
 # java config tool
 bindsym $win+j exec /usr/java/bin/jcontrol
+for_window [class="(?i)com-sun-deploy-panel-ControlPanel"] floating enable
 
 # start calculator
 bindcode 148 exec gnome-calculator

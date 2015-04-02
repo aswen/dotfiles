@@ -239,6 +239,9 @@ bindsym $mod+F1 workspace meuk
 bindsym $mod+F2 workspace mail
 bindsym $mod+F3 workspace chat
 bindsym $mod+F4 workspace music
+bindsym $win+F1 workspace puppet
+bindsym $win+F2 workspace vagrant
+bindsym $win+F3 workspace dotfiles
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -255,6 +258,9 @@ bindsym $mod+Shift+F1 move container to workspace meuk
 bindsym $mod+Shift+F2 move container to workspace mail
 bindsym $mod+Shift+F3 move container to workspace chat
 bindsym $mod+Shift+F4 move container to workspace music
+bindsym $win+Shift+F1 move container to workspace puppet
+bindsym $win+Shift+F2 move container to workspace vagrant
+bindsym $win+Shift+F3 move container to workspace dotfiles
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -293,19 +299,19 @@ bindsym $mod+r mode "resize"
 bindsym $mod+a exec arandr
 for_window [class="(?i)arandr"] floating enable
 # laptop
-bindsym $win+F1 exec --no-startup-id xrandr -s 1920x1080 --output eDP1 --auto --output DP1 --off --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off
+bindsym $win+Ctrl+F1 exec --no-startup-id xrandr -s 1920x1080 --output eDP1 --auto --output DP1 --off --output DP2 --off --output HDMI1 --off --output HDMI2 --off --output VIRTUAL1 --off
 # nedap
-bindsym $win+F2 exec --no-startup-id xrandr --output eDP1 --auto --pos 0x750 --output DP1 --auto --pos 1920x0 --output DP2
+bindsym $win+Ctrl+F2 exec --no-startup-id xrandr --output eDP1 --auto --pos 0x750 --output DP1 --auto --pos 1920x0 --output DP2
 # 3 schermen!!
-bindsym $win+F3 exec --no-startup-id xrandr --output eDP1 --auto --pos 0x750 --output DP1 --auto --pos 1920x0 --output DP2 --auto --pos 3840x0
+bindsym $win+Ctrl+F3 exec --no-startup-id xrandr --output eDP1 --auto --pos 0x750 --output DP1 --auto --pos 1920x0 --output DP2 --auto --pos 3840x0
 # home (to calc modeline use cvt 3840 2160 29.97)
-bindsym $win+F4 "exec --no-startup-id xrandr --newmode '3840x2160_29.97'  338.50  3840 4080 4488 5136  2160 2163 2168 2200 -hsync +vsync;exec --no-startup-id xrandr --addmode DP1 '3840x2160_29.97';exec --no-startup-id xrandr --output eDP1 --auto --pos 0x1500 --output DP1 --mode '3840x2160_29.97' --pos 1920x0 --output DP2 --auto --pos 5760x1000"
-# thuis met tiets kleinere resolutie
-bindsym $win+F5 exec --no-startup-id xrandr --output eDP1 --auto --pos 0x1000 --output DP1 --mode '2560x1440' --pos 1920x0 --output DP2 --auto --pos 4480x700
+bindsym $win+Ctrl+F4 "exec --no-startup-id xrandr --newmode '3840x2160_29.97'  338.50  3840 4080 4488 5136  2160 2163 2168 2200 -hsync +vsync;exec --no-startup-id xrandr --addmode DP1 '3840x2160_29.97';exec --no-startup-id xrandr --output eDP1 --auto --pos 0x1500 --output DP1 --mode '3840x2160_29.97' --pos 1920x0 --output DP2 --auto --pos 5760x1000"
+# thuis met iets kleinere resolutie
+bindsym $win+Ctrl+F5 exec --no-startup-id xrandr --output eDP1 --auto --pos 0x1000 --output DP1 --mode '2560x1440' --pos 1920x0 --output DP2 --auto --pos 4480x700
 # scherm op displayport laptop
-bindsym $win+F6 exec --no-startup-id xrandr --output eDP1 --auto --output DP1 --auto --right-of eDP1
+bindsym $win+Ctrl+F6 exec --no-startup-id xrandr --output eDP1 --auto --output DP1 --auto --right-of eDP1
 # tweede scherm op displayport-2 laptop
-bindsym $win+F7 exec --no-startup-id xrandr --output eDP1 --auto --output DP2 --auto --right-of eDP1
+bindsym $win+Ctrl+F7 exec --no-startup-id xrandr --output eDP1 --auto --output DP2 --auto --right-of eDP1
 
 bindsym $mod+x "exec /usr/bin/setxkbmap -variant euro -option -option compose:menu -option lv3:ralt_switch -option eurosign:5 -option ctrl:nocaps ;exec xmodmap ~/.xmodmap;exec feh --bg-scale /home/alex/P1150009.JPG"
 

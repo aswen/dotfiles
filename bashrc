@@ -132,7 +132,7 @@ alias tl='tmux ls'
 alias ltmux="if tmux has-session -t $USER; then tmux attach -t $USER; else tmux new -s $USER; fi"
 
 # Backup
-rsyncopts='-avz --exclude=lost+found --no-perms --no-owner --no-group --append-verify'
+rsyncopts='-av --exclude=lost+found --no-perms --no-owner --no-group --append-verify'
 alias bck_foto='rsync ${rsyncopts} --exclude-from=/data/foto/.excludefile  /data/foto/ /netwerk/foto/'
 alias bck_foto_usb='rsync ${rsyncopts} --exclude-from=/data/foto/.excludefile  /data/foto/ /mnt/2t_2/foto/'
 alias bck_foto_cider_usb='sudo rsync ${rsyncopts} --exclude-from=/data/foto/.excludefile  /netwerk/foto/ /mnt/2t_2/foto/'

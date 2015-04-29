@@ -22,9 +22,9 @@ prompt () {
     if [ $branchstate -eq 0 ];then
       local branch_colour=$GREEN
     else
-      if git status --porcelain|grep "^UU " >/dev/null 2>&1;then
+      if git status --porcelain|egrep "^UU |^AA" >/dev/null 2>&1;then
         local branch_colour=$RED
-        local branch="Rebase in progress"
+        local branch="MERGE CONFLICTS"
       else
         local branch_colour=$ORANGE
       fi

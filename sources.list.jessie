@@ -1,17 +1,17 @@
-deb https://mirrors.kernel.org/debian/ wheezy main non-free contrib
-deb-src https://mirrors.kernel.org/debian/ wheezy main non-free contrib
+deb https://mirrors.kernel.org/debian/ jessie main non-free contrib
+deb-src https://mirrors.kernel.org/debian/ jessie main non-free contrib
 
-deb http://security.debian.org/ wheezy/updates main non-free contrib
-deb-src http://security.debian.org/ wheezy/updates main non-free contrib
+deb http://security.debian.org/ jessie/updates main non-free contrib
+deb-src http://security.debian.org/ jessie/updates main non-free contrib
 
-deb https://mirrors.kernel.org/debian/ wheezy-updates main non-free contrib
-deb-src https://mirrors.kernel.org/debian/ wheezy-updates main non-free contrib
+deb https://mirrors.kernel.org/debian/ jessie-updates main non-free contrib
+deb-src https://mirrors.kernel.org/debian/ jessie-updates main non-free contrib
 
-deb https://mirrors.kernel.org/debian/ wheezy-proposed-updates non-free contrib main
-deb-src https://mirrors.kernel.org/debian/ wheezy-proposed-updates non-free contrib main
+deb https://mirrors.kernel.org/debian/ jessie-proposed-updates non-free contrib main
+deb-src https://mirrors.kernel.org/debian/ jessie-proposed-updates non-free contrib main
 
 # Backports
-deb https://mirrors.kernel.org/debian wheezy-backports main non-free contrib
+deb https://mirrors.kernel.org/debian jessie-backports main non-free contrib
 
 # Add the testing repos (link testing.pref to prefer this over stable)
 deb https://mirrors.kernel.org/debian/ testing main non-free contrib
@@ -34,7 +34,7 @@ deb http://repository.spotify.com stable non-free
 
 # uit ivm ffmpeg
 # apt-get install deb-multimedia-keyring
-#deb http://www.deb-multimedia.org wheezy main non-free
+#deb http://www.deb-multimedia.org jessie main non-free
 
 # mozilla.debian.net
 #deb http://cdn.debian.net/debian unstable main
@@ -42,7 +42,7 @@ deb http://repository.spotify.com stable non-free
 
 # virtualbox
 # curl http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc|sudo apt-key add -
-deb http://download.virtualbox.org/virtualbox/debian wheezy contrib
+deb http://download.virtualbox.org/virtualbox/debian jessie contrib
 
 # OSM
 #gpg --recv-key DD45F6C3
@@ -55,5 +55,5 @@ deb-src http://qgis.org/debian testing main
 deb http://repo.percona.com/apt wheezy main
 
 # curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-deb https://apt.postgresql.org/pub/repos/apt/ wheezy-pgdg main
+deb https://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main
 

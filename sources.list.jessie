@@ -27,7 +27,7 @@ deb https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib
 deb-src https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
 
 # curl http://deb.opera.com/archive.key | sudo apt-key add -
-deb http://deb.opera.com/opera stable non-free
+#deb http://deb.opera.com/opera stable non-free
 
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
 deb http://repository.spotify.com stable non-free

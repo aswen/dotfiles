@@ -29,7 +29,7 @@ deb-src https://mirrors.kernel.org/debian/ testing-proposed-updates non-free con
 # curl http://deb.opera.com/archive.key | sudo apt-key add -
 #deb http://deb.opera.com/opera stable non-free
 
-# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
+# sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2C19886
 deb http://repository.spotify.com stable non-free
 
 # uit ivm ffmpeg

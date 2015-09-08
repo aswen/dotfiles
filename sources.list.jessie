@@ -13,6 +13,8 @@ deb-src https://mirrors.kernel.org/debian/ jessie-proposed-updates non-free cont
 # Backports
 deb https://mirrors.kernel.org/debian jessie-backports main non-free contrib
 
+
+#### TESTING
 # Add the testing repos (link testing.pref to prefer this over stable)
 deb https://mirrors.kernel.org/debian/ testing main non-free contrib
 deb-src https://mirrors.kernel.org/debian/ testing main non-free contrib
@@ -25,6 +27,14 @@ deb-src https://mirrors.kernel.org/debian/ testing-updates main non-free contrib
 
 deb https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
 deb-src https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
+
+
+#### UNSTABLE
+# Add the unstable repos (link unstable.pref to prefer this over stable)
+#deb https://mirrors.kernel.org/debian/ unstable main non-free contrib
+#deb-src https://mirrors.kernel.org/debian/ unstable main non-free contrib
+
+
 
 # curl http://deb.opera.com/archive.key | sudo apt-key add -
 #deb http://deb.opera.com/opera stable non-free

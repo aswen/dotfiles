@@ -1,250 +1,257 @@
-restore window = 1
-unsharp radius = 0
-unsharp sigma = 1
-view files toggle = 
-default filename = %y-%m-%d %t
-rotate reverse = 0
-no-mask-scan = 1
-y = 148
-author = 
-image type = pdf
-threshold tool = 80
-pdf compression = auto
-selection = 8
-selection = 736
-selection = 787
-selection = 0
-resolution = 200
-no-noisefilter = 1
-Dark threshold = 0.12
-tiff compression = none
-cwd = /data/home/alex/Documenten/huizen/Lochem, Hugo de Grootlaan 18
-window_x = 1920
-window_maximize = 
-white-threshold = 0.9
-OCR on scan = 
-cache options = 1
-date offset = -26
-OCR output = replace
-pages to scan = 0
-Blank threshold = 0
-thumb panel = 148
-startup warning = 1
-no-blackfilter = 1
-<Paper>
-    <foto>
-        t = 0
-        x = 88
-        l = 0
-        y = 130
-    </foto>
-    <ASNafschrift>
-        y = 148
-        l = 0
-        x = 211
-        t = 0
-    </ASNafschrift>
-    <"foto klein">
-        t = 0
-        x = 98
-        l = 0
-        y = 146
-    </"foto klein">
-    <"Getronics loonstrook">
-        x = 180
-        t = 0
-        l = 0
-        y = 300
-    </"Getronics loonstrook">
-    <"foto groot">
-        l = 0
-        y = 184
-        t = 0
-        x = 123
-    </"foto groot">
-    <A4+acceptgiro>
-        t = 0
-        x = 210
-        y = 400
-        l = 0
-    </A4+acceptgiro>
-    <A5>
-        l = 0
-        y = 210
-        t = 0
-        x = 148
-    </A5>
-    <A4>
-        l = 0
-        y = 297
-        x = 210
-        t = 0
-    </A4>
-    <A6>
-        y = 105
-        l = 0
-        t = 0
-        x = 148
-    </A6>
-    <"Raet loonstrook">
-        x = 176
-        t = 0
-        y = 300
-        l = 0
-    </"Raet loonstrook">
-    <A3>
-        y = 420
-        l = 0
-        t = 0
-        x = 297
-    </A3>
-</Paper>
-layout = single
-rotate facing = 0
-cycle sane handle = 
-version = 1.3.2
-batch-scan = yes
-downsample dpi = 150
-no-grayfilter = 1
-deskew-scan-direction = left,right,top,bottom
-libsane-perl version = 0.05
-unsharp amount = 1
-window_height = 2124
-window_y = 18
-mode = True Gray
-unsharp threshold = 0.05
-unpaper on scan = 
-quality = 75
-SANE version = 1.0.24
-<profile>
-    <"brief meerdere pagina's">
-        t = 0
-        source = Automatic Document Feeder(centrally aligned)
-        Paper size = A4
-        y = 297
-        mode = True Gray
-        x = 210
-        brightness = 0
-        contrast = 0
-        resolution = 200
-        l = 0
-    </"brief meerdere pagina's">
-    <foto>
-        y = 149
-        Paper size = foto klein
-        source = FlatBed
-        t = 0
-        l = 0
-        resolution = 600
-        mode = 24bit Color
-        x = 101
-    </foto>
-</profile>
-scan_window_height = 813
-subject = 
-window_width = 1916
-<default>
-    <brother3:net1;dev0>
-        br-x = 210
-    </brother3:net1;dev0>
-    <brother3:net1;dev0>
-        br-y = 297
-    </brother3:net1;dev0>
-    <brother3:net1;dev0>
-        mode = True Gray
-    </brother3:net1;dev0>
-    <brother3:net1;dev0>
-        source = Automatic Document Feeder(centrally aligned)
-    </brother3:net1;dev0>
-</default>
-scan-reload-triggers = mode
-t = 0
-keywords = 
-pid = 3133
-Paper size = A4
-Page range = selected
-auto-open-scan-dialog = 1
-x = 211
-user_defined_tools = gimp %i
-no-blurfilter = 1
-scan_window_width = 537
-downsample = 
-scan prefix = 
-ocr engine = ocropus
-l = 0
-output-pages = 1
-source = Automatic Document Feeder(centrally aligned)
-device = brother3:net1;dev0
-black-threshold = 0.33
-pdf font = /home/alex/.fonts/Aller_Bd.ttf
-title = Bon schoorsteenveger
-compression = JPEG
-brightness = 0
-<default-scan-options>
-    Paper size = A4
-</default-scan-options>
-<default-scan-options>
-    l = 0
-</default-scan-options>
-<default-scan-options>
-    resolution = 200
-</default-scan-options>
-<default-scan-options>
-    t = 0
-</default-scan-options>
-<default-scan-options>
-    x = 210
-</default-scan-options>
-<default-scan-options>
-    y = 297
-</default-scan-options>
-<default-scan-options>
-    brightness = 0
-</default-scan-options>
-<default-scan-options>
-    contrast = 0
-</default-scan-options>
-<default-scan-options>
-    mode = True Gray
-</default-scan-options>
-<default-scan-options>
-    br-x = 210
-</default-scan-options>
-<default-scan-options>
-    br-y = 297
-</default-scan-options>
-<default-scan-options>
-    source = FlatBed
-</default-scan-options>
-frontend = libsane-perl
-contrast = 0
-available-tmp-warning = 10
-<visible-scan-options>
-    source = 1
-    y = 1
-    compression = 1
-    button-wait = 1
-    x = 1
-    mode = 1
-    adf-mode = 1
-    pageheight = 1
-    adf_mode = 1
-    pagewidth = 1
-    l = 1
-    page-height = 1
-    calibration-cache = 1
-    overscan-top = 1
-    t = 1
-    speed = 1
-    Paper size = 1
-    threshold = 1
-    gain = 1
-    wait-for-button = 1
-    brightness = 1
-    overscan-bottom = 1
-    resolution = 1
-    batch-scan = 1
-    contrast = 1
-    page-width = 1
-</visible-scan-options>
-default profile
+{
+   "window_width" : 3836,
+   "window_x" : 1920,
+   "window_height" : 1052,
+   "Paper" : {
+      "foto groot" : {
+         "t" : "0",
+         "x" : "123",
+         "l" : "0",
+         "y" : "184"
+      },
+      "A5" : {
+         "l" : "0",
+         "x" : "148",
+         "t" : "0",
+         "y" : "210"
+      },
+      "A6" : {
+         "y" : "105",
+         "t" : "0",
+         "l" : "0",
+         "x" : "148"
+      },
+      "foto klein" : {
+         "t" : "0",
+         "x" : "98",
+         "l" : "0",
+         "y" : "146"
+      },
+      "Raet loonstrook" : {
+         "t" : "0",
+         "x" : "176",
+         "l" : "0",
+         "y" : "300"
+      },
+      "foto" : {
+         "x" : "88",
+         "l" : "0",
+         "t" : "0",
+         "y" : "130"
+      },
+      "A3" : {
+         "y" : "420",
+         "t" : "0",
+         "x" : "297",
+         "l" : "0"
+      },
+      "A4" : {
+         "t" : "0",
+         "x" : "210",
+         "l" : "0",
+         "y" : "297"
+      },
+      "ASNafschrift" : {
+         "x" : "211",
+         "l" : "0",
+         "t" : "0",
+         "y" : "148"
+      },
+      "A4+acceptgiro" : {
+         "y" : "400",
+         "x" : "210",
+         "l" : "0",
+         "t" : "0"
+      },
+      "Getronics loonstrook" : {
+         "y" : "300",
+         "x" : "180",
+         "l" : "0",
+         "t" : "0"
+      }
+   },
+   "scan_window_width" : 537,
+   "selection" : [
+      0,
+      0,
+      970,
+      1129
+   ],
+   "message" : {
+      "Some pages have not been saved.\nDo you really want to quit?" : {}
+   },
+   "SANE version" : "1.0.24",
+   "t" : "0",
+   "pages to scan" : "0",
+   "no-blackfilter" : "1",
+   "pdf compression" : "auto",
+   "output-pages" : "1",
+   "OCR on scan" : "",
+   "batch-scan" : "yes",
+   "keywords" : "",
+   "profile" : {
+      "brief meerdere pagina's" : {
+         "mode" : "True Gray",
+         "t" : "0",
+         "contrast" : "0",
+         "Paper size" : "A4",
+         "y" : "297",
+         "brightness" : "0",
+         "source" : "Automatic Document Feeder(centrally aligned)",
+         "resolution" : "200",
+         "x" : "210",
+         "l" : "0"
+      },
+      "foto" : {
+         "t" : "0",
+         "mode" : "24bit Color",
+         "x" : "101",
+         "l" : "0",
+         "resolution" : "600",
+         "source" : "FlatBed",
+         "y" : "149",
+         "Paper size" : "foto klein"
+      }
+   },
+   "unsharp sigma" : "1",
+   "image type" : "pdf",
+   "scan prefix" : "",
+   "auto-open-scan-dialog" : "1",
+   "compression" : "JPEG",
+   "Dark threshold" : "0.12",
+   "x" : "211",
+   "visible-scan-options" : {
+      "overscan-bottom" : "1",
+      "compression" : "1",
+      "calibration-cache" : "1",
+      "pagewidth" : "1",
+      "speed" : "1",
+      "button-wait" : "1",
+      "mode" : "1",
+      "overscan-top" : "1",
+      "y" : "1",
+      "pageheight" : "1",
+      "threshold" : "1",
+      "Paper size" : "1",
+      "x" : "1",
+      "adf_mode" : "1",
+      "t" : "1",
+      "page-height" : "1",
+      "page-width" : "1",
+      "brightness" : "1",
+      "contrast" : "1",
+      "adf-mode" : "1",
+      "wait-for-button" : "1",
+      "batch-scan" : "1",
+      "resolution" : "1",
+      "gain" : "1",
+      "l" : "1",
+      "source" : "1"
+   },
+   "frontend" : "libsane-perl",
+   "no-mask-scan" : "1",
+   "cwd" : "/data/home/alex/Documenten/archief/Facturen en garantiebewijzen",
+   "unsharp amount" : "1",
+   "downsample dpi" : 150,
+   "date offset" : -26,
+   "default-scan-options" : [
+      {
+         "Paper size" : "A4"
+      },
+      {
+         "brightness" : "0"
+      },
+      {
+         "contrast" : "0"
+      },
+      {
+         "l" : "0"
+      },
+      {
+         "mode" : "True Gray"
+      },
+      {
+         "resolution" : "200"
+      },
+      {
+         "t" : "0"
+      },
+      {
+         "x" : "210"
+      },
+      {
+         "y" : "297"
+      },
+      {
+         "source" : "Automatic Document Feeder(centrally aligned)"
+      }
+   ],
+   "window_maximize" : "",
+   "rotate reverse" : "0",
+   "author" : "",
+   "brightness" : "0",
+   "default profile" : "brief meerdere pagina's",
+   "quality" : 75,
+   "no-noisefilter" : "1",
+   "scan-reload-triggers" : "mode",
+   "version" : "1.3.4",
+   "thumb panel" : 148,
+   "layout" : "single",
+   "no-blurfilter" : "1",
+   "cache options" : "1",
+   "y" : "148",
+   "white-threshold" : "0.9",
+   "rotate facing" : "0",
+   "view files toggle" : "",
+   "tiff compression" : "none",
+   "OCR output" : "replace",
+   "unpaper on scan" : "",
+   "downsample" : "",
+   "resolution" : "200",
+   "unsharp threshold" : "0.05",
+   "ocr engine" : "ocropus",
+   "source" : "Automatic Document Feeder(centrally aligned)",
+   "threshold tool" : "80",
+   "user_defined_tools" : [
+      "gimp %i"
+   ],
+   "libsane-perl version" : "0.05",
+   "scan_window_height" : 813,
+   "window_y" : 18,
+   "mode" : "True Gray",
+   "available-tmp-warning" : "10",
+   "pid" : "3133",
+   "unsharp radius" : "0",
+   "restore window" : "1",
+   "black-threshold" : "0.33",
+   "device" : "brother3:net1;dev0",
+   "cycle sane handle" : "",
+   "Paper size" : "A4",
+   "default" : {
+      "brother3:net1;dev0" : [
+         {
+            "br-x" : "210"
+         },
+         {
+            "br-y" : "297"
+         },
+         {
+            "mode" : "True Gray"
+         },
+         {
+            "source" : "Automatic Document Feeder(centrally aligned)"
+         }
+      ]
+   },
+   "subject" : "",
+   "startup warning" : "1",
+   "Blank threshold" : "0",
+   "title" : "Te Koppele - factuur ringsteeksleutels en kleine zijkniptang",
+   "Page range" : "selected",
+   "deskew-scan-direction" : "left,right,top,bottom",
+   "l" : "0",
+   "pdf font" : "/home/alex/.fonts/Aller_Bd.ttf",
+   "no-grayfilter" : "1",
+   "default filename" : "%y-%m-%d %t",
+   "contrast" : "0"
+}

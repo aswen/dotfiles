@@ -129,12 +129,12 @@ for_window [class="(?i)spotify"] border none
 
 bindsym $win+v exec vlc
 
-bindsym $win+q exec --no-startup-id qmmp
-bindcode 171 exec --no-startup-id qmmp --next
-bindcode 172 exec --no-startup-id qmmp -t
-bindcode 173 exec --no-startup-id qmmp --previous
-bindcode 174 exec --no-startup-id qmmp -s
-bindcode 179 exec --no-startup-id qmmp
+bindsym $win+q exec --no-startup-id /usr/local/bin/qmmp
+bindcode 171 exec --no-startup-id /usr/local/bin/qmmp --next
+bindcode 172 exec --no-startup-id /usr/local/bin/qmmp -t
+bindcode 173 exec --no-startup-id /usr/local/bin/qmmp --previous
+bindcode 174 exec --no-startup-id /usr/local/bin/qmmp -s
+bindcode 179 exec --no-startup-id /usr/local/bin/qmmp
 for_window [class="(?i)qmmp"] border none
 for_window [class="(?i)qmmp"] floating enable
 assign [class="(?i)qmmp"] → music

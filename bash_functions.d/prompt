@@ -2,6 +2,8 @@
 
 # This is to have a branch indication in PS1 when in a git repo
 prompt () {
+  # Append command history to historyfile immediately
+  history -a
   case $USER in
     root)
       local prompt_suffix='$'

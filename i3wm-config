@@ -139,8 +139,8 @@ for_window [class="(?i)qmmp"] border none
 for_window [class="(?i)qmmp"] floating enable
 assign [class="(?i)qmmp"] → music
 
-bindsym $win+k exec /usr/local/bin/keepassx ~/KeepassX/Alex.kdbx
-bindsym $win+o exec keepassx ~/Documenten/Nedap/Steppingstone-pass/Stepping\ Stone.kdb
+bindsym $win+k exec /usr/bin/keepass2 ~/KeepassX/Alex.kdbx
+bindsym $win+o exec keepass2 ~/Documenten/Nedap/Steppingstone-pass/Stepping\ Stone.kdb
 #for_window [class="(?i)keepass"] floating enable
 assign [Title="(?i)keepass"] → meuk
 

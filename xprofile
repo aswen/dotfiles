@@ -10,14 +10,11 @@ set -x
 /usr/bin/xset +fp ~/.fonts
 /usr/bin/xset +fp ~/.fonts/dina
 eval `/usr/bin/gnome-keyring-daemon --start --components=pkcs11`
-/usr/bin/gnome-sound-applet&
-/usr/bin/bluetooth-applet&
 /usr/bin/nm-applet&
 /usr/bin/gkrellm&
 /usr/bin/glipper&
 /usr/bin/setxkbmap -variant euro -option -option compose:menu,lv3:ralt_switch,eurosign:5,ctrl:nocaps
 /usr/bin/xmodmap ~/.xmodmap
-/usr/bin/update-notifier&
 /usr/bin/libreoffice --quickstart --nologo&
 [ -x /usr/bin/numlockx ]&&/usr/bin/numlockx on
 ## tapping aan en geen palm op touchpad
@@ -27,6 +24,9 @@ eval `/usr/bin/gnome-keyring-daemon --start --components=pkcs11`
 ##http://www.webupd8.org/2009/11/ubuntu-automatically-disable-touchpad.html
 /usr/bin/syndaemon -dKti2 -v
 #
+
+# Start the NitroKey app
+/usr/bin/nitrokey-app &
 
 # This is here so cron can use notify-send to warn me if batery gets empty
 [ -d $HOME/.dbus ] || mkdir $HOME/.dbus

@@ -240,8 +240,9 @@ bindsym $mod+F2 workspace mail
 bindsym $mod+F3 workspace chat
 bindsym $mod+F4 workspace music
 bindsym $win+F1 workspace puppet
-bindsym $win+F2 workspace vagrant
+bindsym $win+F2 workspace puppet2
 bindsym $win+F3 workspace dotfiles
+bindsym $win+F4 workspace vagrant
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -259,8 +260,9 @@ bindsym $mod+Shift+F2 move container to workspace mail
 bindsym $mod+Shift+F3 move container to workspace chat
 bindsym $mod+Shift+F4 move container to workspace music
 bindsym $win+Shift+F1 move container to workspace puppet
-bindsym $win+Shift+F2 move container to workspace vagrant
+bindsym $win+Shift+F2 move container to workspace puppet2
 bindsym $win+Shift+F3 move container to workspace dotfiles
+bindsym $win+Shift+F4 move container to workspace vagrant
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

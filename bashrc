@@ -135,7 +135,7 @@ alias ltmux="if tmux has-session -t $USER; then tmux attach -t $USER; else tmux 
 rsyncopts='-av --exclude=lost+found --no-perms --no-owner --no-group'
 
 # admin aliasses
-alias hgrep='history|grep'
+alias hgrep='history|grep -i'
 alias sudi='sudo -i'
 alias meminfo='ps -eo pid,user,pmem,rss,vsz,cmd --sort rss'
 alias top='top -cHd1'

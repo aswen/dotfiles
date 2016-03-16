@@ -14,19 +14,19 @@ deb-src https://mirrors.kernel.org/debian/ jessie-proposed-updates non-free cont
 deb https://mirrors.kernel.org/debian jessie-backports main non-free contrib
 
 
-#### TESTING
-# Add the testing repos (link testing.pref to prefer this over stable)
-deb https://mirrors.kernel.org/debian/ testing main non-free contrib
-deb-src https://mirrors.kernel.org/debian/ testing main non-free contrib
-
-deb http://security.debian.org/ testing/updates main non-free contrib
-deb-src http://security.debian.org/ testing/updates main non-free contrib
-
-deb https://mirrors.kernel.org/debian/ testing-updates main non-free contrib
-deb-src https://mirrors.kernel.org/debian/ testing-updates main non-free contrib
-
-deb https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
-deb-src https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
+##### TESTING
+## Add the testing repos (link testing.pref to prefer this over stable)
+#deb https://mirrors.kernel.org/debian/ testing main non-free contrib
+#deb-src https://mirrors.kernel.org/debian/ testing main non-free contrib
+#
+#deb http://security.debian.org/ testing/updates main non-free contrib
+#deb-src http://security.debian.org/ testing/updates main non-free contrib
+#
+#deb https://mirrors.kernel.org/debian/ testing-updates main non-free contrib
+#deb-src https://mirrors.kernel.org/debian/ testing-updates main non-free contrib
+#
+#deb https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
+#deb-src https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
 
 
 #### UNSTABLE

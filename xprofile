@@ -9,7 +9,7 @@ set -x
 /usr/bin/xset fp defaults
 /usr/bin/xset +fp ~/.fonts
 /usr/bin/xset +fp ~/.fonts/dina
-eval `/usr/bin/gnome-keyring-daemon --start --components=pkcs11`
+#eval `/usr/bin/gnome-keyring-daemon --start --components=pkcs11`
 /usr/bin/nm-applet&
 /usr/bin/gkrellm&
 /usr/bin/glipper&
@@ -26,7 +26,7 @@ eval `/usr/bin/gnome-keyring-daemon --start --components=pkcs11`
 #
 
 # Start the NitroKey app
-/usr/bin/nitrokey-app &
+#/usr/bin/nitrokey-app &
 
 # This is here so cron can use notify-send to warn me if batery gets empty
 [ -d $HOME/.dbus ] || mkdir $HOME/.dbus

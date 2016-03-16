@@ -35,7 +35,7 @@ deb https://mirrors.kernel.org/debian jessie-backports main non-free contrib
 #deb-src https://mirrors.kernel.org/debian/ unstable main non-free contrib
 
 # Docker
-deb https://apt.dockerproject.org/repo debian-stretch main
+#deb https://apt.dockerproject.org/repo debian-stretch main
 
 # curl http://deb.opera.com/archive.key | sudo apt-key add -
 #deb http://deb.opera.com/opera stable non-free

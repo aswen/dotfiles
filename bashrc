@@ -142,7 +142,7 @@ alias top='top -cHd1'
 alias df='df -TH'
 alias tailf='tail -f'
 alias dusort='du -h --time --max-depth=1|sort -hr'
-alias upgrade='sudo apt-get update;sudo apt-get dist-upgrade'
+alias upgrade='sudo apt update;sudo apt -V dist-upgrade'
 
 # XrandR
 alias xra_home='xrandr --output LVDS --off --output DisplayPort-2 --auto --output VGA-0 --auto --left-of DisplayPort-2 --verbose'

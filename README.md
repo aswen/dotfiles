@@ -19,7 +19,7 @@ commands to remember:
 ```bash
 fc-cache -fv
 mkfontdir
-mkfontcale
+mkfontscale
 xset -q (query settings)
 xset fp default
 xset +fp ~/.fonts

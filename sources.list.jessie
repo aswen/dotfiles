@@ -67,3 +67,6 @@ deb http://repo.percona.com/apt jessie main
 # curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
 deb https://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main
 
+# Hipchat
+# curl https://atlassian.artifactoryonline.com/atlassian/api/gpg/key/public | sudo apt-key add -
+deb https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client jessie main

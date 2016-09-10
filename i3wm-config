@@ -122,7 +122,8 @@ bindsym --release Print exec /usr/bin/scrot -m '/tmp/%Y-%m-%d_%H:%M:%S.png'
 bindsym --release $win+Print exec --no-startup-id /usr/bin/scrot -u -d2 '/tmp/%Y-%m-%d_%H:%M:%S.png'
 
 #bindsym $win+y exec spotify
-bindsym $win+s exec spotify
+#bindsym $win+s exec spotify
+bindsym $win+s exec /usr/lib/chromium/chromium --profile-directory=Default --app-id=bikioccmkafdpakkkcpdbppfkghcmihk
 assign [class="(?i)spotify"] → music
 for_window [class="(?i)spotify"] border none
 #for_window [class="(?i)spotify"] floating enable

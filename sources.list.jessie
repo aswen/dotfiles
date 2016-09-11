@@ -56,7 +56,7 @@ deb http://repository.spotify.com stable non-free
 deb http://download.virtualbox.org/virtualbox/debian jessie contrib
 
 # OSM
-# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 3FF5FFCAD71472C4
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 073D307A618E5811
 deb     http://qgis.org/debian jessie main
 deb-src http://qgis.org/debian jessie main
 

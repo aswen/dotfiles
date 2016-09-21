@@ -1,8 +1,0 @@
-gc () {
-  commit_params="$@"
-  if [ -f ext/pre-commit ];then
-    ./ext/pre-commit && git commit $commit_params
-  else
-    git commit $commit_params
-  fi
-}

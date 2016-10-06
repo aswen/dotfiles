@@ -49,6 +49,10 @@ bindsym $win+l exec i3lock -t -e -i /home/alex/mug.png -c 000000
 bindsym $win+f exec --no-startup-id iceweasel
 for_window [class="(?i)Navigator"] border none
 
+# TOR
+bindsym Ctrl+$win+f exec --no-startup-id sh -c '"/home/alex/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/start-tor-browser" --detach || ([ !  -x "/home/alex/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/start-tor-browser" ] && "$(dirname "$*")"/Browser/start-tor-browser --detach)' dummy %k
+
+
 # some libreoffice keybindings
 bindsym $win+w exec libreoffice --nologo --writer
 bindsym $win+c exec libreoffice --nologo --calc

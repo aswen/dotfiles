@@ -1,6 +1,7 @@
 [user]
 	name = Alexander Swen
 	email = alex@swen.nu
+	signingkey = D90185AF639B58EB
 [color]
   branch = auto
   diff = auto

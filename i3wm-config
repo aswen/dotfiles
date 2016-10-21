@@ -74,6 +74,7 @@ for_window [title="(?i)Zimbra:"] border normal
 for_window [title="(?i)Zimbra: Compose"] floating enable
 for_window [title="(?i)Zimbra: Reply"] floating enable
 for_window [title="(?i)Zimbra: Forward"] floating enable
+for_window [title="(?i)NLLGG Webmail:: Compose"] floating enable
 
 # Skype calls floating
 for_window [title="(?i)Call with "] floating enable

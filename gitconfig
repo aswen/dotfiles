@@ -36,3 +36,5 @@
 	default = current
 [help]
   autocorrect = -1
+[commit]
+	gpgsign = true

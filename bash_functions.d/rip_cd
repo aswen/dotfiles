@@ -13,21 +13,25 @@ usage_rip_cd () {
   printf '%s\n' 'If you set all some of the four the dir will be made of what you gave.' >&2
   printf '%s\n' "If you set none of the four the dir will './rip_cd_$(date_now)'." >&2
   printf '%s\n\n' "Tracks will allways be '##.mp3'." >&2
+  unset album artist cd diskdrive targetdir dir
   return 1
 }
 
 get_options_rip_cd () {
-  unset album artist cd diskdrive targetdir
-  while getopts "A:a:c:d:t:" opt;do
-    case ${opt} in
-      A) export artist=$OPTARG;;
-      a) export album=$OPTARG;;
-      c) export cd=$OPTARG;;
-      d) export diskdrive=$OPTARG;;
-      t) export targetdir=$OPTARG;;
-      *) usage_rip_cd;;
-    esac
-  done
+  if [ $# -gt 1 ];then
+    while getopts "A:a:c:d:t:" opt;do
+      case ${opt} in
+        A) export artist=$OPTARG;;
+        a) export album=$OPTARG;;
+        c) export cd=$OPTARG;;
+        d) export diskdrive=$OPTARG;;
+        t) export targetdir=$OPTARG;;
+      esac
+    done
+    unset OPTIND
+  else
+    usage_rip_cd
+  fi
   return $?
 }
 
@@ -43,19 +47,18 @@ rip_cd () {
 
   # If any options are given parse them
   if [ $# -gt 0 ];then
+  unset album artist cd diskdrive targetdir
     get_options_rip_cd "$@" || return $?
   fi
   unset dir
-  [ -n "$targetdir" ] && dir="$targetdir/"
-  [ -n "$artist" ]    && dir="${dir}${artist}/"
-  [ -n "$album" ]     && dir="${dir}${album}/"
-  [ -n "$cd" ]        && dir="${dir}${cd}/"
+  [ -n "$targetdir" ] && local dir="$targetdir/"
+  [ -n "$artist" ]    && local dir="${dir}${artist}/"
+  [ -n "$album" ]     && local dir="${dir}${album}/"
+  [ -n "$cd" ]        && local dir="${dir}${cd}/"
 
   # If no input is given make a name ourself
-  [ -z "$targetdir" -a -z "$artist" -a -z "$album" -a -z "$cd" ] && dir="./$(date_now)"
+  [ -z "$targetdir" -a -z "$artist" -a -z "$album" -a -z "$cd" ] && local dir="./$(date_now)"
 
-  echo "Dir: $dir"
-  return 1
   # If the dir ins't there yet: make it
   [ -d "$dir" ] || install -d "$dir"
   cd "$dir"
@@ -63,19 +66,20 @@ rip_cd () {
   # Rip CD contents to wav file
   if [ -n "$diskdrive" ];then
     log "The contents of $diskdrive will be written to $dir"
-    /usr/bin/cdparanoia -B --force-cdrom-device=$diskdrive || die 2 "Reading from $diskdrive failed."
+    /usr/bin/cdparanoia -B --force-cdrom-device=$diskdrive && eject $diskdrive || die 2 "Reading from $diskdrive failed."
   else
     log "CdParanoia will search for a Cd and that will be written to $dir"
-    /usr/bin/cdparanoia -B || die 2 "cdparanoia failed."
+    /usr/bin/cdparanoia -B && eject || die 2 "cdparanoia failed."
   fi
 
   log "Convert wave files to mp3 now."
   for x in *.wav;do
-    name=${x#track}
-    name=${name/cdda.wav/mp3}
+    local name=${x#track}
+    local name=${name/cdda.wav/mp3}
     /usr/bin/lame --vbr-new -V2 "$x" "${name}" && rm "$x"
   done
 
+  unset album artist cd diskdrive targetdir dir
   ls -lah
 
 }

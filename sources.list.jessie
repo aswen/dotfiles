@@ -48,6 +48,10 @@ deb http://repository.spotify.com stable non-free
 # apt-get install deb-multimedia-keyring
 #deb http://www.deb-multimedia.org jessie main non-free
 
+# VideoLAN libdvdcss source
+# curl http://download.videolan.org/pub/debian/videolan-apt.asc | sudo apt-key add -
+deb http://download.videolan.org/pub/debian/stable/ /
+
 # mozilla.debian.net
 #deb http://cdn.debian.net/debian unstable main
 #deb http://cdn.debian.net/debian experimental main

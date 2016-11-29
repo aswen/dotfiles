@@ -52,6 +52,8 @@ for_window [class="(?i)Navigator"] border none
 # TOR
 bindsym Ctrl+$win+f exec --no-startup-id sh -c '"/home/alex/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/start-tor-browser" --detach || ([ !  -x "/home/alex/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/start-tor-browser" ] && "$(dirname "$*")"/Browser/start-tor-browser --detach)' dummy %k
 
+# Bluetooth
+bindsym $win+b exec --no-startup-id blueman-manager
 
 # some libreoffice keybindings
 bindsym $win+w exec libreoffice --nologo --writer

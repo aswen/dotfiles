@@ -66,7 +66,7 @@ deb     http://qgis.org/debian jessie main
 deb-src http://qgis.org/debian jessie main
 
 #Mysql_Percona
-# apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
+# sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
 deb http://repo.percona.com/apt jessie main
 
 # curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -

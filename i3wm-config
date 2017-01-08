@@ -68,6 +68,9 @@ for_window [class="(?i)com-sun-deploy-panel-ControlPanel"] floating enable
 bindcode 148 exec gnome-calculator
 for_window [class="(?i)gnome-calculator"] floating enable
 
+# Start Gnome control center
+bindsym $mod+c exec gnome-control-center
+
 #start Zimbra in browser
 bindcode 163 exec chromium --allow-outdated-plugins --app=https://webmail.melkweg-online.nl
 bindsym $win+m exec chromium --allow-outdated-plugins --app=https://webmail.melkweg-online.nl

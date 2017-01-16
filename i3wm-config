@@ -37,6 +37,9 @@ bindsym $win+e exec pcmanfm
 # There are moments I want nautilus though...
 bindsym Shift+$win+e exec nautilus --no-desktop ~
 
+# Start eclipse
+bindsym Ctrl+$mod+e exec /data/software/Eclipse/eclipse/eclipse
+
 # sysadmmeuk
 bindsym $mod+y exec su-to-root -X -c /usr/sbin/synaptic
 bindsym $win+d exec su-to-root -X -c /usr/bin/palimpsest

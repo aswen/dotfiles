@@ -329,7 +329,7 @@ bindsym $win+Ctrl+F5 exec --no-startup-id xrandr --output eDP1 --auto --pos 0x10
 # scherm op displayport laptop
 bindsym $win+Ctrl+F6 exec --no-startup-id xrandr --output eDP1 --auto --output DP1 --auto --right-of eDP1
 # Twee schermen op dock
-bindsym $win+Ctrl+F7 exec --no-startup-id xrandr --verbose --output DP1-2 --auto --output DP1-1 --auto --right-of DP1-2 --output eDP1 --auto --left-of DP1-2
+bindsym $win+Ctrl+F7 exec --no-startup-id xrandr --output eDP1 --crtc 0 --auto --output DP1-2 --crtc 1 --auto --right-of eDP1 --output DP1-1 --crtc 2 --auto --right-of DP1-2
 
 bindsym $mod+x "exec /usr/bin/setxkbmap -variant euro -option -option compose:menu -option lv3:ralt_switch -option eurosign:5 -option ctrl:nocaps ;exec xmodmap ~/.xmodmap;exec feh --bg-scale /home/alex/DSC_0717.JPG"
 

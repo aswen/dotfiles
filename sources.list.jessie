@@ -81,3 +81,7 @@ deb https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client jessie 
 # gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
 deb http://deb.torproject.org/torproject.org jessie main
 deb-src http://deb.torproject.org/torproject.org jessie main
+
+# Owncloud
+# curl "http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Debian_8.0/Release.key"|sudo apt-key add -
+deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Debian_8.0/ /

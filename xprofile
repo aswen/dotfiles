@@ -24,7 +24,9 @@ set -x
 ##http://askubuntu.com/questions/46299/how-to-disable-touchpad-tapping-when-typing-on-keyboard
 ##http://www.webupd8.org/2009/11/ubuntu-automatically-disable-touchpad.html
 /usr/bin/syndaemon -dKti2 -v
-#
+
+# Load Owncloud
+/usr/bin/owncloud &
 
 # start the gpg-agent
 eval $(gpg-agent --daemon)

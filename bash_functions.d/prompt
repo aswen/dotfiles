@@ -11,7 +11,7 @@ prompt () {
       ;;
     *)
       local prompt_suffix='#'
-      local prompt_colour=$CYAN
+      local prompt_colour=$BLUE
       ;;
   esac
   if git status --porcelain > /dev/null 2>&1 ; then
@@ -32,12 +32,12 @@ prompt () {
       fi
     fi
     if [[ -n "${subdir}" ]];then
-      PS1="\[$BOLD$prompt_colour\]\t $reponame \[$branch_colour\]$branch\[$prompt_colour\] ${subdir%/}\[$NC\] $prompt_suffix "
+      PS1="\[$BOLD$prompt_colour\]\t $reponame \[$branch_colour\]$branch\[$prompt_colour\] ${subdir%/} $prompt_suffix \[$NC\]"
     else
-      PS1="\[$BOLD$prompt_colour\]\t $reponame \[$branch_colour\]$branch\[$NC\] $prompt_suffix "
+      PS1="\[$BOLD$prompt_colour\]\t $reponame \[$branch_colour\]$branch $prompt_suffix \[$NC\]"
     fi
   else
-    PS1="\[$prompt_colour\]\t \u@\h \w\[$NC\] $prompt_suffix "
+    PS1="\[$prompt_colour\]\t \u@\h \w $prompt_suffix \[$NC\]"
   fi
 }
 

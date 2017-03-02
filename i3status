@@ -18,6 +18,8 @@ order += "battery 0"
 #order += "load"
 order += "cpu_temperature 0"
 order += "volume master"
+order += "tztime Vancouver"
+order += "tztime Ottawa"
 order += "time"
 
 wireless wlan0 {
@@ -59,7 +61,17 @@ run_watch DHCP {
 }
 
 time {
-  format = " :: %Y-%m-%d :: %H.%M.%S :: "
+  format = "NL: %Y-%m-%d :: %H:%M:%S"
+}
+
+tztime Ottawa {
+  format = "Ottawa: %H:%M"
+  timezone = "Canada/Eastern"
+}
+
+tztime Vancouver {
+  format = "Vancouver: %H:%M"
+  timezone = "Canada/Pacific"
 }
 
 load {

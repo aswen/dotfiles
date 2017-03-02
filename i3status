@@ -7,15 +7,9 @@ general {
   interval       = 5
 }
 
-#order += "run_watch EN"
-#order += "run_watch ZW"
-#order += "run_watch Santpoort"
-#order += "run_watch Menno"
-#order += "run_watch Whiskey"
 order += "wireless wlan0"
 order += "ethernet eth0"
 order += "battery 0"
-#order += "load"
 order += "cpu_temperature 0"
 order += "volume master"
 order += "tztime Vancouver"
@@ -33,26 +27,8 @@ ethernet eth0 {
   format_down = "eth0: down"
 }
 
-run_watch Menno {
-  pidfile = "/var/run/openvpn.menno.pid"
-}
-run_watch EN {
-  pidfile = "/var/run/openvpn.nedap-enschede.pid"
-}
-run_watch ZW {
-  pidfile = "/var/run/openvpn.nedap-zwolle.pid"
-}
-run_watch Santpoort {
-  pidfile = "/var/run/openvpn.santpoort.pid"
-}
-run_watch Whiskey {
-  pidfile = "/var/run/openvpn.whiskey.pid"
-}
-
 battery 0 {
   format        = "%status %percentage %remaining"
-  #format       = "%status %percentage %remaining %emptytime %consumption"
-  #low_treshold = 10
   last_full_capacity = true
 }
 
@@ -72,10 +48,6 @@ tztime Ottawa {
 tztime Vancouver {
   format = "Vancouver: %H:%M"
   timezone = "Canada/Pacific"
-}
-
-load {
-  format = "%1min"
 }
 
 disk "/" {

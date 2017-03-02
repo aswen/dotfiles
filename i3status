@@ -17,7 +17,7 @@ order += "tztime Ottawa"
 order += "time"
 
 wireless wlan0 {
-  format_up   = "wlan0: (%quality at %essid, %bitrate) %ip"
+  format_up   = "wlan0: %ip (%quality at %essid, %bitrate)"
   format_down = "wlan0: down"
 }
 

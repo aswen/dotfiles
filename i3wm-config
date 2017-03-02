@@ -337,17 +337,17 @@ bindsym $mod+x "exec /usr/bin/setxkbmap -variant euro -option -option compose:me
 # finds out, if available)
 set $orange #d64937
 set $bgnorm #313131
-set $blue   #5882FA
+set $blue   #819FF7
 set $bfoc   #7f7f7f
 set $bgunf  #3f3f3f
 set $bunf   #333333
 set $white  #FFFFFF
 
-# class                 border  backgr. text    indicator
-client.focused          $bfoc   $orange $blue $bfoc
-client.focused_inactive $orange $bgunf  $blue #484e50
-client.unfocused        $bunf   $bgunf  $blue #292d2e
-client.urgent           $bfoc   $orange $blue #900000
+# class                 border  backgr. text  indicator
+client.focused          $blue   $blue   $white $bfoc
+client.focused_inactive $blue   $bgunf  $white #484e50
+client.unfocused        $bunf   $bgunf  $white #292d2e
+client.urgent           $bfoc   $orange $white #900000
 
 bar {
   status_command i3status -c ~/.i3/status
@@ -357,17 +357,17 @@ bar {
 
   #workspace_buttons yes
 
-  font pango:Dina 7
+  font pango:Dina 9
 
   colors {
     background #202020
-    statusline #5882FA
-    separator  #5882FA
+    statusline #FFFFFF
+    separator  #FFFFFF
 
-    # class            border   backgrd  text
-    focused_workspace  $bfoc    $orange  $white
-    active_workspace   $orange  $bgunf   $white
-    inactive_workspace $bunf    $bgunf   $blue
+    # class            border   backgrnd text
+    focused_workspace  $blue    $blue    $white
+    active_workspace   $blue    $bgunf   $white
+    inactive_workspace $bunf    $bgunf   $white
     urgent_workspace   $bfoc    #ff1203  $blue
   }
 }

@@ -1,0 +1,102 @@
+# vim: set filetype=sh:
+
+# This makes an iso image of an encrypted DVD
+
+usage_rip_dvd () {
+  printf '%s\n' "===============" >&2
+  printf '%s\n' "==== USAGE ====" >&2
+  printf '%s\n\n' "===============" >&2
+  printf '%s\n' 'Usage: ${me} [ Targetdirname options: -n <name> [ -i <index> ] [ -d <diskdrive> ] [ -t <targetdir> ]' >&2
+  printf '%s\n\n' '(DO NOT FORGET TO PUT QUOTES ARROUND A PATH WITH SPACES!)' >&2
+  printf '%s\n\n' "example: ${me} -n 'Pulp Fiction' -i 1 -t '/dev/null'" >&2
+  printf '%s\n' 'If you set all three this will be the target: targetdir/name - index.iso' >&2
+  printf '%s\n' 'If you set all some of the three the target will be made of what you gave.' >&2
+  printf '%s\n' 'The index is a number used if you have multiple dvds with the same name.' >&2
+  printf '%s\n' "If you set none of the three the dir will './rip_dvd_$(date_now)'." >&2
+  unset name index diskdrive targetdir
+  return 1
+}
+
+get_options_rip_dvd () {
+  if [ $# -gt 1 ];then
+    while getopts "n:i:d:t:" opt;do
+      case ${opt} in
+        n) export name=$OPTARG;;
+        i) export index=$OPTARG;;
+        d) export diskdrive=$OPTARG;;
+        t) export targetdir=$OPTARG;;
+      esac
+    done
+    unset OPTIND
+  else
+    usage_rip_dvd
+  fi
+  return $?
+}
+
+rip_dvd () {
+  if [ ! -x /usr/bin/sdparm ];then
+    die 1 "Sdparm not found"
+    return 1
+  fi
+  if [ ! -x /usr/bin/ddrescue ];then
+    die 1 "Ddrescue not found"
+    return 1
+  fi
+  if [ ! -x /usr/bin/dvdbackup ];then
+    die 1 "Dvdbackup not found"
+    return 1
+  fi
+  if [ ! -x /usr/bin/genisoimage ];then
+    die 1 "Genisoimage not found"
+    return 1
+  fi
+
+  # If any options are given parse them
+  if [ $# -gt 0 ];then
+    unset name index diskdrive targetdir
+    get_options_rip_dvd "$@" || return $?
+  fi
+
+  # If no diskdrive was set asume /dev/dvd
+  [ -n "$diskdrive" ] || diskdrive=/dev/dvd
+
+  unset targetname
+  [ -n "$name" ]  && local targetname="${name}"
+  [ -n "$index" ] && local targetname="${targetname} - ${index}"
+  local targetname="${targetname}.iso"
+
+  # If no input is given make a name ourself
+  [ -n "$targetdir" ] || local targetdir="./$(date_now)"
+
+  # If the dir ins't there yet: make it
+  [ -d "$targetdir" ] || install -d "$targetdir"
+  cd "$targetdir"
+
+  #create a tempfile and a tempdir
+  tmp_iso_image=$(mktemp -p . --suffix=.iso)
+  tmp_structure_dir=$(mktemp -dp .)
+
+  log "The contents of $diskdrive will be written to $targetdir/$targetname"
+  log "Configure diskdrive $diskdrive"
+  sdparm --set=RRC=0 $diskdrive
+  echo
+
+  log "Starting ddrescue..."
+  ddrescue --no-scrape --sector-size 2048 --force --verbose $diskdrive $tmp_iso_image
+  echo
+
+  log "Exctracting contents of temp iso image into temp structure dir."
+  dvdbackup --mirror --progress --input=$tmp_iso_image --output=$tmp_structure_dir
+  echo
+
+  log "Fabricating target iso file."
+  genisoimage -dvd-video -o "$targetname" $tmp_structure_dir/*
+  echo
+
+  [ -f $tmp_iso_image ] && rm $tmp_iso_image
+  [ -d $tmp_structure_dir ] && rm -rf $tmp_structure_dir
+  unset name targetname index diskdrive targetdir targetdir tmp_iso_image tmp_structure_dir
+
+  log "Job done."
+}

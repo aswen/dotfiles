@@ -85,3 +85,7 @@ deb-src http://deb.torproject.org/torproject.org jessie main
 # Owncloud
 # curl "http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Debian_8.0/Release.key"|sudo apt-key add -
 deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Debian_8.0/ /
+
+# PlayOnLinux
+# curl http://deb.playonlinux.org/public.gpg| sudo apt-key add -
+deb http://deb.playonlinux.com/ jessie main

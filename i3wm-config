@@ -73,6 +73,11 @@ for_window [class="(?i)gnome-calculator"] floating enable
 
 # Start Gnome control center
 bindsym $mod+c exec gnome-control-center
+for_window [class="(?i)gnome-control-center"] floating enable
+
+# Start Bluetooth manager
+bindsym $mod+b exec blueman-manager
+for_window [class="(?i)blueman-manager"] floating enable
 
 #start Zimbra in browser
 bindcode 163 exec chromium --allow-outdated-plugins --app=https://webmail.melkweg-online.nl

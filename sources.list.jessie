@@ -41,7 +41,7 @@ deb https://apt.dockerproject.org/repo debian-jessie main
 # curl http://deb.opera.com/archive.key | sudo apt-key add -
 #deb http://deb.opera.com/opera stable non-free
 
-# sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys D2C19886
+# sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
 deb http://repository.spotify.com stable non-free
 
 # uit ivm ffmpeg
@@ -53,8 +53,7 @@ deb http://repository.spotify.com stable non-free
 deb http://download.videolan.org/pub/debian/stable/ /
 
 # mozilla.debian.net
-#deb http://cdn.debian.net/debian unstable main
-#deb http://cdn.debian.net/debian experimental main
+deb https://mozilla.debian.net/ jessie-backports firefox-release
 
 # virtualbox
 # curl http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc|sudo apt-key add -

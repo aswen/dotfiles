@@ -88,3 +88,7 @@ deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Debian_8.0/
 # PlayOnLinux
 # curl http://deb.playonlinux.org/public.gpg| sudo apt-key add -
 deb http://deb.playonlinux.com/ jessie main
+
+# Riot client
+# curl https://riot.im/packages/debian/repo-key.asc|sudo apt-key add -
+deb https://riot.im/packages/debian jessie main

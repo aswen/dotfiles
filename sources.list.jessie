@@ -92,3 +92,8 @@ deb http://deb.playonlinux.com/ jessie main
 # Riot client
 # curl https://riot.im/packages/debian/repo-key.asc|sudo apt-key add -
 deb https://riot.im/packages/debian jessie main
+
+# Slack
+# curl -L https://packagecloud.io/slacktechnologies/slack/gpgkey|sudo apt-key add -
+deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+deb-src https://packagecloud.io/slacktechnologies/slack/debian/ jessie main

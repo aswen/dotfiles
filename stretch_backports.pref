@@ -1,0 +1,5 @@
+# backports
+Explanation: : backports
+Package: *
+Pin: release a=stretch-backports
+Pin-Priority: 500

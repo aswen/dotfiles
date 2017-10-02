@@ -60,12 +60,12 @@ deb http://download.videolan.org/pub/debian/stable/ /
 deb http://download.virtualbox.org/virtualbox/debian stretch contrib
 
 # OSM
-# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 073D307A618E5811
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key CAEB3DC3BDF7FB45
 deb     http://qgis.org/debian stretch main
 deb-src http://qgis.org/debian stretch main
 
 #Mysql_Percona
-# sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A
+# sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 9334A25F8507EFA5
 deb https://repo.percona.com/apt stretch main
 
 # curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
@@ -87,7 +87,7 @@ deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Debian_8.0/
 
 # PlayOnLinux
 # curl http://deb.playonlinux.org/public.gpg| sudo apt-key add -
-deb http://deb.playonlinux.com/ stretch main
+# deb http://deb.playonlinux.com/ stretch main
 
 # Riot client
 # curl https://riot.im/packages/debian/repo-key.asc|sudo apt-key add -

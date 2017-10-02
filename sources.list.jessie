@@ -53,7 +53,7 @@ deb http://repository.spotify.com stable non-free
 deb http://download.videolan.org/pub/debian/stable/ /
 
 # mozilla.debian.net
-deb https://mozilla.debian.net/ jessie-backports firefox-release
+# deb https://mozilla.debian.net/ jessie-backports firefox-release
 
 # virtualbox
 # curl http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc|sudo apt-key add -
@@ -95,5 +95,13 @@ deb https://riot.im/packages/debian jessie main
 
 # Slack
 # curl -L https://packagecloud.io/slacktechnologies/slack/gpgkey|sudo apt-key add -
-deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
-deb-src https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+#deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+#deb-src https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+
+# Ubiquiti
+# Info: https://help.ubnt.com/hc/en-us/articles/220066768-UniFi-How-to-Install-Update-via-APT-on-Debian-or-Ubuntu
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 06E85760C0A52C50
+deb https://www.ubnt.com/downloads/unifi/debian testing ubiquiti
+# deb http://www.ubnt.com/downloads/unifi/debian oldstable ubiquiti
+# deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti
+

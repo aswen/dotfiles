@@ -49,7 +49,8 @@ for_window [class="(?i)palimpsest"] floating enable
 bindsym $win+l exec i3lock -t -e -i /home/alex/mug.png -c 000000
 
 # start FF
-bindsym $win+f exec --no-startup-id iceweasel
+bindsym $win+f exec --no-startup-id firefox
+bindsym Shift+$win+f exec --no-startup-id firefox --private-window
 for_window [class="(?i)Navigator"] border none
 
 # TOR

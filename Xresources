@@ -120,6 +120,19 @@ URxvt*scrollBar_Right        : true
 URxvt*scrollstyle            : plain
 URxvt*scrollTtyOutput        : false
 URxvt*scrollTtyKeypress      : true
+
+!https://wiki.archlinux.org/index.php/rxvt-unicode
+!do not scroll with output
+URxvt*scrollTtyOutput        : false
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer       : true
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress      : true
+!URxvt should scroll in less
+URxvt.secondaryScreen        : 1
+URxvt.secondaryScroll        : 0
+URxvt.secondaryWheel         : 1
+
 URxvt*reverseVideo           : false
 URxvt*saveLines              : 100000
 URxvt*pointerBlank           : true

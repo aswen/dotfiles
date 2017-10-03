@@ -59,11 +59,6 @@ bindsym Ctrl+$win+f exec --no-startup-id sh -c '"/home/alex/.local/share/torbrow
 # Bluetooth
 bindsym $win+b exec --no-startup-id blueman-manager
 
-# some libreoffice keybindings
-bindsym $win+w exec libreoffice --nologo --writer
-bindsym $win+c exec libreoffice --nologo --calc
-bindsym $win+i exec libreoffice --nologo --impress
-
 # java config tool
 bindsym $win+j exec /usr/java/bin/jcontrol
 for_window [class="(?i)com-sun-deploy-panel-ControlPanel"] floating enable
@@ -164,7 +159,9 @@ bindsym $win+o exec keepass2 ~/Documenten/Nedap/Steppingstone-pass/Stepping\ Sto
 #for_window [class="(?i)keepass"] floating enable
 assign [Title="(?i)keepass"] → meuk
 
-bindsym $win+p exec /usr/local/bin/hipchat4
+#bindsym $win+p exec /usr/local/bin/hipchat4
+bindsym $win+p exec firefox ~/Documenten/Nedap/Hipchat.com.html
+bindsym $win+w exec firefox ~/Documenten/web.whatsapp.com.html
 assign [class="(?i)HipChat"] → chat
 #bindsym $win+p exec pidgin
 assign [class="(?i)Pidgin"] → chat

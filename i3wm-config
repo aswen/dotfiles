@@ -326,7 +326,7 @@ bindsym $win+Ctrl+F2 "exec --no-startup-id xrandr --newmode '3840x2160_29.98' 33
 # Nedap 3 schermen
 bindsym $win+Ctrl+F3 exec --no-startup-id xrandr --output eDP1 --auto --pos 0x750 --output DP1 --auto --pos 1920x0 --output DP2 --auto --pos 3840x0
 # home (to calc modeline use cvt 3840 2160 29.97)
-bindsym $win+Ctrl+F4 "exec --no-startup-id xrandr --newmode '3840x2160_29.97'  338.50  3840 4080 4488 5136  2160 2163 2168 2200 -hsync +vsync;exec --no-startup-id xrandr --addmode DP1-1 '3840x2160_29.97';exec --no-startup-id xrandr --output eDP1 --auto --pos 0x1500 --output DP1-1 --mode '3840x2160_29.97' --pos 1920x0 --output DP2 --auto --pos 5760x1000"
+bindsym $win+Ctrl+F4 "exec --no-startup-id xrandr --newmode '3840x2160_29.97'  338.50  3840 4080 4488 5136  2160 2163 2168 2200 -hsync +vsync;exec --no-startup-id xrandr --addmode DP-1-1 '3840x2160_29.97';exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x1500 --output DP-1-1 --mode '3840x2160_29.97' --pos 1920x0 --output DP-2 --auto --pos 5760x1000"
 # thuis met iets kleinere resolutie
 bindsym $win+Ctrl+F5 exec --no-startup-id xrandr --output eDP1 --auto --pos 0x1000 --output DP1 --mode '2560x1440' --pos 1920x0 --output DP2 --auto --pos 4480x700
 # scherm op displayport laptop

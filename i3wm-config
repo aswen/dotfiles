@@ -329,7 +329,7 @@ bindsym $win+Ctrl+F3 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x7
 # home (to calc modeline use cvt 3840 2160 29.97)
 bindsym $win+Ctrl+F4 "exec --no-startup-id xrandr --newmode '3840x2160_29.97'  338.50  3840 4080 4488 5136  2160 2163 2168 2200 -hsync +vsync;exec --no-startup-id xrandr --addmode DP-1-1 '3840x2160_29.97';exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x1500 --output DP-1-1 --mode '3840x2160_29.97' --pos 1920x0 --output DP-2 --auto --pos 5760x1000"
 # thuis met iets kleinere resolutie
-bindsym $win+Ctrl+F5 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x1000 --output DP-1 --mode '2560x1440' --pos 1920x0 --output DP-2 --auto --pos 4480x700
+bindsym $win+Ctrl+F5 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x1000 --output DP-1-1 --mode '2560x1440' --pos 1920x0 --output DP-1-2 --auto --pos 4480x700
 # scherm op displayport laptop
 bindsym $win+Ctrl+F6 exec --no-startup-id xrandr --output eDP-1 --auto --output DP-1 --auto --right-of eDP-1
 # Twee schermen op dock

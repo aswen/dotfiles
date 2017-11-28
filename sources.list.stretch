@@ -105,3 +105,6 @@ deb https://www.ubnt.com/downloads/unifi/debian testing ubiquiti
 # deb http://www.ubnt.com/downloads/unifi/debian oldstable ubiquiti
 # deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti
 
+# Signal
+# curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -
+deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main

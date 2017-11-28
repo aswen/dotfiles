@@ -4,7 +4,7 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # let's set a background first
-exec --no-startup-id /usr/bin/feh --bg-scale /home/alex/DSC_0717.JPG
+exec --no-startup-id /usr/bin/feh --bg-scale /home/alex/DSC_1956.JPG
 
 set $mod Mod1
 set $win Mod4
@@ -335,7 +335,7 @@ bindsym $win+Ctrl+F6 exec --no-startup-id xrandr --output eDP-1 --auto --output 
 # Twee schermen op dock
 bindsym $win+Ctrl+F7 exec --no-startup-id xrandr --output eDP-1 --crtc 0 --auto --output DP-1-2 --crtc 1 --auto --right-of eDP-1 --output DP-1-1 --crtc 2 --auto --right-of DP-1-2
 
-bindsym $mod+x "exec /usr/bin/setxkbmap -variant euro -option -option compose:menu -option lv3:ralt_switch -option eurosign:5 -option ctrl:nocaps ;exec xmodmap ~/.xmodmap;exec feh --bg-scale /home/alex/DSC_0717.JPG"
+bindsym $mod+x "exec /usr/bin/setxkbmap -variant euro -option -option compose:menu -option lv3:ralt_switch -option eurosign:5 -option ctrl:nocaps ;exec xmodmap ~/.xmodmap;exec feh --bg-scale /home/alex/DSC_1956.JPG"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

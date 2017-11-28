@@ -161,8 +161,7 @@ bindsym $win+o exec keepass2 ~/Documenten/Nedap/Steppingstone-pass/Stepping\ Sto
 #for_window [class="(?i)keepass"] floating enable
 assign [Title="(?i)keepass"] → meuk
 
-#bindsym $win+p exec /usr/local/bin/hipchat4
-bindsym $win+p exec firefox ~/Documenten/Nedap/Hipchat.com.html
+bindsym $win+p exec /usr/local/bin/hipchat4
 bindsym $win+w exec firefox ~/Documenten/web.whatsapp.com.html
 bindsym Shift+$win+t exec firefox ~/Documenten/web.telegram.org.html
 assign [class="(?i)HipChat"] → chat

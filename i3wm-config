@@ -49,8 +49,8 @@ for_window [class="(?i)palimpsest"] floating enable
 bindsym $win+l exec i3lock -t -e -i /home/alex/mug.png -c 000000
 
 # start FF
-bindsym $win+f exec --no-startup-id firefox
-bindsym Shift+$win+f exec --no-startup-id firefox --private-window
+bindsym $win+f exec --no-startup-id /opt/firefox/firefox
+bindsym Shift+$win+f exec --no-startup-id /opt/firefox/firefox --private-window
 for_window [class="(?i)Navigator"] border none
 
 # TOR
@@ -162,8 +162,8 @@ bindsym $win+o exec keepass2 ~/Documenten/Nedap/Steppingstone-pass/Stepping\ Sto
 assign [Title="(?i)keepass"] → meuk
 
 bindsym $win+p exec /usr/local/bin/hipchat4
-bindsym $win+w exec firefox ~/Documenten/web.whatsapp.com.html
-bindsym Shift+$win+t exec firefox ~/Documenten/web.telegram.org.html
+bindsym $win+w exec /opt/firefox/firefox ~/Documenten/web.whatsapp.com.html
+bindsym Shift+$win+t exec /opt/firefox/firefox ~/Documenten/web.telegram.org.html
 assign [class="(?i)HipChat"] → chat
 #bindsym $win+p exec pidgin
 assign [class="(?i)Pidgin"] → chat

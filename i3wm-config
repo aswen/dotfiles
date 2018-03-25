@@ -4,7 +4,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # let's set a background first
-exec --no-startup-id /usr/bin/feh --bg-scale /home/alex/DSC_1956.JPG
+#exec --no-startup-id /data/git/alex/scripts/backgroundchooser -d /data/backgrounds
+exec --no-startup-id /data/git/alex/scripts/backgroundchooser -d /data/backgrounds >> /var/log/backgroundchooser.log 2>&1
 
 set $mod Mod1
 set $win Mod4
@@ -161,17 +162,13 @@ bindsym $win+o exec keepass2 ~/Documenten/Nedap/Steppingstone-pass/Stepping\ Sto
 #for_window [class="(?i)keepass"] floating enable
 assign [Title="(?i)keepass"] → meuk
 
-bindsym $win+p exec /usr/local/bin/hipchat4
+bindsym $win+p exec /usr/bin/slack
+assign [class="(?i)Slack"] → chat
 bindsym $win+w exec /opt/firefox/firefox ~/Documenten/web.whatsapp.com.html
-bindsym Shift+$win+t exec /opt/firefox/firefox ~/Documenten/web.telegram.org.html
-assign [class="(?i)HipChat"] → chat
-#bindsym $win+p exec pidgin
-assign [class="(?i)Pidgin"] → chat
-#bindsym $win+p exec empathy
-assign [class="(?i)empathy"] → chat
+bindsym Shift+$win+t exec /usr/local/bin/Telegram
+assign [class="(?i)Telegram"] → chat
 bindsym $win+x exec uxterm -T Weechat +bc -sl 100000 -si -sk -vb weechat
 assign [Title="(?i)weechat"] → chat
-assign [class="(?i)xchat"] → chat
 #for_window [Title="(?i)weechat"] move container to workspace chat
 
 # disable auto focus when mouse moves over window
@@ -336,7 +333,7 @@ bindsym $win+Ctrl+F6 exec --no-startup-id xrandr --output eDP-1 --auto --output 
 # Twee schermen op dock
 bindsym $win+Ctrl+F7 exec --no-startup-id xrandr --output eDP-1 --crtc 0 --auto --output DP-1-2 --crtc 1 --auto --right-of eDP-1 --output DP-1-1 --crtc 2 --auto --right-of DP-1-2
 
-bindsym $mod+x "exec /usr/bin/setxkbmap -variant euro -option -option compose:menu -option lv3:ralt_switch -option eurosign:5 -option ctrl:nocaps ;exec xmodmap ~/.xmodmap;exec feh --bg-scale /home/alex/DSC_1956.JPG"
+bindsym $mod+x "exec /usr/bin/setxkbmap -variant euro -option -option compose:menu -option lv3:ralt_switch -option eurosign:5 -option ctrl:nocaps ;exec xmodmap ~/.xmodmap; exec /data/git/alex/scripts/backgroundchooser -d /data/backgrounds >> /var/log/backgroundchooser.log 2>&1"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

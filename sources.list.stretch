@@ -73,7 +73,7 @@ deb https://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main
 
 # Hipchat
 # curl https://atlassian.artifactoryonline.com/atlassian/api/gpg/key/public | sudo apt-key add -
-deb https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client stretch main
+#deb https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client stretch main
 
 # Tor
 # gpg --keyserver keys.gnupg.net --recv 886DDD89
@@ -95,8 +95,10 @@ deb https://riot.im/packages/debian stretch main
 
 # Slack
 # curl -L https://packagecloud.io/slacktechnologies/slack/gpgkey|sudo apt-key add -
-#deb https://packagecloud.io/slacktechnologies/slack/debian/ stretch main
-#deb-src https://packagecloud.io/slacktechnologies/slack/debian/ stretch main
+# deb https://packagecloud.io/slacktechnologies/slack/debian/ stretch main
+# No Stretch ATM (20180226)
+deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+# deb-src https://packagecloud.io/slacktechnologies/slack/debian/ stretch main
 
 # Ubiquiti
 # Info: https://help.ubnt.com/hc/en-us/articles/220066768-UniFi-How-to-Install-Update-via-APT-on-Debian-or-Ubuntu

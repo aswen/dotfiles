@@ -8,11 +8,12 @@ general {
 }
 
 order += "wireless wlan0"
-order += "ethernet eth0"
+#order += "ethernet eth0"
 order += "battery 0"
-order += "cpu_temperature 0"
-order += "volume master"
+#order += "cpu_temperature 0"
+#order += "volume master"
 order += "tztime Vancouver"
+order += "tztime Panama"
 order += "tztime Ottawa"
 order += "time"
 
@@ -48,12 +49,17 @@ time {
 }
 
 tztime Ottawa {
-  format = "Ottawa: %H:%M"
+  format = "OTT: %H:%M"
   timezone = "Canada/Eastern"
 }
 
+tztime Panama {
+  format = "PAN: %H:%M"
+  timezone = "America/Panama"
+}
+
 tztime Vancouver {
-  format = "Vancouver: %H:%M"
+  format = "VANC: %H:%M"
   timezone = "Canada/Pacific"
 }
 

@@ -70,11 +70,13 @@ for_window [class="(?i)gnome-calculator"] floating enable
 
 # Start Gnome control center
 bindsym $mod+c exec gnome-control-center
-for_window [class="(?i)gnome-control-center"] floating enable
+#for_window [class="(?i)gnome-control-center"] floating enable
+assign [class="(?i)gnome-control-center"] → music
 
 # Start Bluetooth manager
 bindsym $mod+b exec blueman-manager
-for_window [class="(?i)blueman-manager"] floating enable
+#for_window [class="(?i)blueman-manager"] floating enable
+assign [class="(?i)blueman-manager"] → music
 
 #start Zimbra in browser
 bindcode 163 exec chromium --allow-outdated-plugins --app=https://webmail.melkweg-online.nl
@@ -85,9 +87,6 @@ for_window [title="(?i)Zimbra: Compose"] floating enable
 for_window [title="(?i)Zimbra: Reply"] floating enable
 for_window [title="(?i)Zimbra: Forward"] floating enable
 for_window [title="(?i)NLLGG Webmail:: Compose"] floating enable
-
-# Skype calls floating
-for_window [title="(?i)Call with "] floating enable
 
 # start a browser
 bindsym $mod+p exec chromium --allow-outdated-plugins
@@ -101,13 +100,13 @@ bindsym $win+g exec gvim
 
 # NVidia settings
 #bindsym $win+n exec nvidia-settings
-for_window [class="(?i)nvidia-settings"] floating enable
+#for_window [class="(?i)nvidia-settings"] floating enable
 
-for_window [class="(?i)bluetooth-"] floating enable
+#for_window [class="(?i)bluetooth-"] floating enable
 assign [class="(?i)bluetooth-"] → meuk
 
-for_window [class="(?i)gnome-volume-control.gstreamer"] floating enable
-assign [class="(?i)gnome-volume-control.gstreamer"] → meuk
+#for_window [class="(?i)gnome-volume-control.gstreamer"] floating enable
+#assign [class="(?i)gnome-volume-control.gstreamer"] → meuk
 
 # reset wlan shit
 #bindsym $mod+w sudo modprobe -r iwlwifi;sudo modprobe iwlwifi
@@ -170,6 +169,11 @@ assign [class="(?i)Telegram"] → chat
 bindsym $win+x exec uxterm -T Weechat +bc -sl 100000 -si -sk -vb weechat
 assign [Title="(?i)weechat"] → chat
 #for_window [Title="(?i)weechat"] move container to workspace chat
+
+# Skype
+assign [Title="(?i)skype"] → chat
+#for_window [title="(?i)Call with "] floating enable
+
 
 # disable auto focus when mouse moves over window
 focus_follows_mouse no
@@ -325,7 +329,7 @@ bindsym $win+Ctrl+F2 "exec --no-startup-id xrandr --newmode '3840x2160_29.98' 33
 # Nedap 3 schermen
 bindsym $win+Ctrl+F3 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x750 --output DP-1 --auto --pos 1920x0 --output DP-2 --auto --pos 3840x0
 # home (to calc modeline use cvt 3840 2160 29.97)
-bindsym $win+Ctrl+F4 "exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x1500 --output DP-1-1 --mode 3840x2160 --pos 1920x0 --output DP-2 --auto --pos 5760x1000"
+bindsym $win+Ctrl+F4 "exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x1500 --output DP-1-1 --mode 3840x2160 --pos 1920x0 --output DP-1-2 --auto --pos 5760x50"
 # thuis met iets kleinere resolutie
 bindsym $win+Ctrl+F5 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x1000 --output DP-1-1 --mode '2560x1440' --pos 1920x0 --output DP-1-2 --auto --pos 4480x700
 # scherm op displayport laptop

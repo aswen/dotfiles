@@ -19,11 +19,11 @@ set -x
 /usr/bin/libreoffice --quickstart --nologo&
 [ -x /usr/bin/numlockx ]&&/usr/bin/numlockx on
 ## tapping aan en geen palm op touchpad
-/usr/bin/synclient TapButton1=1 PalmDetect=1 VertEdgeScroll=1 HorizEdgeScroll=1 HorizTwoFingerScroll=1 AccelFactor=0.05
+#/usr/bin/synclient TapButton1=1 PalmDetect=1 VertEdgeScroll=1 HorizEdgeScroll=1 HorizTwoFingerScroll=1 AccelFactor=0.05
 #
 ##http://askubuntu.com/questions/46299/how-to-disable-touchpad-tapping-when-typing-on-keyboard
 ##http://www.webupd8.org/2009/11/ubuntu-automatically-disable-touchpad.html
-/usr/bin/syndaemon -dKti2 -v
+#/usr/bin/syndaemon -dKti2 -v
 
 # Load NextCloud
 /data/software/Nextcloud-2.3.2-x86_64.AppImage &

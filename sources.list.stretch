@@ -41,7 +41,7 @@ deb https://apt.dockerproject.org/repo debian-stretch main
 # curl http://deb.opera.com/archive.key | sudo apt-key add -
 #deb http://deb.opera.com/opera stable non-free
 
-# sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
+# sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0DF731E45CE24F27EEEB1450EFDC8610341D9410 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 deb http://repository.spotify.com stable non-free
 
 # uit ivm ffmpeg
@@ -66,24 +66,16 @@ deb-src http://qgis.org/debian stretch main
 
 #Mysql_Percona
 # sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 9334A25F8507EFA5
-deb https://repo.percona.com/apt stretch main
+#deb https://repo.percona.com/apt stretch main
 
 # curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-deb https://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main
-
-# Hipchat
-# curl https://atlassian.artifactoryonline.com/atlassian/api/gpg/key/public | sudo apt-key add -
-#deb https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client stretch main
+#deb https://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main
 
 # Tor
 # gpg --keyserver keys.gnupg.net --recv 886DDD89
 # gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
-deb http://deb.torproject.org/torproject.org stretch main
-deb-src http://deb.torproject.org/torproject.org stretch main
-
-# Owncloud
-# curl "http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Debian_8.0/Release.key"|sudo apt-key add -
-deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/Debian_8.0/ /
+#deb http://deb.torproject.org/torproject.org stretch main
+#deb-src http://deb.torproject.org/torproject.org stretch main
 
 # PlayOnLinux
 # curl http://deb.playonlinux.org/public.gpg| sudo apt-key add -
@@ -103,7 +95,7 @@ deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
 # Ubiquiti
 # Info: https://help.ubnt.com/hc/en-us/articles/220066768-UniFi-How-to-Install-Update-via-APT-on-Debian-or-Ubuntu
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 06E85760C0A52C50
-deb https://www.ubnt.com/downloads/unifi/debian testing ubiquiti
+#deb https://www.ubnt.com/downloads/unifi/debian testing ubiquiti
 # deb http://www.ubnt.com/downloads/unifi/debian oldstable ubiquiti
 # deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti
 

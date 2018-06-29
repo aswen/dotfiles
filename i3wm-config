@@ -20,8 +20,8 @@ floating_modifier $mod
 # audio
 # http://www.tldp.org/HOWTO/Alsa-sound-6.html
 bindcode 121 exec amixer -q set Master toggle
-bindcode 122 exec amixer -qc 1 set Master 2dB- unmute
-bindcode 123 exec amixer -qc 1 set Master 2dB+ unmute
+bindcode 122 exec amixer -qc 0 set Master 2dB- unmute
+bindcode 123 exec amixer -qc 0 set Master 2dB+ unmute
 
 #brightness
 bindcode 233 exec sudo /data/git/alex/scripts/brightctl up
@@ -164,7 +164,7 @@ assign [Title="(?i)keepass"] → meuk
 bindsym $win+p exec /usr/bin/slack
 assign [class="(?i)Slack"] → chat
 bindsym $win+w exec /opt/firefox/firefox ~/Documenten/web.whatsapp.com.html
-bindsym Shift+$win+t exec /usr/local/bin/Telegram
+bindsym Shift+$win+t exec /usr/bin/telegram-desktop
 assign [class="(?i)Telegram"] → chat
 bindsym $win+x exec uxterm -T Weechat +bc -sl 100000 -si -sk -vb weechat
 assign [Title="(?i)weechat"] → chat
@@ -329,7 +329,7 @@ bindsym $win+Ctrl+F2 "exec --no-startup-id xrandr --newmode '3840x2160_29.98' 33
 # Nedap 3 schermen
 bindsym $win+Ctrl+F3 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x750 --output DP-1 --auto --pos 1920x0 --output DP-2 --auto --pos 3840x0
 # home (to calc modeline use cvt 3840 2160 29.97)
-bindsym $win+Ctrl+F4 "exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x1500 --output DP-1-1 --mode 3840x2160 --pos 1920x0 --output DP-1-2 --auto --pos 5760x50"
+bindsym $win+Ctrl+F4 "exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x1500 --output DP-2-1 --mode 3840x2160 --pos 1920x0 --output DP-2-2 --auto --pos 5760x50"
 # thuis met iets kleinere resolutie
 bindsym $win+Ctrl+F5 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x1000 --output DP-1-1 --mode '2560x1440' --pos 1920x0 --output DP-1-2 --auto --pos 4480x700
 # scherm op displayport laptop

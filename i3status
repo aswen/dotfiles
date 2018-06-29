@@ -7,8 +7,8 @@ general {
   interval       = 5
 }
 
-order += "wireless wlo1"
-order += "ethernet enp0s25"
+order += "wireless wlp1s0"
+order += "ethernet enp0s31f6"
 order += "battery 0"
 #order += "cpu_temperature 0"
 #order += "volume master"
@@ -17,12 +17,12 @@ order += "tztime Panama"
 order += "tztime Ottawa"
 order += "time"
 
-wireless wlo1 {
+wireless wlp1s0 {
   format_up   = "W: %ip (%quality at %essid, %bitrate)"
   format_down = "W"
 }
 
-ethernet enp0s25 {
+ethernet enp0s31f6 {
   # if you use %speed, i3status requires root privileges
   format_up   = "E: %ip (%speed)"
   format_down = " "

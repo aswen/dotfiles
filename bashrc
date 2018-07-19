@@ -174,8 +174,7 @@ alias ':qa'='exit'
 
 [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
 
-# Add rbenv to path
-if [ -d $HOME/.rbenv/bin ];then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
+# Add stpst package to path
+if [ -d /opt/stpst/embedded/bin ];then
+  export PATH="/opt/stpst/embedded/bin:$PATH"
 fi

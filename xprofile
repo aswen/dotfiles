@@ -4,6 +4,9 @@ log=/home/alex/xprofile.log
 exec > $log 2>&1
 set -x
 
+# Set papersize for Evince
+export LC_PAPER="en_GB.UTF-8"
+
 /usr/bin/xset b off
 /usr/bin/xset b 0 0 0
 /usr/bin/xset fp defaults

@@ -29,7 +29,7 @@ export LC_PAPER="en_GB.UTF-8"
 #/usr/bin/syndaemon -dKti2 -v
 
 # Load NextCloud
-/data/software/Nextcloud-2.3.2-x86_64.AppImage &
+/data/software/Nextcloud-2.3.3-x86_64.AppImage &
 
 # start the gpg-agent
 eval $(gpg-agent --daemon)

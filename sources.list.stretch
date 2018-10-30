@@ -16,37 +16,37 @@ deb https://mirrors.kernel.org/debian stretch-backports main non-free contrib
 
 ##### TESTING
 ## Add the testing repos (link testing.pref to prefer this over stable)
-#deb https://mirrors.kernel.org/debian/ testing main non-free contrib
-#deb-src https://mirrors.kernel.org/debian/ testing main non-free contrib
+# deb https://mirrors.kernel.org/debian/ testing main non-free contrib
+# deb-src https://mirrors.kernel.org/debian/ testing main non-free contrib
 #
-#deb http://security.debian.org/ testing/updates main non-free contrib
-#deb-src http://security.debian.org/ testing/updates main non-free contrib
+# deb http://security.debian.org/ testing/updates main non-free contrib
+# deb-src http://security.debian.org/ testing/updates main non-free contrib
 #
-#deb https://mirrors.kernel.org/debian/ testing-updates main non-free contrib
-#deb-src https://mirrors.kernel.org/debian/ testing-updates main non-free contrib
+# deb https://mirrors.kernel.org/debian/ testing-updates main non-free contrib
+# deb-src https://mirrors.kernel.org/debian/ testing-updates main non-free contrib
 #
-#deb https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
-#deb-src https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
+# deb https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
+# deb-src https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
 
 
 #### UNSTABLE
 # Add the unstable repos (link unstable.pref to prefer this over stable)
-#deb https://mirrors.kernel.org/debian/ unstable main non-free contrib
-#deb-src https://mirrors.kernel.org/debian/ unstable main non-free contrib
+# deb https://mirrors.kernel.org/debian/ unstable main non-free contrib
+# deb-src https://mirrors.kernel.org/debian/ unstable main non-free contrib
 
 # Docker
 # sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
 deb https://apt.dockerproject.org/repo debian-stretch main
 
 # curl http://deb.opera.com/archive.key | sudo apt-key add -
-#deb http://deb.opera.com/opera stable non-free
+# deb http://deb.opera.com/opera stable non-free
 
 # sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0DF731E45CE24F27EEEB1450EFDC8610341D9410 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
 deb http://repository.spotify.com stable non-free
 
 # uit ivm ffmpeg
 # apt-get install deb-multimedia-keyring
-#deb http://www.deb-multimedia.org stretch main non-free
+# deb http://www.deb-multimedia.org stretch main non-free
 
 # VideoLAN libdvdcss source
 # curl http://download.videolan.org/pub/debian/videolan-apt.asc | sudo apt-key add -
@@ -61,21 +61,21 @@ deb http://download.virtualbox.org/virtualbox/debian stretch contrib
 
 # OSM
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key CAEB3DC3BDF7FB45
-deb     http://qgis.org/debian stretch main
+deb http://qgis.org/debian stretch main
 deb-src http://qgis.org/debian stretch main
 
 #Mysql_Percona
 # sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 9334A25F8507EFA5
-#deb https://repo.percona.com/apt stretch main
+# deb https://repo.percona.com/apt stretch main
 
 # curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-#deb https://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main
+# deb https://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main
 
 # Tor
 # gpg --keyserver keys.gnupg.net --recv 886DDD89
 # gpg --export A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89 | sudo apt-key add -
-#deb http://deb.torproject.org/torproject.org stretch main
-#deb-src http://deb.torproject.org/torproject.org stretch main
+# deb http://deb.torproject.org/torproject.org stretch main
+# deb-src http://deb.torproject.org/torproject.org stretch main
 
 # PlayOnLinux
 # curl http://deb.playonlinux.org/public.gpg| sudo apt-key add -
@@ -95,7 +95,7 @@ deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
 # Ubiquiti
 # Info: https://help.ubnt.com/hc/en-us/articles/220066768-UniFi-How-to-Install-Update-via-APT-on-Debian-or-Ubuntu
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 06E85760C0A52C50
-#deb https://www.ubnt.com/downloads/unifi/debian testing ubiquiti
+# deb https://www.ubnt.com/downloads/unifi/debian testing ubiquiti
 # deb http://www.ubnt.com/downloads/unifi/debian oldstable ubiquiti
 # deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti
 

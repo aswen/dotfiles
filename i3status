@@ -9,6 +9,7 @@ general {
 
 order += "wireless wlp1s0"
 order += "ethernet enp0s31f6"
+order += "ethernet enp8s0"
 order += "battery 0"
 #order += "cpu_temperature 0"
 #order += "volume master"
@@ -23,6 +24,12 @@ wireless wlp1s0 {
 }
 
 ethernet enp0s31f6 {
+  # if you use %speed, i3status requires root privileges
+  format_up   = "E: %ip (%speed)"
+  format_down = " "
+}
+
+ethernet enp8s0 {
   # if you use %speed, i3status requires root privileges
   format_up   = "E: %ip (%speed)"
   format_down = " "

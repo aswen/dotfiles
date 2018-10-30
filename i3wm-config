@@ -82,8 +82,6 @@ bindsym $mod+b exec blueman-manager
 assign [class="(?i)blueman-manager"] → music
 
 #start Zimbra in browser
-bindcode 163 exec chromium --allow-outdated-plugins --app=https://webmail.melkweg-online.nl
-bindsym $win+m exec chromium --allow-outdated-plugins --app=https://webmail.melkweg-online.nl
 #for_window [class="(?i)webmail.melkwegit.nl"] floating enable
 for_window [title="(?i)Zimbra:"] border normal
 for_window [title="(?i)Zimbra: Compose"] floating enable

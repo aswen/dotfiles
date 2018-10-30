@@ -49,6 +49,9 @@ for_window [class="(?i)palimpsest"] floating enable
 # i3lock
 bindsym $win+l exec i3lock -t -e -i /home/alex/mug.png -c 000000
 
+# Allow thunderbolt devices (USB-C)
+bindsym $win+c exec --no-startup-id sudo /data/git/alex/scripts/allow_usb-c_thunderbolt
+
 # start FF
 bindsym $win+f exec --no-startup-id /opt/firefox/firefox
 bindsym Shift+$win+f exec --no-startup-id /opt/firefox/firefox --private-window

@@ -47,7 +47,7 @@ bindsym $win+d exec su-to-root -X -c /usr/bin/palimpsest
 for_window [class="(?i)palimpsest"] floating enable
 
 # i3lock
-bindsym $win+l exec i3lock -t -e -i /home/alex/mug.png -c 000000
+bindsym $win+l "exec /data/git/alex/scripts/backgroundchooser --dir /data/backgrounds --link /tmp/background.png; exec i3lock -t -e -i /tmp/background.png -c 000000"
 
 # Allow thunderbolt devices (USB-C)
 bindsym $win+c exec --no-startup-id sudo /data/git/alex/scripts/allow_usb-c_thunderbolt

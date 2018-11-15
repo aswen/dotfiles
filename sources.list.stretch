@@ -77,10 +77,6 @@ deb-src http://qgis.org/debian stretch main
 # deb http://deb.torproject.org/torproject.org stretch main
 # deb-src http://deb.torproject.org/torproject.org stretch main
 
-# PlayOnLinux
-# curl http://deb.playonlinux.org/public.gpg| sudo apt-key add -
-# deb http://deb.playonlinux.com/ stretch main
-
 # Riot client
 # curl https://riot.im/packages/debian/repo-key.asc|sudo apt-key add -
 deb https://riot.im/packages/debian stretch main

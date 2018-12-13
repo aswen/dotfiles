@@ -44,7 +44,6 @@ bindsym Ctrl+$mod+e exec /data/software/Eclipse/eclipse/eclipse
 # sysadmmeuk
 bindsym $mod+y exec su-to-root -X -c /usr/sbin/synaptic
 bindsym $win+d exec su-to-root -X -c /usr/bin/palimpsest
-for_window [class="(?i)palimpsest"] floating enable
 
 # i3lock
 bindsym $win+l "exec /data/git/alex/scripts/backgroundchooser --dir /data/backgrounds --link /tmp/background.png; exec i3lock -t -e -i /tmp/background.png -c 000000"
@@ -65,7 +64,6 @@ bindsym $win+b exec --no-startup-id blueman-manager
 
 # java config tool
 bindsym $win+j exec /usr/java/bin/jcontrol
-for_window [class="(?i)com-sun-deploy-panel-ControlPanel"] floating enable
 
 # start calculator
 bindcode 148 exec gnome-calculator
@@ -73,16 +71,13 @@ for_window [class="(?i)gnome-calculator"] floating enable
 
 # Start Gnome control center
 bindsym $mod+c exec gnome-control-center
-#for_window [class="(?i)gnome-control-center"] floating enable
 assign [class="(?i)gnome-control-center"] → music
 
 # Start Bluetooth manager
 bindsym $mod+b exec blueman-manager
-#for_window [class="(?i)blueman-manager"] floating enable
 assign [class="(?i)blueman-manager"] → music
 
 #start Zimbra in browser
-#for_window [class="(?i)webmail.melkwegit.nl"] floating enable
 for_window [title="(?i)Zimbra:"] border normal
 for_window [title="(?i)Zimbra: Compose"] floating enable
 for_window [title="(?i)Zimbra: Reply"] floating enable
@@ -101,12 +96,9 @@ bindsym $win+g exec gvim
 
 # NVidia settings
 #bindsym $win+n exec nvidia-settings
-#for_window [class="(?i)nvidia-settings"] floating enable
 
-#for_window [class="(?i)bluetooth-"] floating enable
 assign [class="(?i)bluetooth-"] → meuk
 
-#for_window [class="(?i)gnome-volume-control.gstreamer"] floating enable
 #assign [class="(?i)gnome-volume-control.gstreamer"] → meuk
 
 # reset wlan shit
@@ -114,12 +106,6 @@ assign [class="(?i)bluetooth-"] → meuk
 #bindsym $mod+n exec /data/git/alex/scripts/networktoggle
 bindsym $win+z exec /data/git/alex/scripts/touchpadtoggle
 bindcode 199 exec /data/git/alex/scripts/touchpadtoggle
-
-for_window [class="(?i)tsclient"] floating enable
-for_window [class="(?i)remmina"] floating enable
-for_window [class="(?i)rdesktop"] floating enable
-for_window [class="(?i)sun-awt-X11-XFramePeer"] floating enable
-for_window [class="(?i)java-lang-Thread"] floating enable
 
 for_window [class="(?i)gkrellm"] border none
 for_window [class="(?i)gkrellm"] floating enable
@@ -143,7 +129,6 @@ assign [class="(?i)signal"] → chat
 #bindsym $win+s exec spotify
 assign [class="(?i)spotify"] → music
 for_window [class="(?i)spotify"] border none
-#for_window [class="(?i)spotify"] floating enable
 
 bindsym $win+v exec vlc
 
@@ -158,7 +143,6 @@ for_window [class="(?i)qmmp"] floating enable
 assign [class="(?i)qmmp"] → music
 
 bindsym $win+k exec ~/KeepassX/keepass ~/KeepassX/Alex.kdbx
-#for_window [class="(?i)keepass"] floating enable
 assign [Title="(?i)keepass"] → meuk
 
 bindsym $win+p exec /usr/bin/slack
@@ -176,7 +160,6 @@ assign [Title="(?i)weechat"] → chat
 
 # Skype
 assign [Title="(?i)skype"] → chat
-#for_window [title="(?i)Call with "] floating enable
 
 
 # disable auto focus when mouse moves over window

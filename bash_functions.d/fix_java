@@ -31,6 +31,20 @@ fix_java () {
       pluginsrc=/usr/java/lib/i386/libnpjp2.so
     fi
 
+    # Fixes for java virtual console viewer of Out of band devices
+    sudo ln -sf /usr/local/java/lib/amd64/libnpjp2.so /usr/lib/mozilla/plugins/libnpjp2.so
+    cat << EOF | sudo tee /usr/share/applications/javaws.desktop
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+NoDisplay=true
+Exec=/usr/local/java/bin/javaws %f
+Name=javaws
+Comment=Custom definition for javaws
+EOF
+    # END Fixes for java virtual console viewer of Out of band devices
+
     if [ ! -f ${pluginsrc} ];then
       die 1 "pluginsource ${pluginsrc} not found"
       return 1

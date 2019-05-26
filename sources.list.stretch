@@ -98,3 +98,11 @@ deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
 # Signal
 # curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -
 deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main
+
+# Keybase
+# curl https://keybase.io/docs/server_security/code_signing_key.asc|sudo apt-key add -
+deb https://prerelease.keybase.io/deb stable main
+
+# Teamviewer
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv C5E224500C1289C0
+deb https://linux.teamviewer.com/deb stable main

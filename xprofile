@@ -28,6 +28,9 @@ export LC_PAPER="en_GB.UTF-8"
 ##http://www.webupd8.org/2009/11/ubuntu-automatically-disable-touchpad.html
 #/usr/bin/syndaemon -dKti2 -v
 
+# Enforce the sort order in filechooser dialog windows to list directories first and then files.
+gsettings set org.gtk.Settings.FileChooser sort-directories-first true
+
 # Load NextCloud
 /data/software/Nextcloud-2.3.3-x86_64.AppImage &
 

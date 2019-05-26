@@ -95,7 +95,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias mkdir='mkdir -p'
-alias fetch='curl -O'
+alias fetch='curl -LO'
 
 # git aliasses
 alias ga='/usr/bin/git add'

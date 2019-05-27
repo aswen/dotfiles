@@ -43,6 +43,24 @@ Exec=/usr/local/java/bin/javaws %f
 Name=javaws
 Comment=Custom definition for javaws
 EOF
+    [ -d ~/.java/deployment/ ] || mkdir -p ~/.java/deployment
+    [ -f ~/.java/deployment/deployment.properties ] || touch ~/.java/deployment/deployment.properties
+    if grep -q '^deployment.proxy.socks.port' ~/.java/deployment/deployment.properties;then
+      sed -i -e 's?^deployment.proxy.socks.port=.*?deployment.proxy.socks.port=9000?' ~/.java/deployment/deployment.properties
+    else
+      echo 'deployment.proxy.socks.port=9000' >> ~/.java/deployment/deployment.properties
+    fi
+    if grep -q '^deployment.proxy.socks.host' ~/.java/deployment/deployment.properties;then
+      sed -i -e 's?^deployment.proxy.socks.host=.*?deployment.proxy.socks.host=localhost?' ~/.java/deployment/deployment.properties
+    else
+      echo 'deployment.proxy.socks.host=localhost' >> ~/.java/deployment/deployment.properties
+    fi
+    if grep -q '^deployment.proxy.type' ~/.java/deployment/deployment.properties;then
+      sed -i -e 's?^deployment.proxy.type=.*?deployment.proxy.type=1?' ~/.java/deployment/deployment.properties
+    else
+      echo 'deployment.proxy.type=1' >> ~/.java/deployment/deployment.properties
+    fi
+
     # END Fixes for java virtual console viewer of Out of band devices
 
     if [ ! -f ${pluginsrc} ];then

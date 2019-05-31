@@ -69,10 +69,6 @@ bindsym $win+j exec /usr/java/bin/jcontrol
 bindcode 148 exec gnome-calculator
 for_window [class="(?i)gnome-calculator"] floating enable
 
-# Start Gnome control center
-bindsym $mod+Shift+c exec gnome-control-center
-assign [class="(?i)gnome-control-center"] → music
-
 # Pulse Audio Volume Control
 bindsym $mod+c exec pavucontrol
 assign [class="(?i)pavucontrol"] → music

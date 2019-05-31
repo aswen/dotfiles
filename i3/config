@@ -10,6 +10,13 @@ exec --no-startup-id /data/git/alex/scripts/backgroundchooser -d /data/backgroun
 set $mod Mod1
 set $win Mod4
 
+# Bar configuration
+bar {
+  status_command i3blocks -c ~/.i3/blocks/blocks.conf
+  position bottom
+  font pango:Dina 9
+}
+
 workspace_auto_back_and_forth yes
 
 # since I use older driver I need xinerama
@@ -19,13 +26,13 @@ floating_modifier $mod
 
 # audio
 # http://www.tldp.org/HOWTO/Alsa-sound-6.html
-bindcode 121 exec amixer -q set Master toggle
-bindcode 122 exec amixer -qc 0 set Master 2dB- unmute
-bindcode 123 exec amixer -qc 0 set Master 2dB+ unmute
+bindcode 121 exec --no-startup-id amixer -q set Master toggle && pkill -RTMIN+2 i3blocks
+bindcode 122 exec amixer -qc 0 set Master 2dB- unmute && pkill -RTMIN+2 i3blocks
+bindcode 123 exec amixer -qc 0 set Master 2dB+ unmute && pkill -RTMIN+2 i3blocks
 
 #brightness
-bindcode 233 exec sudo /data/git/alex/scripts/brightctl up
-bindcode 232 exec sudo /data/git/alex/scripts/brightctl down
+bindcode 233 exec sudo /data/git/alex/scripts/brightctl up && pkill -RTMIN+3 i3blocks
+bindcode 232 exec sudo /data/git/alex/scripts/brightctl down && pkill -RTMIN+3 i3blocks
 
 # start a terminal
 bindsym $win+Return exec uxterm -T HIER +bc -sl 100000 -si -sk -vb
@@ -342,26 +349,3 @@ client.focused          $blue   $blue   $white $bfoc
 client.focused_inactive $blue   $bgunf  $white #484e50
 client.unfocused        $bunf   $bgunf  $white #292d2e
 client.urgent           $bfoc   $orange $white #900000
-
-bar {
-  status_command i3status -c ~/.i3/status
-  position bottom
-  mode     dock
-  modifier $mod
-
-  #workspace_buttons yes
-
-  font pango:Dina 9
-
-  colors {
-    background #202020
-    statusline #FFFFFF
-    separator  #FFFFFF
-
-    # class            border   backgrnd text
-    focused_workspace  $blue    $blue    $white
-    active_workspace   $blue    $bgunf   $white
-    inactive_workspace $bunf    $bgunf   $white
-    urgent_workspace   $bfoc    #ff1203  $blue
-  }
-}

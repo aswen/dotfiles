@@ -1,0 +1,5 @@
+#!/bin/bash
+Y=$(cat /sys/class/backlight/intel_backlight/max_brightness)
+X=$(cat /sys/class/backlight/intel_backlight/brightness)
+answer=$(bc <<< "scale=2;($X/$Y) * 100")
+echo ${answer%.*}

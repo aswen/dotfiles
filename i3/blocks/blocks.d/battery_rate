@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+
+# Rate is in watts with no decimals
+RATE_WARN=5
+RATE_CRIT=7
+# Time is in hours with no decimals
+TIME_WARN=4
+TIME_CRIT=2
+
+source ~/.i3/blocks/colors
+
+STATE=$( upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep state | awk '{ print $2 }' )
+RATE=$( upower -i /org/freedesktop/UPower/devices/battery_BAT0  | grep energy-rate | awk '{print $2}' )
+
+if [ $STATE == "discharging" ]; then
+  ACTUAL=$( echo "scale=4;$RATE / -1" | bc -l )
+  TTE=$( upower -i /org/freedesktop/UPower/devices/battery_BAT0  | grep "time to empty" )
+  TIME=$( echo "$TTE" | awk '{print $4}' )
+  TYPE=$( echo "$TTE" | awk '{print $5}' )
+  COMPARE=$( echo $RATE | awk -F\. '{print $1}' )
+  if [[ $COMPARE -lt $RATE_WARN ]]; then
+    RATE_COLOR=$OK_COLOR
+  elif [[ $COMPARE -lt $RATE_CRIT ]]; then
+    RATE_COLOR=$WARN_COLOR
+  elif [[ $COMPARE -gt $RATE_CRIT ]]; then
+    RATE_COLOR=$CRIT_COLOR
+  fi
+  if [[ $TYPE != "hours" ]]; then
+    TIME_COLOR=$CRIT_COLOR
+  fi
+  if [[ $TYPE == "hours" ]]; then
+    COMPARE=$( echo $TIME | awk -F\. '{print $1}' )
+    if [[ $COMPARE -gt $TIME_WARN ]]; then
+      TIME_COLOR=$OK_COLOR
+    elif [[ $COMPARE -gt $TIME_CRIT ]]; then
+      TIME_COLOR=$WARN_COLOR
+    elif [[ $COMPARE -lt $TIME_CRIT ]]; then
+      TIME_COLOR=$CRIT_COLOR
+    fi
+  fi
+  OUTPUT="<span color='$RATE_COLOR'>$ACTUAL</span>w <span color='$TIME_COLOR'>$TIME $TYPE</span>"
+fi
+
+if [ $STATE == "charging" ]; then
+  ACTUAL=$RATE
+  OUTPUT="$ACTUAL"
+fi
+
+echo -n "$OUTPUT"

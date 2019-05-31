@@ -39,6 +39,14 @@ if [[ "$(cat /sys/class/net/$IF/operstate)" = 'down' ]]; then
   exit
 fi
 
+if [[ "$IF" = "tun0" ]];then
+  if [[ "$(cat /sys/class/net/$IF/operstate)" = 'unknown' ]]; then
+    echo UP
+    echo UP
+    exit
+  fi
+fi
+
 case $1 in
   -4)
     AF=inet ;;

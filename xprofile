@@ -17,7 +17,7 @@ export LC_PAPER="en_GB.UTF-8"
 /usr/bin/blueman-applet&
 #/usr/bin/gkrellm&
 /usr/bin/glipper&
-/usr/bin/setxkbmap -variant euro -option -option compose:menu,lv3:ralt_switch,eurosign:5,ctrl:nocaps
+/usr/bin/setxkbmap -variant euro -option compose:menu,lv3:ralt_switch,eurosign:5,ctrl:nocaps
 /usr/bin/xmodmap ~/.xmodmap
 /usr/bin/libreoffice --quickstart --nologo&
 [ -x /usr/bin/numlockx ]&&/usr/bin/numlockx on

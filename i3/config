@@ -176,9 +176,8 @@ focus_follows_mouse no
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
-bindsym $win+r exec dmenu_run
+# Start Rofi (program launcher)
+bindsym $win+r exec "rofi -combi-modi drun,run -show combi -modi combi"
 
 # change focus
 bindsym $mod+h focus left

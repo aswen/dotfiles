@@ -156,8 +156,8 @@ assign [Title="(?i)keepass"] → meuk
 bindsym $win+p exec /usr/bin/slack
 assign [class="(?i)Slack"] → chat
 
-bindsym $win+m exec /usr/local/bin/riot-web
-assign [class="(?i)Riot"] → chat
+bindsym $win+m exec /usr/bin/evolution
+assign [class="(?i)Evolution"] → mail
 
 bindsym $win+w exec /opt/firefox/firefox ~/Documenten/web.whatsapp.com.html
 bindsym Shift+$win+t exec /usr/bin/telegram-desktop

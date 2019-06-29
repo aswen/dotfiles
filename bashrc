@@ -178,3 +178,5 @@ alias ':qa'='exit'
 if [ -d /opt/stpst/embedded/bin ];then
   export PATH="/opt/stpst/embedded/bin:$PATH"
 fi
+
+complete -C /data/software/vault/vault vault

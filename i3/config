@@ -331,7 +331,7 @@ bindsym $win+Ctrl+F6 exec --no-startup-id xrandr --output eDP-1 --auto --output 
 # Twee schermen op dock
 bindsym $win+Ctrl+F7 exec --no-startup-id xrandr --output eDP-1 --crtc 0 --auto --output DP-1-2 --crtc 1 --auto --right-of eDP-1 --output DP-1-1 --crtc 2 --auto --right-of DP-1-2
 
-bindsym $mod+x "exec --no-startup-id xmodmap ~/.xmodmap; exec --no-startup-id /data/git/alex/scripts/backgroundchooser -d /data/backgrounds >> /var/log/backgroundchooser.log 2>&1;exec--no-startup-id xinput list|grep Mouse|while read device;do eval $(echo $device|grep -Eo 'id=[0-9]{2}');xinput set-int-prop $id 300 8 1 ;done"
+bindsym $mod+x "exec --no-startup-id xmodmap ~/.xmodmap; exec --no-startup-id /data/git/alex/scripts/backgroundchooser -d /data/backgrounds >> /var/log/backgroundchooser.log 2>&1;exec--no-startup-id /data/git/alex/scripts/mouse_scroll"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)

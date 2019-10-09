@@ -41,7 +41,7 @@ deb https://apt.dockerproject.org/repo debian-stretch main
 # curl http://deb.opera.com/archive.key | sudo apt-key add -
 # deb http://deb.opera.com/opera stable non-free
 
-# sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 0DF731E45CE24F27EEEB1450EFDC8610341D9410 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+# sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 4773BD5E130D1D45
 deb http://repository.spotify.com stable non-free
 
 # uit ivm ffmpeg
@@ -60,7 +60,7 @@ deb http://download.videolan.org/pub/debian/stable/ /
 deb http://download.virtualbox.org/virtualbox/debian stretch contrib
 
 # OSM
-# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key CAEB3DC3BDF7FB45
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 51F523511C7028C3
 deb http://qgis.org/debian stretch main
 deb-src http://qgis.org/debian stretch main
 
@@ -79,7 +79,7 @@ deb-src http://qgis.org/debian stretch main
 
 # Riot client
 # curl https://riot.im/packages/debian/repo-key.asc|sudo apt-key add -
-deb https://riot.im/packages/debian stretch main
+#deb https://riot.im/packages/debian stretch main
 
 # Slack
 # curl -L https://packagecloud.io/slacktechnologies/slack/gpgkey|sudo apt-key add -

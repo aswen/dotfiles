@@ -111,15 +111,14 @@ xterm*eightBitInput : false
 URxvt*font          : -windows-dina-medium-r-normal-*-13-*-*-*-c-*-iso8859-1,-misc-fixed-medium-r-normal-*-15-*-*-*-*-*-iso10646-1,xft:AR PL UKai CN:regular:pixelsize=16
 URxvt*boldFont      : -windows-dina-bold-r-normal-*-13-*-*-*-c-*-iso8859-1,-misc-fixed-bold-r-normal-*-15-*-*-*-*-*-iso10646-1,xft:AR PL UKai CN:bold:pixelsize=16
 
+URxvt*locale                 : en_US.utf-8
 URxvt*title                  : HIER
 URxvt*depth                  : 32
 URxvt*transparent            : false
-URxvt*letterspace            : -1
+URxvt*letterspace            : 1
 URxvt*scrollBar              : false
 URxvt*scrollBar_Right        : true
 URxvt*scrollstyle            : plain
-URxvt*scrollTtyOutput        : false
-URxvt*scrollTtyKeypress      : true
 
 !https://wiki.archlinux.org/index.php/rxvt-unicode
 !do not scroll with output

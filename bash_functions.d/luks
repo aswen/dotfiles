@@ -25,7 +25,7 @@ mnt_cryptdisk () {
   # now let's mount
   [ -d /mnt/$1 ]|| sudo install -dm 775 -o $USER -g $USER /mnt/$1
   sudo mount /dev/mapper/$1 /mnt/$1
-  sudo mount -o remount,uid=$UID,gid=$UID /dev/mapper/$1 /mnt/$1
+  sudo chown $USER:$USER /mnt/$1
 
   printf '%s\n' "I mounted a cryptdisk with the name $1 and uuid $uuid on partition $part to /mnt/$1"
   df -TH /mnt/$1

@@ -62,9 +62,9 @@ rip_dvd () {
   [ -n "$diskdrive" ] || diskdrive=/dev/dvd
 
   unset targetname
-  [ -n "$name" ]  && local targetname="${name}"
-  [ -n "$index" ] && local targetname="${targetname} - ${index}"
-  local targetname="${targetname}.iso"
+  [ -n "$name" -a -z "$index" ] && local targetname="${name}.iso"
+  [ -n "$name" -a -n "$index" ] && local targetname="${name} - ${index}.iso"
+  [ -z "$name" -a -n "$index" ] && local targetname="${index}.iso"
 
   # If no input is given make a name ourself
   [ -n "$targetdir" ] || local targetdir="./$(date_now)"
@@ -79,22 +79,21 @@ rip_dvd () {
 
   log "The contents of $diskdrive will be written to $targetdir/$targetname"
   log "Configure diskdrive $diskdrive"
-  sdparm --set=RRC=0 $diskdrive
+  sdparm --set=RRC=0 $diskdrive || die 2 "sdparm failed"
   echo
 
   log "Starting ddrescue..."
-  ddrescue --no-scrape --sector-size 2048 --force --verbose $diskdrive $tmp_iso_image
+  ddrescue --no-scrape --sector-size 2048 --force --verbose $diskdrive $tmp_iso_image && eject $diskdrive || die 3 "ddrescue failed"
   echo
 
   log "Exctracting contents of temp iso image into temp structure dir."
-  dvdbackup --mirror --progress --input=$tmp_iso_image --output=$tmp_structure_dir
+  dvdbackup --mirror --progress --input=$tmp_iso_image --output=$tmp_structure_dir && rm $tmp_iso_image || die 4 "dvdbackup failed"
   echo
 
   log "Fabricating target iso file."
-  genisoimage -dvd-video -o "$targetname" $tmp_structure_dir/*
+  genisoimage -dvd-video -o "$targetname" $tmp_structure_dir/* || die 5 "genisoimage failed"
   echo
 
-  [ -f $tmp_iso_image ] && rm $tmp_iso_image
   [ -d $tmp_structure_dir ] && rm -rf $tmp_structure_dir
   unset name targetname index diskdrive targetdir targetdir tmp_iso_image tmp_structure_dir
 

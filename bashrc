@@ -156,6 +156,7 @@ alias date_ymd='date +%Y%m%d'
 alias date_time='date +%Y-%m-%d\ %T'
 alias date_time_short='date +%Y%m%d%H%M%S'
 
+alias vlc='QT_AUTO_SCREEN_SCALE_FACTOR=0 /usr/bin/vlc'
 # setup my favorite editor
 export EDITOR=/usr/bin/vim
 

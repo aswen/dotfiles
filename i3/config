@@ -53,7 +53,7 @@ bindsym $mod+y exec su-to-root -X -c /usr/sbin/synaptic
 bindsym $win+d exec su-to-root -X -c /usr/bin/palimpsest
 
 # i3lock
-bindsym $win+l "exec --no-startup-id /data/git/alex/scripts/backgroundchooser --dir /data/backgrounds --link /tmp/background.png; exec --no-startup-id i3lock -t -e -i /tmp/background.png -c 000000"
+bindsym $win+l "exec --no-startup-id /data/git/alex/scripts/backgroundchooser --dir /data/backgrounds --link /tmp/background.png; exec --no-startup-id i3lock -t -i /tmp/background.png -c 000000"
 
 # Allow thunderbolt devices (USB-C)
 bindsym $win+c exec --no-startup-id sudo /data/git/alex/scripts/allow_usb-c_thunderbolt

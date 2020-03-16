@@ -1,42 +1,42 @@
-deb https://mirrors.kernel.org/debian/ stretch main non-free contrib
-deb-src https://mirrors.kernel.org/debian/ stretch main non-free contrib
+deb http://ftp.nl.debian.org/debian/ stretch main non-free contrib
+deb-src http://ftp.nl.debian.org/debian/ stretch main non-free contrib
 
 deb http://security.debian.org/ stretch/updates main non-free contrib
 deb-src http://security.debian.org/ stretch/updates main non-free contrib
 
-deb https://mirrors.kernel.org/debian/ stretch-updates main non-free contrib
-deb-src https://mirrors.kernel.org/debian/ stretch-updates main non-free contrib
+deb http://ftp.nl.debian.org/debian/ stretch-updates main non-free contrib
+deb-src http://ftp.nl.debian.org/debian/ stretch-updates main non-free contrib
 
-deb https://mirrors.kernel.org/debian/ stretch-proposed-updates non-free contrib main
-deb-src https://mirrors.kernel.org/debian/ stretch-proposed-updates non-free contrib main
+deb http://ftp.nl.debian.org/debian/ stretch-proposed-updates non-free contrib main
+deb-src http://ftp.nl.debian.org/debian/ stretch-proposed-updates non-free contrib main
 
 # Backports
-deb https://mirrors.kernel.org/debian stretch-backports main non-free contrib
+deb http://ftp.nl.debian.org/debian stretch-backports main non-free contrib
 
 
 ##### TESTING
 ## Add the testing repos (link testing.pref to prefer this over stable)
-# deb https://mirrors.kernel.org/debian/ testing main non-free contrib
-# deb-src https://mirrors.kernel.org/debian/ testing main non-free contrib
+# deb http://ftp.nl.debian.org/debian/ testing main non-free contrib
+# deb-src http://ftp.nl.debian.org/debian/ testing main non-free contrib
 #
 # deb http://security.debian.org/ testing/updates main non-free contrib
 # deb-src http://security.debian.org/ testing/updates main non-free contrib
 #
-# deb https://mirrors.kernel.org/debian/ testing-updates main non-free contrib
-# deb-src https://mirrors.kernel.org/debian/ testing-updates main non-free contrib
+# deb http://ftp.nl.debian.org/debian/ testing-updates main non-free contrib
+# deb-src http://ftp.nl.debian.org/debian/ testing-updates main non-free contrib
 #
-# deb https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
-# deb-src https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
+# deb http://ftp.nl.debian.org/debian/ testing-proposed-updates non-free contrib main
+# deb-src http://ftp.nl.debian.org/debian/ testing-proposed-updates non-free contrib main
 
 
 #### UNSTABLE
 # Add the unstable repos (link unstable.pref to prefer this over stable)
-# deb https://mirrors.kernel.org/debian/ unstable main non-free contrib
-# deb-src https://mirrors.kernel.org/debian/ unstable main non-free contrib
+# deb http://ftp.nl.debian.org/debian/ unstable main non-free contrib
+# deb-src http://ftp.nl.debian.org/debian/ unstable main non-free contrib
 
 # Docker
 # sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
-deb https://apt.dockerproject.org/repo debian-stretch main
+#deb https://apt.dockerproject.org/repo debian-stretch main
 
 # curl http://deb.opera.com/archive.key | sudo apt-key add -
 # deb http://deb.opera.com/opera stable non-free

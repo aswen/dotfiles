@@ -112,7 +112,7 @@ assign [class="(?i)bluetooth-"] → meuk
 # reset wlan shit
 #bindsym $mod+w sudo modprobe -r iwlwifi;sudo modprobe iwlwifi
 #bindsym $mod+n exec /data/git/alex/scripts/networktoggle
-bindsym $win+z exec /data/git/alex/scripts/touchpadtoggle
+bindsym Shift+$win+z exec /data/git/alex/scripts/touchpadtoggle
 bindcode 199 exec /data/git/alex/scripts/touchpadtoggle
 
 for_window [class="(?i)gkrellm"] border none
@@ -348,3 +348,6 @@ client.focused          $blue   $blue   $white $bfoc
 client.focused_inactive $blue   $bgunf  $white #484e50
 client.unfocused        $bunf   $bgunf  $white #292d2e
 client.urgent           $bfoc   $orange $white #900000
+
+# Use a script to disable the screenblank feature of Linux while Zoom is running.
+bindsym $win+z "exec --no-startup-id ~/git/alex/scripts/zoom-launcher"

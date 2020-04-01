@@ -7,11 +7,15 @@ set -x
 # Set papersize for Evince
 export LC_PAPER="en_GB.UTF-8"
 
+# Disable annoying bell
 /usr/bin/xset b off
 /usr/bin/xset b 0 0 0
+
+# Fonts
 /usr/bin/xset fp defaults
 /usr/bin/xset +fp ~/.fonts
 /usr/bin/xset +fp ~/.fonts/dina
+
 #eval `/usr/bin/gnome-keyring-daemon --start --components=pkcs11`
 /usr/bin/nm-applet&
 /usr/bin/blueman-applet&

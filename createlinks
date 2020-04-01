@@ -41,6 +41,9 @@ done
 
 [ -L ~/.dircolors ]||ln -sf ~/dotfiles/dircolors-dark ~/.dircolors
 
+[ -d ~/.config/Dharkeal ] || mkdir -p ~/.config/Dharkeal
+[ -L ~/.config/Dharkeal/flameshot.ini ] || ln -s ~/dotfiles/flameshot.ini ~/.config/Dharkeal
+
 source ~/.bashrc
 
 # END

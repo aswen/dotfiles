@@ -119,7 +119,7 @@ for_window [class="(?i)gkrellm"] border none
 for_window [class="(?i)gkrellm"] floating enable
 assign [class="(?i)gkrellm"] → meuk
 
-bindsym $win+t exec gscan2pdf
+bindsym Shift+$win+s exec gscan2pdf
 
 # take screenshot selection
 bindsym --release Print exec --no-startup-id /usr/bin/flameshot gui -p '/tmp'
@@ -132,7 +132,7 @@ bindsym $win+s exec signal-desktop
 assign [class="(?i)signal"] → chat
 
 #bindsym $win+y exec spotify
-#bindsym $win+s exec spotify
+bindsym Shift+$mod+s exec spotify
 assign [class="(?i)spotify"] → music
 for_window [class="(?i)spotify"] border none
 
@@ -154,11 +154,14 @@ assign [Title="(?i)keepass"] → meuk
 bindsym $win+p exec /usr/bin/slack
 assign [class="(?i)Slack"] → chat
 
+bindsym Shift+$win+t exec /usr/bin/teams
+assign [class="(?i)Microsoft Teams"] → chat
+
 bindsym $win+m exec /usr/bin/evolution
 assign [class="(?i)Evolution"] → mail
 
 bindsym $win+w exec /opt/firefox/firefox ~/Documenten/web.whatsapp.com.html
-bindsym Shift+$win+t exec /usr/bin/telegram-desktop
+bindsym $win+t exec /usr/bin/telegram-desktop
 assign [class="(?i)Telegram"] → chat
 bindsym $win+x exec uxterm -T Weechat +bc -sl 100000 -si -sk -vb weechat
 assign [Title="(?i)weechat"] → chat

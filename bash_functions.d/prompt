@@ -6,11 +6,11 @@ prompt () {
   history -a
   case $USER in
     root)
-      local prompt_suffix='$'
+      local prompt_suffix='#'
       local prompt_colour=$RED
       ;;
     *)
-      local prompt_suffix='#'
+      local prompt_suffix='$'
       local prompt_colour=$BLUE
       ;;
   esac

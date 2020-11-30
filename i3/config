@@ -102,6 +102,9 @@ for_window [class="(?i)Chromium"] border none
 #gvim
 bindsym $win+g exec gvim
 
+# GnuCash
+bindsym $win+Shift+g exec --no-startup-id /usr/bin/flatpak run org.gnucash.GnuCash
+
 # NVidia settings
 #bindsym $win+n exec nvidia-settings
 
@@ -128,7 +131,7 @@ bindsym --release $mod+Print exec --no-startup-id /usr/bin/flameshot screen -p '
 # take screenshot of entire workspace
 bindsym --release Shift+Print exec --no-startup-id /usr/bin/flameshot full -p '/tmp'
 
-bindsym $win+s exec signal-desktop
+bindsym $win+s exec signal-desktop --no-sandbox
 assign [class="(?i)signal"] → chat
 
 #bindsym $win+y exec spotify
@@ -161,7 +164,7 @@ bindsym $win+m exec /usr/bin/evolution
 assign [class="(?i)Evolution"] → mail
 
 bindsym $win+w exec /opt/firefox/firefox ~/Documenten/web.whatsapp.com.html
-bindsym $win+t exec /usr/bin/telegram-desktop
+bindsym $win+t exec /data/software/Telegram\ desktop\ client/Telegram/Updater
 assign [class="(?i)Telegram"] → chat
 bindsym $win+x exec uxterm -T Weechat +bc -sl 100000 -si -sk -vb weechat
 assign [Title="(?i)weechat"] → chat

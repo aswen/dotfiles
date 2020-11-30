@@ -88,7 +88,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && printf '%s' "terminal
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-    . /etc/bash_completion
+  . /etc/bash_completion
 fi
 
 alias ..='cd ..'
@@ -121,7 +121,8 @@ alias gr='/usr/bin/git rm'
 alias gs='/usr/bin/git status'
 alias gstash='/usr/bin/git stash'
 alias gstashdep='gstash && gpp && gpop && cap deploy'
-alias gitcleanbranches="go master;git branch --merged|grep -v '^*'|xargs -n 1 git branch -d"
+alias gitcleanbranches="go master;git pull;git branch --merged|grep -v '^*'|xargs -n 1 git branch -d"
+alias ggg='gitcleanbranches'
 
 alias capdep='cap deploy'
 alias chrome='/opt/google/chrome/chrome'
@@ -181,3 +182,23 @@ if [ -d /opt/stpst/embedded/bin ];then
 fi
 
 complete -C /data/software/vault/vault vault
+
+if [[ "$USER" == "root" ]];then
+  cat << EOF
+[0;1;31m******************************************* WARNING *******************************************
+[0;1;31m***
+[0;1;31m*** You see this message because you opened an interactive shell for user 'root'.
+[0;1;31m*** Please try to prevent using a root shell; instead, use 'sudo' followed by a direct command:
+[0;1;31m***
+[0;1;31m*** sudo ls -la
+[0;1;31m***
+[0;1;31m*** Using sudo this way makes it much easier to track actions back to the user that executed
+[0;1;31m*** them. This also makes it easier to protect the integrity of this system and the data stored
+[0;1;31m*** on it.
+[0;1;31m***
+[0;1;31m*** Thank you!
+[0;1;31m***
+[0;1;31m***********************************************************************************************
+[0m[255D
+EOF
+fi

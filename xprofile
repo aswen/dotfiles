@@ -49,4 +49,7 @@ env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
 echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
 chmod 600 $HOME/.dbus/Xdbus
 
+# Load Redshift as Bluelight filter
+redshift-gtk -l 52.12417:6.44306 &
+
 set +x

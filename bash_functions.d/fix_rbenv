@@ -14,8 +14,8 @@ fix_rbenv () {
   git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
   sudo apt-get install build-essential libssl-dev libcurl4-openssl-dev libreadline-dev -y
   #rbenv install --list
-  rbenv install 2.1.10 -k
-  rbenv global 2.1.10
-  log "you should see a ruby version now:"
-  ruby -v
+  #rbenv install 2.1.10 -k
+  #rbenv global 2.1.10
+  #log "you should see a ruby version now:"
+  #ruby -v
 }

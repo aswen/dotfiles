@@ -7,7 +7,7 @@
 
 #iface="${BLOCK_INSTANCE}"
 #iface="${IFACE:-$iface}"
-iface="wlp1s0"
+iface="wlp0s20f3"
 dt="${DT:-3}"
 unit="${UNIT:-Kb}"
 LABEL="${LABEL:-<span font='FontAwesome'>  </span>}" # down arrow up arrow

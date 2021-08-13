@@ -24,8 +24,8 @@ HISTCONTROL=ignoredups:ignorespace
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=200000
+HISTSIZE=100000000
+HISTFILESIZE=200000000
 HISTTIMEFORMAT="|%F %T| "
 
 # check the window size after each command and, if necessary,
@@ -161,6 +161,8 @@ alias vlc='QT_AUTO_SCREEN_SCALE_FACTOR=0 /usr/bin/vlc'
 # setup my favorite editor
 export EDITOR=/usr/bin/vim
 
+alias wifimon='sudo linssid-pkexec'
+
 # source specific stuff for my work
 [ -x ~/.nedaprc ] && . ~/.nedaprc
 
@@ -176,9 +178,10 @@ alias ':qa'='exit'
 
 [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
 
-# Add stpst package to path
-if [ -d /opt/stpst/embedded/bin ];then
-  export PATH="/opt/stpst/embedded/bin:$PATH"
+# Add rbenv to path
+if [ -d $HOME/.rbenv/bin ];then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
 fi
 
 complete -C /data/software/vault/vault vault
@@ -202,3 +205,14 @@ if [[ "$USER" == "root" ]];then
 [0m[255D
 EOF
 fi
+
+# Thingy for direnv
+eval "$(direnv hook bash)"
+
+# mp
+alias n='ncmpcpp'
+alias mn='mpc next'
+alias mp='mpc play'
+alias ms='mpc stop'
+alias mt='mpc toggle'
+

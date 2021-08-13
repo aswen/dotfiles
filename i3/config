@@ -43,14 +43,13 @@ bindsym $mod+Return exec urxvt
 # Should also try thunar.
 bindsym $win+e exec pcmanfm
 # There are moments I want nautilus though...
-bindsym Shift+$win+e exec nautilus --no-desktop ~
+#bindsym Shift+$win+e exec nautilus --no-desktop ~
 
 # Start eclipse
 bindsym Ctrl+$mod+e exec /data/software/Eclipse/eclipse/eclipse
 
 # sysadmmeuk
 bindsym $mod+y exec su-to-root -X -c /usr/sbin/synaptic
-bindsym $win+d exec su-to-root -X -c /usr/bin/palimpsest
 
 # i3lock
 bindsym $win+l "exec --no-startup-id /data/git/alex/scripts/backgroundchooser --dir /data/backgrounds --link /tmp/background.png; exec --no-startup-id i3lock -t -i /tmp/background.png -c 000000"
@@ -131,6 +130,9 @@ bindsym --release $mod+Print exec --no-startup-id /usr/bin/flameshot screen -p '
 # take screenshot of entire workspace
 bindsym --release Shift+Print exec --no-startup-id /usr/bin/flameshot full -p '/tmp'
 
+bindsym $win+k exec run_keybase
+assign [class="(?i)keybase"] → chat
+
 bindsym $win+s exec signal-desktop --no-sandbox
 assign [class="(?i)signal"] → chat
 
@@ -151,8 +153,13 @@ for_window [class="(?i)qmmp"] border none
 for_window [class="(?i)qmmp"] floating enable
 assign [class="(?i)qmmp"] → music
 
-bindsym $win+k exec QT_AUTO_SCREEN_SCALE_FACTOR=0 ~/KeepassX/keepass ~/KeepassX/Alex.kdbx
+bindsym Shift+$win+k exec QT_AUTO_SCREEN_SCALE_FACTOR=0 ~/KeepassX/keepass ~/KeepassX/Alex.kdbx
+bindsym Shift+$win+1 exec /usr/bin/1password
 assign [Title="(?i)keepass"] → meuk
+assign [Title="(?i)1password"] → meuk
+
+bindsym $win+d exec /usr/bin/discord
+assign [class="(?i)discord"] → chat
 
 bindsym $win+p exec /usr/bin/slack
 assign [class="(?i)Slack"] → chat
@@ -160,7 +167,8 @@ assign [class="(?i)Slack"] → chat
 bindsym Shift+$win+t exec /usr/bin/teams
 assign [class="(?i)Microsoft Teams"] → chat
 
-bindsym $win+m exec /usr/bin/evolution
+bindsym $win+m exec evolution
+bindsym Shift+$win+e exec evolution
 assign [class="(?i)Evolution"] → mail
 
 bindsym $win+w exec /opt/firefox/firefox ~/Documenten/web.whatsapp.com.html

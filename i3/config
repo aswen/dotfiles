@@ -323,9 +323,9 @@ for_window [class="(?i)arandr"] floating enable
 # laptop
 bindsym $win+Ctrl+F1 exec --no-startup-id xrandr -s 1920x1080 --output eDP-1 --auto --output DP-1 --off --output DP-2-1 --off --output DP-2-2 --off --output DP-2-3 --off --output DP-2 --off --output HDMI-1 --off --output HDMI-2 --off
 # Home
-bindsym $win+Ctrl+F2 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x900 --output HDMI-1 --auto --pos 1920x0
+bindsym $win+Ctrl+F2 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x500 --output HDMI-1 --auto --pos 1920x0
 # Nedap 2e scherm
-bindsym $win+Ctrl+F3 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x900 --output DP-1 --auto --pos 1920x0
+bindsym $win+Ctrl+F3 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x500 --output DP-2 --auto --pos 1920x0
 # home (to calc modeline use cvt 3840 2160 29.97)
 bindsym $win+Ctrl+F4 "exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x1500 --output DP-2-1 --mode 3840x2160 --pos 1920x0 --output DP-2-2 --auto --pos 5760x50"
 # thuis met iets kleinere resolutie
@@ -335,6 +335,7 @@ bindsym $win+Ctrl+F6 exec --no-startup-id xrandr --output eDP-1 --auto --output 
 # Twee schermen op dock
 bindsym $win+Ctrl+F7 exec --no-startup-id xrandr --output eDP-1 --crtc 0 --auto --output DP-1-2 --crtc 1 --auto --right-of eDP-1 --output DP-1-1 --crtc 2 --auto --right-of DP-1-2
 
+#bindsym $mod+x "exec --no-startup-id xmodmap ~/.xmodmap;exec --no-startup-id setxkbmap -variant euro -option compose:menu,lv3:ralt_switch,eurosign:5,ctrl:nocaps; exec --no-startup-id /data/git/alex/scripts/backgroundchooser -d /data/backgrounds >> /var/log/backgroundchooser.log 2>&1;exec --no-startup-id /data/git/alex/scripts/mouse_scroll;exec --no-startup-id gsettings set org.gtk.Settings.FileChooser sort-directories-first true"
 bindsym $mod+x "exec --no-startup-id xmodmap ~/.xmodmap; exec --no-startup-id /data/git/alex/scripts/backgroundchooser -d /data/backgrounds >> /var/log/backgroundchooser.log 2>&1;exec --no-startup-id /data/git/alex/scripts/mouse_scroll;exec --no-startup-id gsettings set org.gtk.Settings.FileChooser sort-directories-first true"
 
 # Start i3bar to display a workspace bar (plus the system information i3status

@@ -20,11 +20,11 @@ export LC_PAPER="en_GB.UTF-8"
 /usr/bin/nm-applet&
 /usr/bin/blueman-applet&
 #/usr/bin/gkrellm&
-/usr/bin/glipper&
+#/usr/bin/glipper&
 /usr/bin/setxkbmap -variant euro -option compose:menu,lv3:ralt_switch,eurosign:5,ctrl:nocaps
 /usr/bin/xmodmap ~/.xmodmap
-/usr/bin/libreoffice --quickstart --nologo&
-[ -x /usr/bin/numlockx ]&&/usr/bin/numlockx on
+#/usr/bin/libreoffice --quickstart --nologo&
+#[ -x /usr/bin/numlockx ]&&/usr/bin/numlockx on
 ## tapping aan en geen palm op touchpad
 #/usr/bin/synclient TapButton1=1 PalmDetect=1 VertEdgeScroll=1 HorizEdgeScroll=1 HorizTwoFingerScroll=1 AccelFactor=0.05
 #
@@ -44,10 +44,10 @@ eval $(gpg-agent --daemon)
 # /usr/bin/nitrokey-app &
 
 # This is here so cron can use notify-send to warn me if batery gets empty
-[ -d $HOME/.dbus ] || mkdir $HOME/.dbus
-env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
-echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
-chmod 600 $HOME/.dbus/Xdbus
+#[ -d $HOME/.dbus ] || mkdir $HOME/.dbus
+#env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
+#echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
+#chmod 600 $HOME/.dbus/Xdbus
 
 # Load Redshift as Bluelight filter
 redshift-gtk -l 52.12417:6.44306 &

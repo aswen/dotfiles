@@ -95,7 +95,7 @@ deb-src http://qgis.org/debian buster main
 
 # Slack
 # No Stretch ATM (20180226)
-deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
+#deb https://packagecloud.io/slacktechnologies/slack/debian/ jessie main
 
 # Ubiquiti
 # Info: https://help.ubnt.com/hc/en-us/articles/220066768-UniFi-How-to-Install-Update-via-APT-on-Debian-or-Ubuntu

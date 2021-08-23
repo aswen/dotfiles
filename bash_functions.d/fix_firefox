@@ -10,4 +10,5 @@ fix_firefox () {
   sudo ln -sf /opt/firefox/firefox /usr/bin
   sudo ln -sf /opt/firefox/firefox /usr/bin/iceweasel
   sudo ln -sf /opt/firefox/firefox /usr/bin/firefox-esr
+  /opt/firefox/firefox &
 }

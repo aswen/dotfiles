@@ -1,0 +1,28 @@
+# vim: set filetype=sh:
+
+# This is a way to quickly update to the latest Evolution.
+# Based on https://wiki.gnome.org/Apps/Evolution/Flatpak
+
+fix_evolution () {
+ [ -x /usr/bin/flatpak ] || ( log_err "Flatpak not installed";exit 1)
+  [ -x /usr/bin/flatpak-builder ] || ( log_err "Flatpak-builder not installed";exit 1)
+  log "Killing Evolution"
+  pkill evolution
+  if [ ! -d /data/software/evolution ];then
+    log "Downloading and installing Evolution"
+    install -d /data/software/evolution
+    cd /data/software/evolution
+    curl -LO https://gitlab.gnome.org/GNOME/evolution/raw/master/flatpak/org.gnome.Evolution-stable.json
+    flatpak-builder --force-clean org.gnome.Evolution-stable org.gnome.Evolution-stable.json
+    flatpak build-export localrepo org.gnome.Evolution-stable
+    flatpak --user remote-add --no-gpg-verify --if-not-exists evolution-repo localrepo
+    flatpak --user install evolution-repo org.gnome.Evolution
+  else
+    log "Upgrading Evolution"
+    cd /data/software/evolution
+    flatpak-builder --force-clean org.gnome.Evolution-stable org.gnome.Evolution-stable.json
+    flatpak build-export localrepo org.gnome.Evolution-stable
+    flatpak --user update org.gnome.Evolution
+  fi
+  flatpak run org.gnome.Evolution &
+}

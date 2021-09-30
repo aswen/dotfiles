@@ -28,6 +28,9 @@ HISTSIZE=100000000
 HISTFILESIZE=200000000
 HISTTIMEFORMAT="|%F %T| "
 
+# Be able to reverse search history (opposite of CTRL+r)
+bind '"\C-t": reverse-search-history'
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize

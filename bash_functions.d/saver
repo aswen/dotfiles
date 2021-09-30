@@ -1,0 +1,39 @@
+# vim: set filetype=sh:
+# This is to turn on or off the screensaver
+# I wrote this because my display disconnects all USB devices while starting up after it was sleeping...
+
+shopt -s extglob
+
+saver () {
+  [ -x /usr/bin/espeak ] || die 1 "Espeak not installed"
+  local INPUT=$1
+  [ -z "$INPUT" ] && log_err "No argument given" && return 1
+  case $INPUT in
+    ON|on|enable )
+      log "Enabling screen saver."
+      xset s default
+      xset +dpms
+    ;;
+    OFF|off|disable )
+      log "Disabling screen saver."
+      xset s off
+      xset s noblank
+      xset -dpms
+    ;;
+    +([[:digit:]]) )
+      log "Setting screen saver timeout to $INPUT seconds."
+      xset s $INPUT
+      xset dpms $INPUT $INPUT $INPUT
+      saver status
+    ;;
+    status )
+      xset q | grep -EA 3 '^Screen Saver|^DPMS'
+    ;;
+    * )
+      log_err "Argument $INPUT not understood."
+      return 1
+    ;;
+  esac
+
+
+}

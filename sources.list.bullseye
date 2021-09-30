@@ -1,38 +1,38 @@
-deb https://mirrors.kernel.org/debian/ bullseye main non-free contrib
-deb-src https://mirrors.kernel.org/debian/ bullseye main non-free contrib
+deb https://debian.snt.utwente.nl/debian/ bullseye main non-free contrib
+deb-src https://debian.snt.utwente.nl/debian/ bullseye main non-free contrib
 
-deb https://security.debian.org/debian-security bullseye-security main non-free contrib
-deb-src http://security.debian.org/debian-security bullseye-security main non-free contrib
+deb https://deb.debian.org/debian-security bullseye-security main non-free contrib
+deb-src http://deb.debian.org/debian-security bullseye-security main non-free contrib
 
-deb https://mirrors.kernel.org/debian/ bullseye-updates main non-free contrib
-deb-src https://mirrors.kernel.org/debian/ bullseye-updates main non-free contrib
+deb https://debian.snt.utwente.nl/debian/ bullseye-updates main non-free contrib
+deb-src https://debian.snt.utwente.nl/debian/ bullseye-updates main non-free contrib
 
-deb https://mirrors.kernel.org/debian/ bullseye-proposed-updates non-free contrib main
-deb-src https://mirrors.kernel.org/debian/ bullseye-proposed-updates non-free contrib main
+deb https://debian.snt.utwente.nl/debian/ bullseye-proposed-updates non-free contrib main
+deb-src https://debian.snt.utwente.nl/debian/ bullseye-proposed-updates non-free contrib main
 
 # Backports
-deb https://mirrors.kernel.org/debian bullseye-backports main non-free contrib
+deb https://debian.snt.utwente.nl/debian bullseye-backports main non-free contrib
 
 
 ##### TESTING
 ## Add the testing repos (link testing.pref to prefer this over stable)
-# deb https://mirrors.kernel.org/debian/ testing main non-free contrib
-# deb-src https://mirrors.kernel.org/debian/ testing main non-free contrib
+# deb https://debian.snt.utwente.nl/debian/ testing main non-free contrib
+# deb-src https://debian.snt.utwente.nl/debian/ testing main non-free contrib
 #
 # deb http://security.debian.org/ testing/updates main non-free contrib
 # deb-src http://security.debian.org/ testing/updates main non-free contrib
 #
-# deb https://mirrors.kernel.org/debian/ testing-updates main non-free contrib
-# deb-src https://mirrors.kernel.org/debian/ testing-updates main non-free contrib
+# deb https://debian.snt.utwente.nl/debian/ testing-updates main non-free contrib
+# deb-src https://debian.snt.utwente.nl/debian/ testing-updates main non-free contrib
 #
-# deb https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
-# deb-src https://mirrors.kernel.org/debian/ testing-proposed-updates non-free contrib main
+# deb https://debian.snt.utwente.nl/debian/ testing-proposed-updates non-free contrib main
+# deb-src https://debian.snt.utwente.nl/debian/ testing-proposed-updates non-free contrib main
 
 
 #### UNSTABLE
 # Add the unstable repos (link unstable.pref to prefer this over stable)
-# deb https://mirrors.kernel.org/debian/ unstable main non-free contrib
-# deb-src https://mirrors.kernel.org/debian/ unstable main non-free contrib
+# deb https://debian.snt.utwente.nl/debian/ unstable main non-free contrib
+# deb-src https://debian.snt.utwente.nl/debian/ unstable main non-free contrib
 
 # 1Password
 # curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
@@ -73,7 +73,7 @@ deb https://mirrors.kernel.org/debian bullseye-backports main non-free contrib
 
 # virtualbox
 # curl http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc|sudo apt-key add -
-#deb http://download.virtualbox.org/virtualbox/debian bullseye contrib
+deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bullseye contrib
 
 # OSM
 deb http://qgis.org/debian bullseye main

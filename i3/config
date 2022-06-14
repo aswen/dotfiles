@@ -124,11 +124,11 @@ assign [class="(?i)gkrellm"] → meuk
 bindsym Shift+$win+s exec gscan2pdf
 
 # take screenshot selection
-bindsym --release Print exec --no-startup-id /usr/bin/flameshot gui -p '/tmp'
+bindsym --release Print exec --no-startup-id /usr/bin/flameshot gui
 # take screenshot of this screen
-bindsym --release $mod+Print exec --no-startup-id /usr/bin/flameshot screen -p '/tmp'
+bindsym --release $mod+Print exec --no-startup-id /usr/bin/flameshot screen --path '/tmp'
 # take screenshot of entire workspace
-bindsym --release Shift+Print exec --no-startup-id /usr/bin/flameshot full -p '/tmp'
+bindsym --release Shift+Print exec --no-startup-id /usr/bin/flameshot full --path '/tmp'
 
 bindsym $win+k exec run_keybase
 assign [class="(?i)keybase"] → chat
@@ -328,16 +328,16 @@ bindsym $mod+r mode "resize"
 # some randr bindings for easy config
 bindsym $mod+a exec arandr
 for_window [class="(?i)arandr"] floating enable
-# laptop
+# Laptop only
 bindsym $win+Ctrl+F1 exec --no-startup-id xrandr -s 1920x1080 --output eDP-1 --auto --output DP-1 --off --output DP-2-1 --off --output DP-2-2 --off --output DP-2-3 --off --output DP-2 --off --output HDMI-1 --off --output HDMI-2 --off
-# Home
+# HDMI-1
 bindsym $win+Ctrl+F2 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x500 --output HDMI-1 --auto --pos 1920x0
-# Nedap 2e scherm
-bindsym $win+Ctrl+F3 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x750 --output DP-2 --auto --pos 1920x500 --output HDMI-1 --auto --pos 5760x0
-# home (to calc modeline use cvt 3840 2160 29.97)
-bindsym $win+Ctrl+F4 "exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x1500 --output DP-2-1 --mode 3840x2160 --pos 1920x0 --output DP-2-2 --auto --pos 5760x50"
-# thuis met iets kleinere resolutie
-bindsym $win+Ctrl+F5 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x1000 --output DP-1-1 --mode '2560x1440' --pos 1920x0 --output DP-1-2 --auto --pos 4480x700
+# DP-2 + HDMI-1 screen
+bindsym $win+Ctrl+F3 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x750 --output DP-2 --mode 3840x1600 --rate 75 --pos 1920x500 --output HDMI-1 --mode 3840x2160 --rate 30 --pos 5760x0
+# DP-2
+bindsym $win+Ctrl+F4 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x1500 --output DP-2 --auto --pos 1920x0
+# Only HDMI-1
+bindsym $win+Ctrl+F5 exec --no-startup-id xrandr --output eDP-1 --off --output HDMI-1 --auto
 # scherm op displayport laptop
 bindsym $win+Ctrl+F6 exec --no-startup-id xrandr --output eDP-1 --auto --output DP-1 --auto --right-of eDP-1
 # Twee schermen op dock

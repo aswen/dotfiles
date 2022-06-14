@@ -7,7 +7,10 @@ shopt -s extglob
 saver () {
   [ -x /usr/bin/espeak ] || die 1 "Espeak not installed"
   local INPUT=$1
-  [ -z "$INPUT" ] && log_err "No argument given" && return 1
+  if [ -z "$INPUT" ];then
+    xset q | grep -EA 3 '^Screen Saver|^DPMS'
+    return 0
+  fi
   case $INPUT in
     ON|on|enable )
       log "Enabling screen saver."

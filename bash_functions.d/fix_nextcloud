@@ -5,8 +5,11 @@ fix_nextcloud () {
   NC_URL=$(curl -s 'https://nextcloud.com/install/#install-clients'|grep -o '\https://github.com/nextcloud/desktop/releases/download/v[0-9].[0-9].[0-9]/Nextcloud-[0-9].[0-9].[0-9]-x86_64.AppImage')
   local NC_FILENAME
   NC_FILENAME=$(echo "$NC_URL"|grep -o 'Nextcloud-.*')
+  local NC_VERSION
+  NC_VERSION=$(echo "$NC_FILENAME"|grep -o '[0-9].[0-9].[0-9]')
   [ -z "$NC_URL"      ] && die 1 "No url derived from clients page"
   [ -z "$NC_FILENAME" ] && die 2 "No filename derived from URL $URL"
+  [ -n "$NC_VERSION"  ] && log "Downloading Nextcloud version $NC_VERSION."
 
   # Make sure nothing is running
   local KILL_NC

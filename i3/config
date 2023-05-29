@@ -57,10 +57,23 @@ bindsym $win+l "exec --no-startup-id /data/git/alex/scripts/backgroundchooser --
 # Allow thunderbolt devices (USB-C)
 bindsym $win+c exec --no-startup-id sudo /data/git/alex/scripts/allow_usb-c_thunderbolt
 
-# start FF
+# Browsers
+
+## Chromium
+bindsym $mod+g exec chromium --allow-outdated-plugins --proxy-pac-url="file:///home/alex/Documenten/Nedap/proxy_for_oob.pac"
+bindcode 180 exec chromium --allow-outdated-plugins
+#for_window [class="(?i)Chromium"] border none
+
+## Firefox
 bindsym $win+f exec --no-startup-id /opt/firefox/firefox
 bindsym Shift+$win+f exec --no-startup-id /opt/firefox/firefox --private-window
-for_window [class="(?i)Navigator"] border none
+
+## Opera
+bindsym $win+o exec --no-startup-id /usr/bin/opera
+bindsym Shift+$win+o exec --no-startup-id /usr/bin/opera --with-feature:strict-security-mode --private
+bindsym $win+w exec --no-startup-id /usr/bin/opera ~/Documenten/web.whatsapp.com.html
+for_window [class="(?i)Opera"] border normal
+#for_window [class="(?i)Navigator"] border none
 
 # TOR
 bindsym Ctrl+$win+f exec --no-startup-id sh -c '"/home/alex/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/start-tor-browser" --detach || ([ !  -x "/home/alex/.local/share/torbrowser/tbb/x86_64/tor-browser_en-US/Browser/start-tor-browser" ] && "$(dirname "$*")"/Browser/start-tor-browser --detach)' dummy %k
@@ -89,14 +102,6 @@ for_window [title="(?i)Zimbra: Compose"] floating enable
 for_window [title="(?i)Zimbra: Reply"] floating enable
 for_window [title="(?i)Zimbra: Forward"] floating enable
 for_window [title="(?i)NLLGG Webmail:: Compose"] floating enable
-
-# start a browser
-bindsym $mod+p exec chromium --allow-outdated-plugins
-bindsym $mod+g exec chromium --allow-outdated-plugins
-bindsym $mod+Shift+g exec chromium --allow-outdated-plugins --proxy-server="socks5://localhost:9000"
-#bindsym $mod+q workspace chat;exec chromium-browser --app=https://webmail.melkweg-online.nl;split horizontal;exec pidgin;split vertical;exec skype
-bindcode 180 exec chromium --allow-outdated-plugins
-for_window [class="(?i)Chromium"] border none
 
 #gvim
 bindsym $win+g exec gvim
@@ -139,7 +144,7 @@ assign [class="(?i)signal"] → chat
 #bindsym $win+y exec spotify
 bindsym Shift+$mod+s exec spotify
 assign [class="(?i)spotify"] → music
-for_window [class="(?i)spotify"] border none
+#for_window [class="(?i)spotify"] border none
 
 bindsym $win+v exec QT_AUTO_SCREEN_SCALE_FACTOR=0 vlc
 
@@ -171,7 +176,6 @@ bindsym $win+m exec evolution
 bindsym Shift+$win+e exec evolution
 assign [class="(?i)Evolution"] → mail
 
-bindsym $win+w exec /opt/firefox/firefox ~/Documenten/web.whatsapp.com.html
 bindsym $win+t exec /data/software/Telegram\ desktop\ client/Telegram/Updater
 assign [class="(?i)Telegram"] → chat
 bindsym $win+x exec uxterm -T Weechat +bc -sl 100000 -si -sk -vb weechat
@@ -329,7 +333,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+a exec arandr
 for_window [class="(?i)arandr"] floating enable
 # Laptop only
-bindsym $win+Ctrl+F1 exec --no-startup-id xrandr -s 1920x1080 --output eDP-1 --auto --output DP-1 --off --output DP-2-1 --off --output DP-2-2 --off --output DP-2-3 --off --output DP-2 --off --output HDMI-1 --off --output HDMI-2 --off
+bindsym $win+Ctrl+F1 exec --no-startup-id xrandr -s 1920x1080 --output eDP-1 --auto --output DP-1 --off --output DP-1-1 --off --output DP-2-1 --off --output DP-2-2 --off --output DP-2-3 --output DP-2-8 --off --output DP-2-9 --off --off --output DP-2 --off --output HDMI-1 --off --output HDMI-2 --off
 # HDMI-1
 bindsym $win+Ctrl+F2 exec --no-startup-id xrandr --output eDP-1 --auto --pos 0x500 --output HDMI-1 --auto --pos 1920x0
 # DP-2 + HDMI-1 screen
@@ -342,6 +346,10 @@ bindsym $win+Ctrl+F5 exec --no-startup-id xrandr --output eDP-1 --off --output H
 bindsym $win+Ctrl+F6 exec --no-startup-id xrandr --output eDP-1 --auto --output DP-1 --auto --right-of eDP-1
 # Twee schermen op dock
 bindsym $win+Ctrl+F7 exec --no-startup-id xrandr --output eDP-1 --crtc 0 --auto --output DP-1-2 --crtc 1 --auto --right-of eDP-1 --output DP-1-1 --crtc 2 --auto --right-of DP-1-2
+# Display on DP-1-8?
+bindsym $win+Ctrl+F8 exec --no-startup-id xrandr --output eDP-1 --auto --output DP-1-8 --auto --right-of eDP-1
+# Display on DP-2-8?
+bindsym $win+Ctrl+F9 exec --no-startup-id xrandr --output eDP-1 --auto --output DP-2-8 --auto --right-of eDP-1
 
 bindsym $mod+x "exec --no-startup-id xmodmap ~/.xmodmap; exec --no-startup-id /data/git/alex/scripts/backgroundchooser -d /data/backgrounds >> /var/log/backgroundchooser.log 2>&1 ; exec --no-startup-id /data/git/alex/scripts/mouse_scroll ; exec --no-startup-id gsettings set org.gtk.Settings.FileChooser sort-directories-first true"
 

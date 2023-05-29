@@ -1,0 +1,129 @@
+!To reread your .Xresources file, and throw away your old resources:
+!xrdb ~/.Xresources
+!To reread your .Xresources file, and keep your old resources:
+!xrdb -merge ~/.Xresources
+
+! define some colourschemes
+
+! Solarized color scheme for the X Window System
+! http://ethanschoonover.com/solarized
+! Common
+#define Solarized_yellow       #b58900
+#define Solarized_orange       #cb4b16
+#define Solarized_red          #dc322f
+#define Solarized_magenta      #d33682
+#define Solarized_violet       #6c71c4
+#define Solarized_blue         #268bd2
+#define Solarized_cyan         #2aa198
+#define Solarized_green        #859900
+
+! Dark
+#define Solarized_dark_base03  #002b36
+#define Solarized_dark_base02  #073642
+#define Solarized_dark_base01  #586e75
+#define Solarized_dark_base00  #657b83
+#define Solarized_dark_base0   #839496
+#define Solarized_dark_base1   #93a1a1
+#define Solarized_dark_base2   #eee8d5
+#define Solarized_dark_base3   #fdf6e3
+
+URxvt*font          : -windows-dina-medium-r-normal-*-13-*-*-*-c-*-iso8859-1,-misc-fixed-medium-r-normal-*-15-*-*-*-*-*-iso10646-1,xft:AR PL UKai CN:regular:pixelsize=16
+URxvt*boldFont      : -windows-dina-bold-r-normal-*-13-*-*-*-c-*-iso8859-1,-misc-fixed-bold-r-normal-*-15-*-*-*-*-*-iso10646-1,xft:AR PL UKai CN:bold:pixelsize=16
+
+URxvt*locale                 : en_US.utf-8
+URxvt*title                  : URxvt
+URxvt*depth                  : 32
+URxvt*transparent            : false
+URxvt*letterspace            : 1
+URxvt*scrollBar              : false
+URxvt*scrollBar_Right        : true
+URxvt*scrollstyle            : plain
+
+!https://wiki.archlinux.org/index.php/rxvt-unicode
+!do not scroll with output
+URxvt*scrollTtyOutput        : false
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer       : true
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress      : true
+!URxvt should scroll in less
+URxvt.secondaryScreen        : 1
+URxvt.secondaryScroll        : 0
+URxvt.secondaryWheel         : 1
+
+URxvt*reverseVideo           : false
+URxvt*saveLines              : 100000
+URxvt*pointerBlank           : true
+URxvt*cursorBlink            : false
+URxvt*meta8                  : false
+
+*modifer                 : ctrl
+!URxvt.keysym.Control-Return : \037\036
+!URxvt*keysym.Control-Insert : 10.200.21.
+!URxvt*keysym.M-o            : $OLDPWD
+! URxvt.perl-ext-common      : matcher,searchable-scrollback<M-s>,selection
+URxvt.perl-ext-common        : matcher
+URxvt*url-launcher           : /usr/bin/firefox
+URxvt*urlLauncher            : /usr/bin/firefox
+URxvt*iso14755               : false
+URxvt*iso14755_52            : false
+URxvt*antialias              : true
+
+*background             : Solarized_dark_base03
+*foreground             : Solarized_dark_base0
+*fading                 : 40
+*fadeColor              : Solarized_dark_base03
+*cursorColor            : Solarized_dark_base1
+*pointerColorBackground : Solarized_dark_base01
+*pointerColorForeground : Solarized_dark_base1
+
+! black
+*color0                 : Solarized_dark_base02
+*color8                 : Solarized_dark_base03
+
+! red
+*color1                 : Solarized_red
+*color9                 : Solarized_orange
+
+! green
+*color2                 : Solarized_green
+*color10                : Solarized_dark_base01
+
+! yellow
+*color3                 : Solarized_yellow
+*color11                : Solarized_dark_base00
+
+! blue
+*color4                 : Solarized_blue
+*color12                : Solarized_dark_base0
+
+! magenta
+*color5                 : Solarized_magenta
+*color13                : Solarized_violet
+
+! cyan
+*color6                 : Solarized_cyan
+*color14                : Solarized_dark_base1
+
+! white
+*color7                 : Solarized_dark_base2
+*color15                : Solarized_dark_base3
+
+Xautolock.corners     : +000
+Xautolock.cornersize  : 10
+Xautolock.locker      : /usr/bin/i3lock -c 000000
+Xautolock.time        : 5
+Xautolock.cornerdelay : 5
+Xautolock.notify      : 5
+Xautolock.notifier    : /usr/bin/notify-send
+
+! Xterm config
+xterm*termName               : xterm-256color
+xterm*faceName               : inconsolata\-dz
+xterm*faceSize               : 9
+xterm*fading                 : 40
+xterm*antialias              : true
+
+! this is here for vi mode (http://www.jukie.net/bart/blog/20040326082602)
+xterm*eightBitInput : false
+

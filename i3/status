@@ -54,14 +54,14 @@ time {
   format = "NL: %Y-%m-%d :: %H:%M:%S"
 }
 
-tztime Ottawa {
-  format = "OTT: %H:%M"
+tztime Ontario {
+  format = "ONT: %H:%M"
   timezone = "Canada/Eastern"
 }
 
-tztime Panama {
-  format = "PAN: %H:%M"
-  timezone = "America/Panama"
+tztime Prince_Edward_Island {
+  format = "PEI: %H:%M"
+  timezone = "America/Atlantic"
 }
 
 disk "/" {

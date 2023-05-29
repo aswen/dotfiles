@@ -6,9 +6,9 @@ fix_firefox () {
   pkill firefox
   [ -d /opt/firefox ] && sudo mv /opt/firefox{,.old}
   curl -L 'https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64'|sudo tar jxf - -C /opt
-  [ -d /opt/firefox.old -a -x /opt/firefox/firefox ] && sudo rm -rf /opt/firefox.old
+  [ -d /opt/firefox.old && -x /opt/firefox/firefox ] && sudo rm -rf /opt/firefox.old
   sudo ln -sf /opt/firefox/firefox /usr/bin
   sudo ln -sf /opt/firefox/firefox /usr/bin/iceweasel
   sudo ln -sf /opt/firefox/firefox /usr/bin/firefox-esr
-  /opt/firefox/firefox &
+  #/opt/firefox/firefox &
 }

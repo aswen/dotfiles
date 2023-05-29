@@ -144,8 +144,8 @@ Rxvt*modifer                 : ctrl
 !URxvt*keysym.M-o            : $OLDPWD
 ! URxvt.perl-ext-common      : matcher,searchable-scrollback<M-s>,selection
 URxvt.perl-ext-common        : matcher
-URxvt*url-launcher           : /usr/bin/opera
-URxvt*urlLauncher            : /usr/bin/opera
+URxvt*url-launcher           : /usr/bin/firefox
+URxvt*urlLauncher            : /usr/bin/firefox
 URxvt*iso14755               : false
 URxvt*iso14755_52            : false
 URxvt*antialias              : true

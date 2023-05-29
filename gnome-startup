@@ -1,0 +1,12 @@
+#!/bin/bash
+
+log=/tmp/gnome_startup.log
+exec > $log 2>&1
+set -x
+
+echo "$(date +%F_%T) Gnome startup script started."
+
+eval $(gpg-agent --daemon)
+
+echo "$(date +%F_%T) Gnome startup script finished."
+set +x

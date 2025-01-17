@@ -1,5 +1,0 @@
-# vim: set filetype=sh:
-
-date_now () { printf '%(%F %T)T' -1 ; }
-
-time_now () { printf '%(%T)T' -1 ; }

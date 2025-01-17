@@ -1,8 +1,0 @@
-# this contains files that should be ignored by my bck_home rsync alias
-.cache
-.adobe
-.thumbnails
-.dvdcss
-.rawstudio
-Cache
-google-chrome-beta

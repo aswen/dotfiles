@@ -1,7 +1,0 @@
-# vim: set filetype=sh:
-# thanks to commandlineFu (User Klisanor) (http://www.commandlinefu.com/commands/view/13468/google-translate)
-translate () {
-  local lang=nl
-  local text=$*
-  wget -U "Mozilla/5.0" -qO - "http://translate.google.com/translate_a/t?client=t&text=${text}&sl=auto&tl=${lang}" | sed 's/\[\[\[\"//' | cut -d \" -f 1
-}
